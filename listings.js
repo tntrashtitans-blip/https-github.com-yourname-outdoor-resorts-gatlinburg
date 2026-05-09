@@ -170,6 +170,21 @@ const listings = [
     cta: "Book on Hipcamp"
   },
   {
+    title: "Crow's Landing RV Site",
+    type: "Lot Rental, Bring your RV",
+    platform: "Hipcamp",
+    platformTag: "hipcamp",
+    tags: ["rv-lot", "hipcamp"],
+    view: "Full-hookup RV site",
+    details: ["Lot 113", "Full hookups", "Bring RV"],
+    description: "Clean RV site with full hookups, a nearby bath house, and access to the resort amenities.",
+    image: "Assets/listings/crows-landing-lot-113.jpg",
+    url: "https://www.hipcamp.com/en-US/land/tennessee-crow-s-landing-rv-site-gatlinburg-7rvhydxv?adults=1&children=0",
+    calendarUrl: "",
+    map: { lot: "113" },
+    cta: "Book on Hipcamp"
+  },
+  {
     title: "Jolene",
     type: "RV Rental",
     platform: "Airbnb",
@@ -287,6 +302,7 @@ const lotColorByNumber = {
   "103": "red",
   "108": "red",
   "111": "red",
+  "113": "red",
   "140": "yellow",
   "172": "orange",
   "174": "orange",
