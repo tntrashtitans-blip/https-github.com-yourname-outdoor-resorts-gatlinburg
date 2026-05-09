@@ -206,11 +206,12 @@ const listings = [
     platformTag: "airbnb",
     tags: ["rv-rental", "airbnb"],
     view: "Dog-friendly camper",
-    details: ["1 bedroom", "1 bed", "Private bath"],
+    details: ["Lot 150", "Dog friendly", "Private bath"],
     description: "Dog-friendly camper rental with a private bath, cozy one-bedroom setup, and easy resort access.",
     image: "Assets/listings/dog-friendly-glamping.jpeg",
     url: "https://www.airbnb.com/rooms/952397626997597257?source_impression_id=p3_1778247365_P3qxQPFuM5yvpbpe",
     calendarUrl: "",
+    map: { lot: "150" },
     cta: "Book on Airbnb"
   },
   {
@@ -304,6 +305,7 @@ const lotColorByNumber = {
   "111": "red",
   "113": "red",
   "140": "yellow",
+  "150": "yellow",
   "172": "orange",
   "174": "orange",
   "189": "orange",
