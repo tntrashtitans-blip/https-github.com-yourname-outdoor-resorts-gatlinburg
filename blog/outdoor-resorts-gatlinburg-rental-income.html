@@ -1,214 +1,212 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>What Do ORG Lots Actually Rent For? Rental Income Guide</title>
-  <meta name="description" content="Realistic rental income projections for Outdoor Resorts Gatlinburg lots by season and location. Fee breakdowns, year-one model, and what separates top performers from average units." />
-  <link rel="canonical" href="https://outdoorresortsgatlinburg.com/blog/outdoor-resorts-gatlinburg-rental-income.html" />
-  <link rel="stylesheet" href="../styles.css" />
-  <style>
-    .article-hero { padding: 72px 0 52px; background: var(--forest-dark); color: #fff; }
-    .article-hero .eyebrow { color: var(--gold); }
-    .article-hero h1 { font-family: "Playfair Display", serif; font-size: clamp(1.9rem,4vw,3rem); line-height: 1.1; margin: 0 0 16px; max-width: 820px; }
-    .article-hero p { color: rgba(255,255,255,.78); max-width: 660px; margin: 0; font-size: 1rem; line-height: 1.6; }
-    .article-body { max-width: 780px; margin: 0 auto; padding: 64px 24px 80px; }
-    .article-body h2 { font-family: "Playfair Display", serif; font-size: clamp(1.5rem,2.5vw,2rem); line-height: 1.15; margin: 48px 0 14px; color: var(--forest-dark); }
-    .article-body h3 { font-family: "Playfair Display", serif; font-size: 1.2rem; margin: 32px 0 10px; color: var(--text); }
-    .article-body p { color: var(--muted); font-size: .97rem; font-weight: 600; line-height: 1.7; margin: 0 0 18px; }
-    .rate-table { width: 100%; border-collapse: collapse; margin: 28px 0; font-size: .9rem; }
-    .rate-table th { padding: 12px 16px; background: var(--forest-dark); color: #fff; font-weight: 800; text-align: left; font-size: .82rem; letter-spacing: .06em; text-transform: uppercase; }
-    .rate-table td { padding: 12px 16px; border-bottom: 1px solid var(--line); color: var(--text); font-weight: 600; }
-    .rate-table tr:nth-child(even) td { background: var(--stone); }
-    .rate-table td:first-child { font-weight: 800; color: var(--forest-dark); }
-    .income-model { margin: 28px 0; border: 1px solid var(--line); border-radius: 8px; overflow: hidden; }
-    .income-model__header { padding: 16px 20px; background: var(--forest); color: #fff; }
-    .income-model__header h4 { margin: 0; font-family: "Playfair Display", serif; font-size: 1.1rem; }
-    .income-model__header p { margin: 4px 0 0; color: rgba(255,255,255,.72); font-size: .84rem; }
-    .income-model__row { display: grid; grid-template-columns: 1fr auto; gap: 12px; align-items: center; padding: 13px 20px; border-bottom: 1px solid var(--line); }
-    .income-model__row:last-child { border-bottom: none; }
-    .income-model__row.total { background: var(--mist); font-weight: 900; }
-    .income-model__label { font-size: .9rem; font-weight: 700; color: var(--text); }
-    .income-model__value { font-size: .9rem; font-weight: 800; color: var(--forest-dark); white-space: nowrap; }
-    .income-model__row.deduction .income-model__value { color: var(--clay); }
-    .callout { margin: 28px 0; padding: 22px 24px; border-left: 4px solid var(--gold); background: rgba(216,164,72,.1); border-radius: 0 8px 8px 0; }
-    .callout p { margin: 0; color: #5a4010; font-weight: 700; font-size: .93rem; line-height: 1.55; }
-    .cta-band { margin-top: 56px; padding: 36px; background: var(--forest); border-radius: 8px; text-align: center; }
-    .cta-band h3 { font-family: "Playfair Display", serif; font-size: 1.4rem; color: #fff; margin: 0 0 10px; }
-    .cta-band p { color: rgba(255,255,255,.78); font-size: .9rem; margin: 0 0 20px; }
-    .cta-band a { display: inline-flex; align-items: center; min-height: 46px; padding: 0 28px; background: var(--gold); color: var(--forest-dark); font-weight: 900; font-size: .9rem; border-radius: 8px; text-decoration: none; }
-    .cta-band a:hover { background: #c49228; }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>What Do ORG Lots Actually Rent For? A Realistic Look at Short-Term Rental Income</title>
+<meta name="description" content="Honest look at short-term rental income from Outdoor Resorts Gatlinburg lots — peak rates, shoulder season reality, platform fees, HOA costs, and year-one expectations.">
+<link rel="canonical" href="https://outdoorresortsgatlinburg.com/blog/outdoor-resorts-gatlinburg-rental-income.html">
+<meta property="og:title" content="What Do ORG Lots Actually Rent For? Realistic Rental Income Guide">
+<meta property="og:description" content="Peak season nightly rates, platform fees, HOA costs — a grounded picture of what to expect in year one at Outdoor Resorts Gatlinburg.">
+<meta property="og:url" content="https://outdoorresortsgatlinburg.com/blog/outdoor-resorts-gatlinburg-rental-income.html">
+<meta property="og:image" content="https://outdoorresortsgatlinburg.com/Assets/Rainbow over pond.jpg">
+<meta property="og:type" content="article">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600&family=Source+Sans+3:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+:root {
+  --forest: #2d4a2d; --forest-mid: #3d6b3d; --forest-light: #e8f0e8;
+  --gold: #c9993a; --gold-light: #f7f0e2; --stone: #6b6457;
+  --cream: #faf8f4; --text-dark: #1a1a16; --text-mid: #3d3a33;
+  --text-muted: #7a7060; --border: #ddd8ce;
+}
+body { font-family: 'Source Sans 3', sans-serif; color: var(--text-dark); background: #fff; font-size: 17px; line-height: 1.7; }
+nav { background: #fff; border-bottom: 1px solid var(--border); padding: 0 2rem; position: sticky; top: 0; z-index: 100; }
+.nav-inner { max-width: 1100px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; height: 60px; }
+.nav-logo { font-family: 'Playfair Display', serif; font-size: 1rem; font-weight: 500; color: var(--forest); text-decoration: none; }
+.nav-links { display: flex; gap: 1.75rem; list-style: none; }
+.nav-links a { font-size: 0.88rem; font-weight: 500; color: var(--text-mid); text-decoration: none; letter-spacing: 0.02em; }
+.nav-links a:hover { color: var(--forest); }
+.article-hero { position: relative; height: 420px; display: flex; align-items: flex-end; overflow: hidden; }
+.article-hero-bg { position: absolute; inset: 0; background-image: url('https://outdoorresortsgatlinburg.com/Assets/Rainbow over pond.jpg'); background-size: cover; background-position: center 68%; filter: brightness(0.38); }
+.article-hero-content { position: relative; z-index: 1; max-width: 1100px; margin: 0 auto; width: 100%; padding: 0 2rem 3rem; }
+.article-eyebrow { font-size: 0.74rem; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: var(--gold); margin-bottom: 0.75rem; }
+.article-hero h1 { font-family: 'Playfair Display', serif; font-size: clamp(1.75rem, 4vw, 2.75rem); font-weight: 500; color: #fff; line-height: 1.18; max-width: 780px; }
+.article-wrap { max-width: 780px; margin: 0 auto; padding: 3.5rem 2rem 5rem; }
+.article-meta { font-size: 0.82rem; color: var(--text-muted); margin-bottom: 2.5rem; padding-bottom: 1.5rem; border-bottom: 1px solid var(--border); }
+.article-wrap h2 { font-family: 'Playfair Display', serif; font-size: 1.55rem; font-weight: 500; color: var(--forest); margin: 2.5rem 0 1rem; line-height: 1.25; }
+.article-wrap h3 { font-family: 'Playfair Display', serif; font-size: 1.2rem; font-weight: 500; color: var(--forest); margin: 2rem 0 0.75rem; }
+.article-wrap p { color: var(--text-mid); margin-bottom: 1.25rem; line-height: 1.8; }
+.article-wrap ul { margin: 0 0 1.25rem 1.25rem; color: var(--text-mid); line-height: 1.8; }
+.article-wrap li { margin-bottom: 0.5rem; }
+.callout { background: var(--forest-light); border-left: 3px solid var(--forest); border-radius: 0 8px 8px 0; padding: 1.25rem 1.5rem; margin: 2rem 0; }
+.callout p { margin: 0; color: var(--forest); font-size: 0.97rem; }
+.season-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin: 2rem 0; }
+.season-card { border: 1px solid var(--border); border-radius: 8px; padding: 1.25rem 1.4rem; background: var(--cream); }
+.season-card h4 { font-family: 'Playfair Display', serif; font-size: 1rem; color: var(--forest); margin-bottom: 0.5rem; }
+.season-card .rate { font-size: 1.4rem; font-weight: 600; color: var(--forest); margin-bottom: 0.25rem; }
+.season-card p { font-size: 0.85rem; color: var(--text-muted); margin: 0; line-height: 1.55; }
+.fee-table { width: 100%; border-collapse: collapse; margin: 1.5rem 0; font-size: 0.92rem; }
+.fee-table th { background: var(--forest); color: #fff; padding: 0.65rem 1rem; text-align: left; font-weight: 500; font-size: 0.82rem; }
+.fee-table td { padding: 0.65rem 1rem; border-bottom: 1px solid var(--border); color: var(--text-mid); }
+.fee-table tr:nth-child(even) td { background: var(--cream); }
+.fee-table .total td { font-weight: 600; color: var(--text-dark); border-top: 2px solid var(--border); }
+.disclaimer { background: var(--gold-light); border: 1px solid #dfc87a; border-radius: 8px; padding: 1.25rem 1.5rem; margin: 2.5rem 0; font-size: 0.88rem; color: var(--text-mid); line-height: 1.65; }
+.article-cta { background: var(--forest); border-radius: 10px; padding: 2.5rem; margin: 3rem 0 0; text-align: center; }
+.article-cta h3 { font-family: 'Playfair Display', serif; font-size: 1.4rem; color: #fff; margin-bottom: 0.75rem; }
+.article-cta p { color: rgba(255,255,255,0.75); font-size: 0.97rem; margin-bottom: 1.5rem; }
+.article-cta a { display: inline-block; background: var(--gold); color: #fff; text-decoration: none; padding: 0.75rem 2rem; border-radius: 6px; font-weight: 600; font-size: 0.9rem; transition: background 0.15s; }
+.article-cta a:hover { background: #b88830; }
+.breadcrumb { font-size: 0.8rem; color: var(--text-muted); margin-bottom: 2rem; }
+.breadcrumb a { color: var(--text-muted); text-decoration: none; }
+.breadcrumb a:hover { color: var(--forest); }
+.breadcrumb span { margin: 0 0.4rem; }
+footer { background: #111; padding: 2.5rem 2rem; text-align: center; }
+footer p { font-size: 0.8rem; color: rgba(255,255,255,0.32); line-height: 1.7; }
+footer a { color: rgba(255,255,255,0.48); text-decoration: none; }
+@media (max-width: 760px) { .nav-links { display: none; } .article-hero { height: 320px; } .season-grid { grid-template-columns: 1fr; } }
+</style>
 </head>
 <body>
 
-<nav class="nav">
-  <div class="container nav__inner">
-    <a class="nav__logo" href="/">Outdoor Resorts <span>Gatlinburg</span></a>
-    <ul class="nav__links">
-      <li><a class="nav__browse" href="/rentals.html">Browse Rentals &rarr;</a></li>
-      <li><a href="/stay-guide.html">Stay Guide</a></li>
-      <li class="nav__drop">
-        <a href="/things-to-do.html">Explore &#9662;</a>
-        <ul class="nav__dropdown">
-          <li><a href="/things-to-do.html">Things to Do</a></li>
-          <li><a href="/dining-near-the-resort.html">Dining Near the Resort</a></li>
-          <li><a href="/great-smoky-mountains.html">Great Smoky Mountains</a></li>
-          <li><a href="/dollywood.html">Dollywood</a></li>
-          <li><a href="/rocky-top-sports-world.html">Rocky Top Sports World</a></li>
-        </ul>
-      </li>
-      <li><a href="/investing-units-for-sale.html">Investing / Units for Sale</a></li>
-      <li><a class="nav__cta" href="/list-your-rv.html">List Your RV</a></li>
+<nav>
+  <div class="nav-inner">
+    <a class="nav-logo" href="https://outdoorresortsgatlinburg.com/">Outdoor Resorts Gatlinburg</a>
+    <ul class="nav-links">
+      <li><a href="https://outdoorresortsgatlinburg.com/rentals">Browse Rentals →</a></li>
+      <li><a href="https://outdoorresortsgatlinburg.com/stay-guide">Stay Guide</a></li>
+      <li><a href="https://outdoorresortsgatlinburg.com/things-to-do">Explore</a></li>
+      <li><a href="https://outdoorresortsgatlinburg.com/investing-units-for-sale.html">Investing</a></li>
+      <li><a href="https://outdoorresortsgatlinburg.com/list-your-rv">List Your RV</a></li>
     </ul>
   </div>
 </nav>
 
-<header class="article-hero">
-  <div class="container">
-    <p class="eyebrow">Rental Income &bull; Investor Resources</p>
-    <h1>What Do ORG Lots Actually Rent For?</h1>
-    <p>Realistic seasonal rates, the full fee picture, and a conservative year-one income model. What you should expect before you buy, not after.</p>
+<section class="article-hero">
+  <div class="article-hero-bg"></div>
+  <div class="article-hero-content">
+    <p class="article-eyebrow">Rental Income</p>
+    <h1>What do ORG lots actually rent for? A realistic look at short-term rental income</h1>
   </div>
-</header>
+</section>
 
-<div class="article-body">
+<div class="article-wrap">
+  <div class="breadcrumb">
+    <a href="https://outdoorresortsgatlinburg.com/">Home</a>
+    <span>›</span>
+    <a href="https://outdoorresortsgatlinburg.com/investing-units-for-sale.html">Investing</a>
+    <span>›</span>
+    Rental income guide
+  </div>
+  <p class="article-meta">Outdoor Resorts Gatlinburg · Rental Income Guide</p>
 
-  <p>There's no shortage of optimistic rental income projections in real estate marketing. This article tries to do the opposite: build a conservative, realistic picture of what an ORG lot can generate in year one, and what drives the gap between top performers and average units.</p>
+  <p>One of the first questions any prospective buyer asks is: what can I actually make renting this out? It's the right question. And it deserves an honest answer — not the best-case number a seller might pitch, and not an overly pessimistic projection either.</p>
 
-  <h2>Seasonal rate ranges by lot position</h2>
+  <p>This article breaks down nightly rates by season, the fees that come off the top, what owners realistically net in year one, and what separates high-performing listings from average ones at Outdoor Resorts Gatlinburg.</p>
 
-  <p>Rates at ORG follow the Smoky Mountain tourism calendar closely. Summer (June–August) and fall foliage season (October) are peak. Spring (April–May) and the winter holiday stretch (Thanksgiving through New Year's) are strong shoulder. January through March is the slowest stretch — though the Smokies see less of a winter cliff than many other vacation markets.</p>
+  <h2>The Smoky Mountain rental market context</h2>
 
-  <table class="rate-table">
-    <thead>
-      <tr>
-        <th>Season</th>
-        <th>Creekside lots</th>
-        <th>Lake-area lots</th>
-        <th>Interior lots</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr><td>Peak (summer + fall foliage)</td><td>$180–$250/night</td><td>$150–$210/night</td><td>$130–$180/night</td></tr>
-      <tr><td>Shoulder (spring + holiday)</td><td>$120–$170/night</td><td>$100–$150/night</td><td>$90–$130/night</td></tr>
-      <tr><td>Slow (Jan–Mar)</td><td>$85–$120/night</td><td>$75–$110/night</td><td>$70–$100/night</td></tr>
-      <tr><td>Holiday premium (4th of July, Labor Day)</td><td>$200–$280+/night</td><td>$170–$240+/night</td><td>$150–$200+/night</td></tr>
-    </tbody>
-  </table>
+  <p>Gatlinburg and the surrounding Smoky Mountain corridor is one of the most visited tourist destinations in the United States. The Great Smoky Mountains National Park consistently ranks as the most visited national park in the country, drawing tens of millions of visitors annually. That underlying demand base is what makes short-term rental investment in this area so attractive — and so competitive.</p>
 
-  <p>These are gross nightly rates — what a guest pays before platform fees are extracted. The net rate per night to the owner is lower; see the fee section below.</p>
+  <p>Within that market, ORG sits in a specific niche: a privately owned RV resort with individually owned lots and campers, most available through platforms like Airbnb, VRBO, and Hipcamp. Renters are paying for the resort setting — the pond, the pools, the creek access, the community feel — as much as for any individual unit.</p>
 
-  <h2>Fee breakdown: what comes out before you see a dollar</h2>
+  <h2>Nightly rates by season</h2>
 
-  <table class="rate-table">
-    <thead>
-      <tr>
-        <th>Fee type</th>
-        <th>Typical range</th>
-        <th>Notes</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr><td>Platform fee (Airbnb host-only model)</td><td>15–20% of booking</td><td>Airbnb charges guests a separate guest fee; VRBO structures differently</td></tr>
-      <tr><td>Cleaning fee (per turnover)</td><td>$75–$150</td><td>Depends on unit size and setup; guests often pay this separately</td></tr>
-      <tr><td>HOA dues</td><td>Varies by lot</td><td>Covers resort amenities; confirm current amount in seller disclosure</td></tr>
-      <tr><td>Utilities (electric, water, sewer)</td><td>$80–$200/month</td><td>Higher in summer (AC); some lots have pass-through to guests</td></tr>
-      <tr><td>Insurance (RV + liability)</td><td>$800–$1,800/year</td><td>Short-term rental use may require endorsement or separate policy</td></tr>
-      <tr><td>Maintenance reserve</td><td>5–8% of gross</td><td>AC units, water heaters, appliances — budget even on newer units</td></tr>
-    </tbody>
-  </table>
-
-  <h2>Conservative year-one income model</h2>
-
-  <p>Year one is almost always below stabilized performance. You're building reviews, refining your listing, and learning your seasonal demand pattern. The model below assumes a mid-tier interior-to-lake-area lot with a quality but not premium camper unit.</p>
-
-  <div class="income-model">
-    <div class="income-model__header">
-      <h4>Year-one conservative model — mid-tier lot</h4>
-      <p>Assumes 65% occupancy, 150 nights rented, average net rate $125/night</p>
+  <div class="season-grid">
+    <div class="season-card">
+      <h4>Peak season</h4>
+      <div class="rate">$130–$250/night</div>
+      <p>Memorial Day through Labor Day, fall color weekends (mid-Oct), major holidays. Highest occupancy and rates of the year.</p>
     </div>
-    <div class="income-model__row">
-      <span class="income-model__label">Gross rental revenue (150 nights × $155 avg. gross rate)</span>
-      <span class="income-model__value">$23,250</span>
+    <div class="season-card">
+      <h4>Shoulder season</h4>
+      <div class="rate">$90–$150/night</div>
+      <p>Spring wildflower season (April–May), early fall. Strong demand but softer than peak. Good occupancy with competitive pricing.</p>
     </div>
-    <div class="income-model__row deduction">
-      <span class="income-model__label">Platform fees (~18%)</span>
-      <span class="income-model__value">− $4,185</span>
+    <div class="season-card">
+      <h4>Holiday weekends</h4>
+      <div class="rate">$150–$250+/night</div>
+      <p>July 4th, Thanksgiving, Christmas/New Year's. Some of the highest rates and fastest-booking nights of the year.</p>
     </div>
-    <div class="income-model__row deduction">
-      <span class="income-model__label">Cleaning (avg. 3-night stay = 50 turnovers × $100)</span>
-      <span class="income-model__value">− $5,000</span>
-    </div>
-    <div class="income-model__row deduction">
-      <span class="income-model__label">HOA dues (annual estimate)</span>
-      <span class="income-model__value">− $2,400</span>
-    </div>
-    <div class="income-model__row deduction">
-      <span class="income-model__label">Utilities</span>
-      <span class="income-model__value">− $1,600</span>
-    </div>
-    <div class="income-model__row deduction">
-      <span class="income-model__label">Insurance</span>
-      <span class="income-model__value">− $1,200</span>
-    </div>
-    <div class="income-model__row deduction">
-      <span class="income-model__label">Maintenance reserve (6%)</span>
-      <span class="income-model__value">− $1,395</span>
-    </div>
-    <div class="income-model__row total">
-      <span class="income-model__label">Net operating income (before debt service)</span>
-      <span class="income-model__value">~$7,470</span>
+    <div class="season-card">
+      <h4>Winter / slow season</h4>
+      <div class="rate">$70–$110/night</div>
+      <p>January through March. Slowest period. Owners who price competitively and maintain strong reviews can still generate bookings.</p>
     </div>
   </div>
 
-  <p>By year two, with established reviews and better seasonal pricing strategy, gross typically climbs to $26K–$32K, and NOI rises accordingly. Top-performing creekside lots with premium camper setups have reported gross revenue of $35K–$45K in strong years — but those are outliers with specific location and presentation advantages.</p>
+  <h2>What comes off the top</h2>
+
+  <p>Gross nightly rate and net income are very different numbers. Before you model cash flow, you need to account for every layer of cost that sits between a guest's payment and your bank account.</p>
+
+  <table class="fee-table">
+    <thead>
+      <tr><th>Cost Item</th><th>Typical Range</th><th>Notes</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>Platform fee (Airbnb/VRBO)</td><td>3–5% host fee</td><td>Guest also pays a service fee on top — doesn't reduce your payout but affects booking conversion</td></tr>
+      <tr><td>Cleaning fee (if charged)</td><td>$75–$150/booking</td><td>Often passed to guest — structure this to cover your actual cost</td></tr>
+      <tr><td>HOA / resort fees</td><td>~$100–$200/mo</td><td>Covers pool, pond, amenities, grounds — a genuine selling point in your listing</td></tr>
+      <tr><td>Utilities (electric, water)</td><td>$50–$150/mo</td><td>Varies by season and RV size</td></tr>
+      <tr><td>Insurance</td><td>$100–$200/mo</td><td>STR-specific coverage recommended</td></tr>
+      <tr><td>Supplies / restocking</td><td>$30–$75/mo</td><td>Consumables for guests: paper goods, basic toiletries, etc.</td></tr>
+      <tr class="total"><td>Total monthly overhead (est.)</td><td>$380–$775/mo</td><td>Before debt service</td></tr>
+    </tbody>
+  </table>
+
+  <h2>A realistic year-one model</h2>
+
+  <p>A conservatively managed lot with a well-presented late-model camper, priced competitively, might realistically achieve the following in year one:</p>
+
+  <ul>
+    <li>Peak months (June, July, August, October): 20–25 booked nights at $150–$200/night</li>
+    <li>Shoulder months (April, May, September, November): 12–18 booked nights at $100–$140/night</li>
+    <li>Slow months (December, January, February, March): 6–10 booked nights at $80–$110/night</li>
+  </ul>
+
+  <p>Running that out conservatively across 12 months puts gross revenue in the $18,000–$28,000 range for a well-managed first year. After platform fees and operating costs, net operating income before debt service typically lands in the $12,000–$20,000 range.</p>
 
   <div class="callout">
-    <p>The conservative year-one range across the ORG market is approximately $18,000–$28,000 gross, with $7,000–$14,000 NOI before debt service. Where you land in that range depends more on lot position and listing quality than on any single factor you can't control.</p>
+    <p>Year one is almost always the weakest year. Listings with no reviews start at a disadvantage. Owners who invest in photography, thoughtful amenities, and responsive communication build review velocity faster and see occupancy improve significantly by year two.</p>
   </div>
 
-  <h2>What separates top performers from average units</h2>
+  <h2>What separates top performers</h2>
 
-  <p><strong>Lot location:</strong> Creekside lots outperform on both rate and occupancy. The sound of running water is a legitimate differentiator in a market with competing inventory. Lake-area lots have strong demand. Interior lots compete primarily on price and presentation quality.</p>
+  <p>Within any resort community, a meaningful gap exists between listings that consistently outperform and those that just get by. At ORG, the differentiators are predictable:</p>
 
-  <p><strong>Photos:</strong> Professional photography — or even a clean smartphone shoot with good natural light — has a measurable impact on booking conversion. A listing with twelve high-quality photos outperforms one with four mediocre photos at the same price point, consistently.</p>
+  <ul>
+    <li>Professional photography — listings with quality photos book at higher rates and faster</li>
+    <li>A clean, modern interior — guests compare your listing to everything else on the platform, not just other RVs</li>
+    <li>A well-maintained outdoor space — a fire pit, outdoor seating, string lights, and a tidy lot make a real difference in nightly rate</li>
+    <li>Responsive communication and fast review responses — Airbnb's algorithm rewards hosts who engage quickly</li>
+    <li>Competitive but not desperate pricing — underpricing trains guests to expect low rates and attracts difficult guests</li>
+    <li>Accurate, specific descriptions — guests who know what to expect leave better reviews</li>
+  </ul>
 
-  <p><strong>Setup and outdoor space:</strong> Guests at ORG are paying for an outdoor experience. A covered outdoor area, quality chairs, a functional grill, and string lights convert browsers into bookers. These are low-cost improvements with high visibility in listing photos.</p>
+  <h2>The lot location factor</h2>
 
-  <p><strong>Review velocity:</strong> Platform algorithms reward new listings with visibility — temporarily. That initial boost matters. Coming in with a clean, well-staged unit and a responsive host profile helps you capture that early window and build the review count that sustains ranking afterward.</p>
+  <p>Not all lots at ORG have equal rental appeal. Creekside lots command a premium — the sound of running water is a genuine selling point that guests specifically search for and pay more to get. Lake-view lots also outperform interior lots consistently. If you're evaluating a purchase with rental income as a primary goal, lot location within the resort matters as much as the camper on it.</p>
 
-  <p><strong>Pricing strategy:</strong> Using dynamic pricing tools (Wheelhouse, PriceLabs, Beyond) rather than flat rates can improve annual revenue by 10–18% by capturing demand spikes at events, holidays, and peak weekends without leaving money on the table during slower stretches.</p>
-
-  <h2>Location ladder at ORG</h2>
-
-  <p>In order of rental income potential: <strong>creekside &gt; lake-adjacent &gt; near amenities (pool, playground) &gt; interior</strong>. This order holds consistently. When evaluating a specific lot, ask for the lot's rental history and cross-reference against its map position. A lot that underperforms relative to its position usually has a presentation or management explanation, not a structural one.</p>
-
-  <div class="cta-band">
-    <h3>Want rental income data for a specific lot?</h3>
-    <p>Tell us which scenario fits you and we'll follow up with current numbers.</p>
-    <a href="/investing-units-for-sale.html#contact">Talk to an agent &rarr;</a>
+  <div class="disclaimer">
+    Rental income figures in this article represent estimated ranges based on general knowledge of the Smoky Mountain STR market and are not guarantees of performance. Actual results depend on property condition, listing quality, platform choice, seasonal conditions, and management approach. Past performance of comparable listings does not guarantee future results. Consult a licensed real estate professional before making investment decisions.
   </div>
 
+  <div class="article-cta">
+    <h3>Want to talk through the numbers for a specific lot?</h3>
+    <p>I'm an owner at Outdoor Resorts Gatlinburg and a licensed Tennessee real estate agent. I can walk you through current listings and what realistic rental income looks like for specific lot types.</p>
+    <a href="https://outdoorresortsgatlinburg.com/investing-units-for-sale.html#contact">Start the conversation →</a>
+  </div>
 </div>
 
-<footer class="footer">
-  <div class="container">
-    <div class="footer__grid">
-      <div>
-        <p class="footer__brand">Outdoor Resorts Gatlinburg</p>
-        <p>Sevierville, TN 37876</p>
-        <p style="margin-top:12px;font-size:.78rem;line-height:1.55;">Not affiliated with Outdoor Resorts of America. Content is informational only and does not constitute financial, tax, or legal advice.</p>
-      </div>
-      <div><h3>Stay</h3><ul><li><a href="/rentals.html">Browse Rentals</a></li><li><a href="/stay-guide.html">Stay Guide</a></li></ul></div>
-      <div><h3>Invest</h3><ul><li><a href="/investing-units-for-sale.html">Investing / Units for Sale</a></li><li><a href="/list-your-rv.html">List Your RV</a></li></ul></div>
-    </div>
-    <div class="footer__bottom">
-      <span>&copy; 2026 OutdoorResortsGatlinburg.com</span>
-      <span>Sevierville, TN &bull; Not financial advice</span>
-    </div>
-  </div>
+<footer>
+  <p>
+    <a href="https://outdoorresortsgatlinburg.com/">OutdoorResortsGatlinburg.com</a> &nbsp;·&nbsp;
+    4229 East Parkway, Gatlinburg, TN 37738 &nbsp;·&nbsp;
+    Independent resort information and RV rental directory<br>
+    This page is for informational purposes only and does not constitute legal, tax, or financial advice.
+  </p>
 </footer>
-
 </body>
 </html>
