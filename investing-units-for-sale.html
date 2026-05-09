@@ -3,12 +3,483 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Investing & Units for Sale | Outdoor Resorts Gatlinburg</title>
-  <meta name="description" content="Information for buyers, owners, and investors interested in Outdoor Resorts Gatlinburg RV lots, RV rentals, lot rental potential, and short-term rental consulting." />
+  <title>Outdoor Resorts Gatlinburg Lots for Sale — An Investor's Guide</title>
+  <meta name="description" content="Three paths to owning an RV lot at Outdoor Resorts Gatlinburg: finance it, use what you have, or roll gains via a 1031 exchange. Rental income projections, lot values, and what to know before you offer." />
+  <link rel="canonical" href="https://outdoorresortsgatlinburg.com/investing-units-for-sale.html" />
   <link rel="stylesheet" href="styles.css" />
+  <style>
+    .scenario-nav { position: sticky; top: 74px; z-index: 15; background: #fff; border-bottom: 1px solid var(--line); }
+    .scenario-nav__inner { display: flex; overflow-x: auto; }
+    .scenario-tab { flex: 1; min-width: 150px; display: flex; align-items: center; justify-content: center; min-height: 52px; padding: 0 20px; border-right: 1px solid var(--line); font-size: .84rem; font-weight: 800; color: var(--muted); text-decoration: none; white-space: nowrap; transition: background .18s, color .18s; }
+    .scenario-tab:last-child { border-right: none; }
+    .scenario-tab:hover { background: var(--mist); color: var(--forest); }
+    .scenario-tab--cta { background: var(--forest); color: #fff !important; }
+    .scenario-tab--cta:hover { background: var(--forest-dark); }
+    .path-cards { display: grid; grid-template-columns: repeat(3,1fr); gap: 14px; margin-top: 36px; }
+    .path-card { padding: 22px 20px 24px; background: var(--forest); border-radius: 8px; color: #fff; text-decoration: none; display: block; transition: background .2s; }
+    .path-card:hover { background: var(--forest-dark); }
+    .path-card__num { display: block; font-size: .7rem; font-weight: 900; letter-spacing: .16em; color: var(--gold); margin-bottom: 8px; text-transform: uppercase; }
+    .path-card__title { display: block; font-family: "Playfair Display", serif; font-size: 1.1rem; line-height: 1.2; margin-bottom: 6px; }
+    .path-card__desc { display: block; font-size: .82rem; color: rgba(255,255,255,.72); line-height: 1.45; }
+    .insight-grid { display: grid; grid-template-columns: repeat(2,1fr); gap: 14px; margin-top: 22px; }
+    .insight-card { padding: 20px; border: 1px solid var(--line); border-radius: 8px; background: #fff; }
+    .insight-card h4 { margin: 0 0 7px; font-family: "Playfair Display", serif; font-size: 1rem; line-height: 1.2; color: var(--forest-dark); }
+    .insight-card p { margin: 0; font-size: .87rem; color: var(--muted); font-weight: 600; line-height: 1.5; }
+    .consider-block { margin-top: 28px; padding: 24px 28px; background: var(--stone); border: 1px solid var(--line); border-radius: 8px; }
+    .consider-block h4 { margin: 0 0 14px; font-family: "Playfair Display", serif; font-size: 1.08rem; }
+    .consider-block ul { margin: 0; padding-left: 20px; color: var(--muted); font-size: .89rem; font-weight: 600; line-height: 1.55; }
+    .consider-block li + li { margin-top: 8px; }
+    .warn-card { display: flex; gap: 14px; align-items: flex-start; margin: 22px 0; padding: 18px 20px; background: rgba(216,164,72,.13); border: 1px solid rgba(216,164,72,.45); border-radius: 8px; }
+    .warn-card__icon { font-size: 1.3rem; flex-shrink: 0; line-height: 1.4; }
+    .warn-card p { margin: 0; font-size: .9rem; font-weight: 700; color: #5a4010; line-height: 1.5; }
+    .timeline-block { margin-top: 28px; padding: 24px 28px; background: var(--mist); border: 1px solid var(--line); border-radius: 8px; }
+    .timeline-block h4 { margin: 0 0 16px; font-family: "Playfair Display", serif; font-size: 1.08rem; }
+    .timeline-steps { display: grid; gap: 10px; }
+    .timeline-step { display: flex; gap: 14px; align-items: flex-start; }
+    .timeline-step__dot { flex-shrink: 0; width: 30px; height: 30px; border-radius: 50%; background: var(--forest); color: #fff; font-size: .74rem; font-weight: 900; display: flex; align-items: center; justify-content: center; margin-top: 2px; }
+    .timeline-step__body { flex: 1; }
+    .timeline-step__body strong { display: block; font-size: .9rem; font-weight: 800; color: var(--forest-dark); margin-bottom: 3px; }
+    .timeline-step__body span { font-size: .84rem; color: var(--muted); font-weight: 600; }
+    .blog-grid-section { background: var(--stone); }
+    .blog-card { display: flex; flex-direction: column; overflow: hidden; border: 1px solid var(--line); border-radius: 8px; background: #fff; box-shadow: 0 6px 24px rgba(23,35,31,.07); }
+    .blog-card__img { height: 175px; overflow: hidden; background: var(--line); }
+    .blog-card__img img { width: 100%; height: 100%; object-fit: cover; transition: transform .3s; }
+    .blog-card:hover .blog-card__img img { transform: scale(1.04); }
+    .blog-card__body { flex: 1; display: flex; flex-direction: column; padding: 20px; }
+    .blog-card__tag { font-size: .7rem; font-weight: 900; letter-spacing: .1em; text-transform: uppercase; color: var(--river); margin: 0 0 6px; }
+    .blog-card h3 { margin: 0 0 8px; font-family: "Playfair Display", serif; font-size: 1.02rem; line-height: 1.22; color: var(--text); }
+    .blog-card p { margin: 0 0 16px; font-size: .86rem; color: var(--muted); line-height: 1.5; flex: 1; }
+    .read-link { font-size: .84rem; font-weight: 800; color: var(--forest); text-decoration: none; }
+    .read-link:hover { color: var(--forest-dark); }
+    .contact-section { background: var(--forest-dark); color: #fff; padding: 82px 0; }
+    .contact-grid { display: grid; grid-template-columns: 1fr 1.1fr; gap: 56px; align-items: start; }
+    .contact-copy h2 { font-family: "Playfair Display", serif; font-size: clamp(1.8rem,3vw,2.4rem); line-height: 1.12; margin: 0 0 16px; }
+    .contact-copy p { color: rgba(255,255,255,.78); font-size: .95rem; line-height: 1.6; margin: 0 0 14px; }
+    .contact-copy ul { padding-left: 18px; color: rgba(255,255,255,.72); font-size: .9rem; font-weight: 600; line-height: 1.7; margin: 0; }
+    .contact-form { display: grid; gap: 14px; }
+    .contact-form label { display: block; font-size: .7rem; font-weight: 900; letter-spacing: .1em; text-transform: uppercase; color: rgba(255,255,255,.65); margin-bottom: 5px; }
+    .contact-form input, .contact-form select, .contact-form textarea { width: 100%; padding: 11px 14px; border: 1px solid rgba(255,255,255,.22); border-radius: 8px; background: rgba(255,255,255,.08); color: #fff; font: inherit; font-size: .92rem; }
+    .contact-form input:focus, .contact-form select:focus, .contact-form textarea:focus { outline: 2px solid var(--gold); outline-offset: 2px; }
+    .contact-form textarea { min-height: 100px; resize: vertical; }
+    .contact-form input::placeholder, .contact-form textarea::placeholder { color: rgba(255,255,255,.35); }
+    .contact-form select option { color: #111; background: #fff; }
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+    .submit-btn { width: 100%; min-height: 50px; border: none; border-radius: 8px; background: var(--clay); color: #fff; font: inherit; font-size: .95rem; font-weight: 800; cursor: pointer; transition: background .2s; }
+    .submit-btn:hover { background: #a04226; }
+    @media (max-width:900px) {
+      .path-cards, .insight-grid, .contact-grid { grid-template-columns: 1fr; }
+      .form-row { grid-template-columns: 1fr; }
+    }
+    @media (max-width:560px) { .path-cards { grid-template-columns: 1fr; } }
+  </style>
 </head>
 <body>
-  <nav class="nav"><div class="container nav__inner"><a class="nav__logo" href="/">Outdoor Resorts <span>Gatlinburg</span></a><ul class="nav__links"><li><a class="nav__browse" href="/rentals.html">Browse Rentals &rarr;</a></li><li><a href="/stay-guide.html">Stay Guide</a></li><li class="nav__drop"><a href="/things-to-do.html">Explore &#9662;</a><ul class="nav__dropdown"><li><a href="/things-to-do.html">Things to Do</a></li><li><a href="/dining-near-the-resort.html">Dining Near the Resort</a></li><li><a href="/great-smoky-mountains.html">Great Smoky Mountains</a></li><li><a href="/dollywood.html">Dollywood</a></li><li><a href="/rocky-top-sports-world.html">Rocky Top Sports World</a></li></ul></li><li><a class="active" href="/investing-units-for-sale.html">Investing / Units for Sale</a></li><li><a class="nav__cta" href="/list-your-rv.html">List Your RV</a></li></ul></div></nav>
-  <header class="page-hero"><div class="container"><p class="eyebrow">Ownership</p><h1>Investing in Outdoor Resorts Gatlinburg rentals</h1><p>A future funnel for units for sale, lot ownership, rental income questions, short-term rental consulting, and real estate conversations.</p></div></header>
+
+<nav class="nav">
+  <div class="container nav__inner">
+    <a class="nav__logo" href="/">Outdoor Resorts <span>Gatlinburg</span></a>
+    <ul class="nav__links">
+      <li><a class="nav__browse" href="/rentals.html">Browse Rentals &rarr;</a></li>
+      <li><a href="/stay-guide.html">Stay Guide</a></li>
+      <li class="nav__drop">
+        <a href="/things-to-do.html">Explore &#9662;</a>
+        <ul class="nav__dropdown">
+          <li><a href="/things-to-do.html">Things to Do</a></li>
+          <li><a href="/dining-near-the-resort.html">Dining Near the Resort</a></li>
+          <li><a href="/great-smoky-mountains.html">Great Smoky Mountains</a></li>
+          <li><a href="/dollywood.html">Dollywood</a></li>
+          <li><a href="/rocky-top-sports-world.html">Rocky Top Sports World</a></li>
+        </ul>
+      </li>
+      <li><a class="active" href="/investing-units-for-sale.html">Investing / Units for Sale</a></li>
+      <li><a class="nav__cta" href="/list-your-rv.html">List Your RV</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <img class="hero__image" src="https://outdoorresortsgatlinburg.com/Assets/OutdoorResortsHero.MOV.png" alt="Aerial view of Outdoor Resorts Gatlinburg" />
+  <div class="hero__overlay"></div>
+  <div class="hero__content">
+    <div class="container">
+      <p class="eyebrow">Ownership &amp; Investing</p>
+      <h1>Outdoor Resorts Gatlinburg lots for&nbsp;sale — an investor's guide</h1>
+      <p>Most buyers come in through one of three doors: they finance the lot and a new RV, they place a camper they already own, or they roll gains from a previous sale tax-deferred. Each path has a different math and a different risk profile.</p>
+      <div class="path-cards">
+        <a class="path-card" href="#scenario-1">
+          <span class="path-card__num">01 — Finance It</span>
+          <span class="path-card__title">Lot + RV loan</span>
+          <span class="path-card__desc">Buy the lot and finance a new or used RV. Rental income reshapes the debt math significantly.</span>
+        </a>
+        <a class="path-card" href="#scenario-2">
+          <span class="path-card__num">02 — Use What You Have</span>
+          <span class="path-card__title">Lot + existing camper</span>
+          <span class="path-card__desc">Place a camper you already own. Often the best risk profile — you arrive with equity and a unit ready to rent.</span>
+        </a>
+        <a class="path-card" href="#scenario-3">
+          <span class="path-card__num">03 — 1031 Exchange</span>
+          <span class="path-card__title">Roll gains tax-deferred</span>
+          <span class="path-card__desc">Defer capital gains from a sold investment property into a lot at ORG. Timelines and tax rules apply.</span>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SCENARIO NAV -->
+<nav class="scenario-nav" aria-label="Investment scenarios">
+  <div class="scenario-nav__inner">
+    <a class="scenario-tab" href="#scenario-1">Finance It (lot + RV loan)</a>
+    <a class="scenario-tab" href="#scenario-2">Use What You Have (lot + existing camper)</a>
+    <a class="scenario-tab" href="#scenario-3">1031 Exchange (roll gains tax-deferred)</a>
+    <a class="scenario-tab scenario-tab--cta" href="#contact">Talk to an Agent</a>
+  </div>
+</nav>
+
+<!-- SCENARIO 1 -->
+<section id="scenario-1" class="section">
+  <div class="container">
+    <div class="split">
+      <div class="split__image">
+        <img src="https://outdoorresortsgatlinburg.com/Assets/B Roll 1.png" alt="Aerial road view through Outdoor Resorts Gatlinburg" loading="lazy" />
+      </div>
+      <div>
+        <p class="eyebrow">Scenario 01</p>
+        <h2>Buying a lot and financing an RV</h2>
+        <p style="color:var(--muted);font-weight:600;margin:0 0 6px;">This is the highest-cost entry path. Two loans, two debt service obligations — but rental income can change the math more than most buyers expect before they run the numbers.</p>
+        <div class="insight-grid">
+          <div class="insight-card">
+            <h4>The lot financing challenge</h4>
+            <p>RV lots at ORG don't always qualify for conventional 30-year mortgages. Expect land loans or portfolio lenders at 10–20% down, often with shorter amortization (15–20 years). Rate and term vary. Get pre-approved before you identify a lot.</p>
+          </div>
+          <div class="insight-card">
+            <h4>RV loan pressure</h4>
+            <p>RV loans are personal property loans — typically 10–20 years, rates ranging 7–11% depending on year and credit. A $60K RV at 9% over 15 years is roughly $610/month. That number needs to live comfortably inside your rental revenue forecast.</p>
+          </div>
+          <div class="insight-card">
+            <h4>How rental income changes the math</h4>
+            <p>A well-positioned lot with a quality unit can generate $18K–$28K gross annually. At $22K gross with a 35% expense ratio, you're netting ~$14,300 — enough to cover most RV loan payments and contribute toward lot debt service.</p>
+          </div>
+          <div class="insight-card">
+            <h4>What to run before you offer</h4>
+            <p>Model three scenarios: conservative (slow ramp, 55% occupancy), base (75% occupancy by year two), and optimistic (top-performer, creekside location). Know your breakeven occupancy rate. If the unit needs to hit 80% to be cash-flow positive, that's a risk flag.</p>
+          </div>
+          <div class="insight-card">
+            <h4>HOA fees as a marketing asset</h4>
+            <p>ORG's HOA dues cover amenities guests actually pay for: pool, putt-putt, playground, event calendar. Don't treat HOA as pure overhead — it supports the nightly rate and occupancy you're underwriting against.</p>
+          </div>
+          <div class="insight-card">
+            <h4>Two loans means two exit options</h4>
+            <p>If you later want to reduce exposure, you can sell the RV and continue renting the lot to others, or sell the lot-and-unit together as a turnkey investment. Keeping the assets separable is a structural advantage.</p>
+          </div>
+        </div>
+        <div class="consider-block">
+          <h4>Considerations before you proceed</h4>
+          <ul>
+            <li>Get pre-approved for a land/lot loan before making offers — not all lenders serve this asset class</li>
+            <li>Budget 8–12 months to reach stabilized occupancy; year one will underperform year two</li>
+            <li>Confirm HOA dues, lot-specific assessments, and any utility pass-throughs in the seller's disclosures</li>
+            <li>Ask for two to three years of rental history if the lot is an existing rental; verify against platform statements</li>
+            <li>Determine whether the RV qualifies as a second home for any tax purposes — consult your CPA</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SCENARIO 2 -->
+<section id="scenario-2" class="section section--stone">
+  <div class="container">
+    <div class="split" style="direction:rtl;">
+      <div class="split__image" style="direction:ltr;">
+        <img src="https://outdoorresortsgatlinburg.com/Assets/Fishing 2.jpeg" alt="Lake view at Outdoor Resorts Gatlinburg" loading="lazy" />
+      </div>
+      <div style="direction:ltr;">
+        <p class="eyebrow">Scenario 02</p>
+        <h2>Buying a lot and placing your existing camper</h2>
+        <p style="color:var(--muted);font-weight:600;margin:0 0 6px;">If you already own a travel trailer, fifth wheel, or motorhome and it's sitting in storage or in a driveway, this is frequently the most financially efficient path to ORG ownership.</p>
+        <div class="insight-grid">
+          <div class="insight-card">
+            <h4>Storage is a sunk cost</h4>
+            <p>RV storage in the Knoxville–Gatlinburg corridor runs $150–$500/month depending on covered vs. uncovered and facility quality. Over 10 years that's $18K–$60K with nothing to show for it. A lot purchase converts that monthly drain into equity-building debt service.</p>
+          </div>
+          <div class="insight-card">
+            <h4>The HELOC comparison</h4>
+            <p>If you have equity in a primary residence, a HELOC at current rates can fund the lot purchase with potentially deductible interest. The payment structure often mirrors what you were already spending on storage — except it builds toward an asset you own outright.</p>
+          </div>
+          <div class="insight-card">
+            <h4>Running the real numbers</h4>
+            <p>Lot prices at ORG vary by position. Creekside lots command a premium; interior lots offer better entry pricing and solid rental demand. Budget for closing costs, any HOA initiation fee, and whatever condition work the unit needs before its first rental.</p>
+          </div>
+          <div class="insight-card">
+            <h4>Why this has the best risk profile</h4>
+            <p>You arrive with one loan (the lot), not two. The RV is already paid for. Your cash-flow breakeven is lower, your debt service is simpler, and your personal use is fully available without displacing rental inventory you financed.</p>
+          </div>
+          <div class="insight-card">
+            <h4>What makes a good rental unit</h4>
+            <p>Guests book presentation. A clean, well-maintained unit with updated bedding, working AC, a functional outdoor kitchen or grill setup, and good photos outperforms a newer unit that photos poorly. Platform ratings compound — your first season sets your trajectory.</p>
+          </div>
+          <div class="insight-card">
+            <h4>Personal use and IRS rules</h4>
+            <p>If you rent for more than 14 days and use personally for more than 14 days or 10% of rental days, the IRS treats the property as a personal residence — which limits expense deductions. If investment intent is primary, document accordingly and consult your CPA.</p>
+          </div>
+        </div>
+        <div class="consider-block">
+          <h4>10-year math snapshot</h4>
+          <ul>
+            <li><strong>Storage cost (10 yrs @ $300/mo):</strong> $36,000 spent, no asset</li>
+            <li><strong>Lot loan (10 yrs, principal paydown):</strong> equity built, rental income partially offsets payments</li>
+            <li><strong>Net position difference at year 10:</strong> you own a Smoky Mountain lot vs. a receipt from a storage facility</li>
+            <li>This comparison sharpens further if rental income covers 50–80% of annual debt service</li>
+            <li>Lot appreciation in resort communities has historically trended positive — though past performance is not a guarantee</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SCENARIO 3 -->
+<section id="scenario-3" class="section">
+  <div class="container">
+    <div class="split">
+      <div class="split__image">
+        <img src="https://outdoorresortsgatlinburg.com/Assets/Rainbow over pond.jpg" alt="Rainbow over the pond at Outdoor Resorts Gatlinburg" loading="lazy" />
+      </div>
+      <div>
+        <p class="eyebrow">Scenario 03</p>
+        <h2>Using a 1031 exchange to invest at&nbsp;ORG</h2>
+        <p style="color:var(--muted);font-weight:600;margin:0 0 6px;">Investors who've sold rental properties, raw land, or other investment real estate can potentially defer capital gains taxes by rolling proceeds into an ORG lot — provided the exchange is structured correctly.</p>
+        <div class="insight-grid">
+          <div class="insight-card">
+            <h4>What a 1031 makes possible</h4>
+            <p>Under IRC §1031, you can defer federal capital gains tax on the sale of investment property by identifying a like-kind replacement within 45 days and closing within 180 days. An RV lot held for investment or rental purposes generally qualifies as like-kind real property.</p>
+          </div>
+          <div class="insight-card">
+            <h4>Lots with existing campers suit 1031 buyers</h4>
+            <p>A lot with a camper already in place is easier to identify quickly (a 1031 requirement) and can demonstrate rental income history — both useful when your QI needs to document investment intent and your lender needs to underwrite the asset.</p>
+          </div>
+          <div class="insight-card">
+            <h4>Depreciation: land vs. camper</h4>
+            <p>Land cannot be depreciated. The RV or camper on the lot, however, is personal property and may be depreciable as a business asset if the unit is held for rental. Your CPA can model cost segregation and depreciation schedules specific to your situation.</p>
+          </div>
+          <div class="insight-card">
+            <h4>Investment intent must be documented</h4>
+            <p>Personal use after acquisition can jeopardize investment property status. If you intend to also use the lot personally, document a clear rental-first policy, use a property management agreement, and limit personal use during the first one to two years of ownership.</p>
+          </div>
+        </div>
+        <div class="warn-card">
+          <span class="warn-card__icon">&#9888;</span>
+          <p>This page is informational only and does not constitute tax, legal, or financial advice. 1031 exchanges involve strict IRS timelines, qualified intermediary requirements, and significant tax consequences if mishandled. Consult a licensed CPA, qualified intermediary, and real estate attorney before proceeding.</p>
+        </div>
+        <div class="timeline-block">
+          <h4>1031 exchange timeline at a glance</h4>
+          <div class="timeline-steps">
+            <div class="timeline-step">
+              <div class="timeline-step__dot">1</div>
+              <div class="timeline-step__body">
+                <strong>Before you close the relinquished property</strong>
+                <span>Engage a qualified intermediary (QI). You cannot touch the proceeds — the QI must hold them.</span>
+              </div>
+            </div>
+            <div class="timeline-step">
+              <div class="timeline-step__dot">2</div>
+              <div class="timeline-step__body">
+                <strong>Day 0 — Relinquished property closes</strong>
+                <span>The 45-day and 180-day clocks start simultaneously on the closing date.</span>
+              </div>
+            </div>
+            <div class="timeline-step">
+              <div class="timeline-step__dot">3</div>
+              <div class="timeline-step__body">
+                <strong>Day 1–45 — Identification period</strong>
+                <span>Identify up to three replacement properties in writing to your QI. ORG lots with existing campers can be identified quickly — having a shortlist before Day 0 is strongly recommended.</span>
+              </div>
+            </div>
+            <div class="timeline-step">
+              <div class="timeline-step__dot">4</div>
+              <div class="timeline-step__body">
+                <strong>Day 46–180 — Exchange period</strong>
+                <span>Close on one or more of your identified replacement properties. The QI transfers proceeds directly to the closing — you never receive the funds.</span>
+              </div>
+            </div>
+            <div class="timeline-step">
+              <div class="timeline-step__dot">5</div>
+              <div class="timeline-step__body">
+                <strong>Post-close — Document investment intent</strong>
+                <span>Establish a rental program, limit personal use, and maintain records. Your CPA will need this documentation at tax time.</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BLOG SECTION -->
+<section class="section blog-grid-section">
+  <div class="container">
+    <div class="section__head">
+      <p class="eyebrow">Investor Resources</p>
+      <h2>Articles for buyers thinking seriously about ORG</h2>
+      <p>Honest breakdowns of rental income, financing options, tax strategies, and what the lot map actually tells you about investment potential.</p>
+    </div>
+    <div class="card-grid">
+      <div class="blog-card">
+        <div class="blog-card__img">
+          <img src="https://outdoorresortsgatlinburg.com/Assets/B Roll 2.png" alt="Creek and fall foliage at Outdoor Resorts Gatlinburg" loading="lazy" />
+        </div>
+        <div class="blog-card__body">
+          <p class="blog-card__tag">Comparison</p>
+          <h3>RV Lot vs. Smoky Mountain Cabin: Which Investment Actually Cash Flows?</h3>
+          <p>Purchase price, debt service, nightly rates, and breakeven occupancy — a side-by-side look at two popular Smoky Mountain investment vehicles.</p>
+          <a class="read-link" href="/blog/rv-lot-vs-smoky-mountain-cabin.html">Read article &rarr;</a>
+        </div>
+      </div>
+      <div class="blog-card">
+        <div class="blog-card__img">
+          <img src="https://outdoorresortsgatlinburg.com/Assets/Rainbow over pond.jpg" alt="Pond at Outdoor Resorts Gatlinburg" loading="lazy" />
+        </div>
+        <div class="blog-card__body">
+          <p class="blog-card__tag">Rental Income</p>
+          <h3>What Do ORG Lots Actually Rent For?</h3>
+          <p>Realistic seasonal rates, fee breakdowns, and a conservative year-one income model based on lot location and unit quality.</p>
+          <a class="read-link" href="/blog/outdoor-resorts-gatlinburg-rental-income.html">Read article &rarr;</a>
+        </div>
+      </div>
+      <div class="blog-card">
+        <div class="blog-card__img">
+          <img src="https://outdoorresortsgatlinburg.com/Assets/Fishing 2.jpeg" alt="Lake view at Outdoor Resorts Gatlinburg" loading="lazy" />
+        </div>
+        <div class="blog-card__body">
+          <p class="blog-card__tag">Financing</p>
+          <h3>How to Use a HELOC to Buy an RV Lot — and Why It Beats Paying Storage</h3>
+          <p>Ten-year math: storage costs vs. HELOC payments with rental income offsetting the difference. The numbers tell a clear story.</p>
+          <a class="read-link" href="/blog/heloc-rv-lot-vs-storage.html">Read article &rarr;</a>
+        </div>
+      </div>
+      <div class="blog-card">
+        <div class="blog-card__img">
+          <img src="https://outdoorresortsgatlinburg.com/Assets/Community.jpg" alt="Community at Outdoor Resorts Gatlinburg" loading="lazy" />
+        </div>
+        <div class="blog-card__body">
+          <p class="blog-card__tag">Tax Strategy</p>
+          <h3>What to Know About 1031 Exchanges Into RV Resort Property</h3>
+          <p>How 1031 exchanges work, why RV lots qualify, and what buyers need to get right about timelines, QIs, and depreciation.</p>
+          <a class="read-link" href="/blog/1031-exchange-rv-resort-property.html">Read article &rarr;</a>
+        </div>
+      </div>
+      <div class="blog-card">
+        <div class="blog-card__img">
+          <img src="https://outdoorresortsgatlinburg.com/Assets/Campground Map.png" alt="ORG campground map" loading="lazy" />
+        </div>
+        <div class="blog-card__body">
+          <p class="blog-card__tag">Buyer's Guide</p>
+          <h3>Know the Layout Before You Buy: An ORG Lot Map Walkthrough for Investors</h3>
+          <p>Creekside vs. lake-area vs. interior lots — what each position means for rental demand, nightly rate, and long-term value.</p>
+          <a class="read-link" href="/blog/org-lot-map-buyers-guide.html">Read article &rarr;</a>
+        </div>
+      </div>
+      <div class="blog-card">
+        <div class="blog-card__img">
+          <img src="https://outdoorresortsgatlinburg.com/Assets/Pool.jpeg" alt="Pool at Outdoor Resorts Gatlinburg" loading="lazy" />
+        </div>
+        <div class="blog-card__body">
+          <p class="blog-card__tag">Long-Term Strategy</p>
+          <h3>Invest Now, Retire Here: Buying an ORG Lot With the Long Game in Mind</h3>
+          <p>A two-phase model: rental income carries the property during earning years; a debt-free Smoky Mountain retreat waits at the end.</p>
+          <a class="read-link" href="/blog/rv-lot-retirement-investment.html">Read article &rarr;</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="contact-section">
+  <div class="container">
+    <div class="contact-grid">
+      <div class="contact-copy">
+        <p class="eyebrow" style="color:var(--gold);">Get in Touch</p>
+        <h2>Ready to run the numbers on an ORG lot?</h2>
+        <p>Whether you're financing, placing an existing camper, or working through a 1031 exchange, the right conversation starts with the right information. Tell us where you are and we'll follow up with details specific to your scenario.</p>
+        <ul>
+          <li>Current lot availability and pricing</li>
+          <li>Rental income data for comparable lots</li>
+          <li>Introductions to lenders familiar with this asset class</li>
+          <li>1031 exchange timeline guidance (with your advisors)</li>
+        </ul>
+      </div>
+      <div>
+        <form class="contact-form" name="investor-contact" method="POST" data-netlify="true" action="/thank-you">
+          <input type="hidden" name="form-name" value="investor-contact" />
+          <div class="form-row">
+            <div>
+              <label for="ic-name">Full name</label>
+              <input type="text" id="ic-name" name="name" placeholder="Jane Smith" required />
+            </div>
+            <div>
+              <label for="ic-email">Email address</label>
+              <input type="email" id="ic-email" name="email" placeholder="jane@example.com" required />
+            </div>
+          </div>
+          <div>
+            <label for="ic-phone">Phone (optional)</label>
+            <input type="tel" id="ic-phone" name="phone" placeholder="(865) 555-0100" />
+          </div>
+          <div>
+            <label for="ic-scenario">Investment scenario</label>
+            <select id="ic-scenario" name="scenario">
+              <option value="">Select a scenario…</option>
+              <option>Finance It — lot + RV loan</option>
+              <option>Use What I Have — lot + existing camper</option>
+              <option>1031 Exchange</option>
+              <option>Not sure yet — just exploring</option>
+            </select>
+          </div>
+          <div>
+            <label for="ic-message">Questions or context</label>
+            <textarea id="ic-message" name="message" placeholder="What are you trying to figure out?"></textarea>
+          </div>
+          <button class="submit-btn" type="submit">Send message</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer__grid">
+      <div>
+        <p class="footer__brand">Outdoor Resorts Gatlinburg</p>
+        <p>Sevierville, TN 37876</p>
+        <p style="margin-top:12px;font-size:.78rem;line-height:1.55;">Not affiliated with Outdoor Resorts of America. Content is informational only and does not constitute financial, tax, or legal advice. Consult qualified professionals before making investment decisions.</p>
+      </div>
+      <div>
+        <h3>Stay</h3>
+        <ul>
+          <li><a href="/rentals.html">Browse Rentals</a></li>
+          <li><a href="/stay-guide.html">Stay Guide</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Invest</h3>
+        <ul>
+          <li><a href="/investing-units-for-sale.html">Investing / Units for Sale</a></li>
+          <li><a href="/list-your-rv.html">List Your RV</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <span>&copy; 2026 OutdoorResortsGatlinburg.com</span>
+      <span>Sevierville, TN &bull; Content is not financial advice</span>
+    </div>
+  </div>
+</footer>
+
 </body>
 </html>
