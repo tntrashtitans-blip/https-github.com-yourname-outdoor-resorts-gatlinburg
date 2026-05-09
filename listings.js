@@ -13,6 +13,7 @@ const listings = [
     calendarUrl: "https://www.airbnb.com/calendar/ical/810381394382742436.ics?t=e5e8e90d08874eb6a15eed8162fa20e1",
     calendarCacheUrl: "calendars/campfire-cove.ics",
     featuredCalendarRank: 1,
+    map: { lot: "103", x: 16.2, y: 69.7 },
     cta: "Book on Airbnb"
   },
   {
@@ -29,6 +30,7 @@ const listings = [
     calendarUrl: "https://www.airbnb.com/calendar/ical/1184548442935899278.ics?t=3e5d08bc88484f5ba12b1181510b64bd",
     calendarCacheUrl: "calendars/creekside-cove.ics",
     featuredCalendarRank: 2,
+    map: { lot: "299", x: 25.8, y: 32.7 },
     cta: "Book on Airbnb"
   },
   {
@@ -43,6 +45,22 @@ const listings = [
     image: "Assets/listings/creekside-vibes.jpg",
     url: "https://www.hipcamp.com/en-US/land/tennessee-gatlinburg-vibes-rv-camping-r57h9eo8/sites/1124856?siteId=1124856&share_id=24c8h1bwxzz&utm_medium=share&utm_source=share_content&adults=1&children=0",
     calendarUrl: "",
+    map: { lot: "262", x: 40.2, y: 71.7 },
+    cta: "Book on Hipcamp"
+  },
+  {
+    title: "Cozy Creekside Camping",
+    type: "Lot Rental, Bring your RV",
+    platform: "Hipcamp",
+    platformTag: "hipcamp",
+    tags: ["rv-lot", "hipcamp", "creekside"],
+    view: "Creekside RV lot",
+    details: ["Lot 294", "Creekside", "Bring RV"],
+    description: "Creekside lot rental for guests bringing their own RV, with a quiet spot inside Outdoor Resorts Gatlinburg.",
+    image: "Assets/listings/cozy-creekside-camping-lot-294.jpg",
+    url: "https://www.hipcamp.com/en-US/land/tennessee-cozy-creekside-camping-6p0hxwmj?share_id=enwf9z7l8q&utm_medium=share&utm_source=share_content&adults=1&children=0",
+    calendarUrl: "",
+    map: { lot: "294", x: 22.9, y: 27.6 },
     cta: "Book on Hipcamp"
   },
   {
@@ -57,6 +75,7 @@ const listings = [
     image: "Assets/listings/org-lot-174.jpg",
     url: "https://www.airbnb.com/h/heavenonearth-creekside-smoky-mountain-retreat",
     calendarUrl: "",
+    map: { lot: "174", x: 93.2, y: 77.2 },
     cta: "Book on Airbnb"
   },
   {
@@ -71,6 +90,7 @@ const listings = [
     image: "Assets/listings/org-lot-88.jpg",
     url: "https://abnb.me/zPrvNRDtozb",
     calendarUrl: "",
+    map: { lot: "88", x: 18.6, y: 62.7 },
     cta: "Book on Airbnb"
   },
   {
@@ -85,6 +105,7 @@ const listings = [
     image: "Assets/listings/org-lot-18.jpg",
     url: "https://www.vrbo.com/4412567?dateless=true",
     calendarUrl: "",
+    map: { lot: "18", x: 31.3, y: 89.8 },
     cta: "View on VRBO"
   },
   {
@@ -113,37 +134,131 @@ const listings = [
     image: "Assets/listings/bear-necessities-exterior.png",
     url: "https://www.airbnb.com/rooms/560015244975806818?source_impression_id=p3_1778212535_P3VV1XuirhfPYnQw",
     calendarUrl: "",
+    map: { lot: "172", x: 94.8, y: 75.3 },
     cta: "Book on Airbnb"
   },
   {
-    title: "Owner Direct Lots 241 and 366",
+    title: "Bearfoot Retreat",
+    type: "RV Rental",
+    platform: "Airbnb",
+    platformTag: "airbnb",
+    tags: ["rv-rental", "airbnb"],
+    view: "Private bath camper",
+    details: ["1 bedroom", "2 beds", "Private bath"],
+    description: "Camper rental with a private bath, one-bedroom layout, and space for a small family stay.",
+    image: "Assets/listings/bearfoot-retreat.jpg",
+    url: "https://www.airbnb.com/rooms/1029992439856067881?unique_share_id=6f64e933-dbeb-43fd-8efd-e57a1c09de53&viralityEntryPoint=1&s=76&source_impression_id=p3_1778244511_P3U1uR0GZTA70pnX",
+    calendarUrl: "https://www.vrbo.com/icalendar/e68783eefd844135ac91eaf22a68679a.ics?nonTentative",
+    calendarCacheUrl: "calendars/vrbo-e68783eefd844135ac91eaf22a68679a.ics",
+    featuredCalendarRank: 3,
+    map: { lot: "140" },
+    cta: "Book on Airbnb"
+  },
+  {
+    title: "Smokey Mtn RV in Gatlinburg",
+    type: "Lot Rental, Bring your RV",
+    platform: "Hipcamp",
+    platformTag: "hipcamp",
+    tags: ["rv-lot", "hipcamp"],
+    view: "Upgraded RV site",
+    details: ["Lot 108", "RV site", "Near park"],
+    description: "Upgraded RV site inside Outdoor Resorts Gatlinburg, close to downtown and the national park entrance.",
+    image: "Assets/listings/smokey-mtn-rv-hipcamp.jpg",
+    url: "https://www.hipcamp.com/en-US/land/tennessee-smokey-mtn-rv-in-gatlinburg-pw1h6d26?adults=1&children=0",
+    calendarUrl: "",
+    map: { lot: "108" },
+    cta: "Book on Hipcamp"
+  },
+  {
+    title: "Jolene",
+    type: "RV Rental",
+    platform: "Airbnb",
+    platformTag: "airbnb",
+    tags: ["rv-rental", "airbnb"],
+    view: "One-bedroom rental",
+    details: ["Lot 190", "3 beds", "Private bath"],
+    description: "One-bedroom stay with three beds, a private bath, and a cabin-style setup near the Smokies.",
+    image: "Assets/listings/jolene-airbnb.jpeg",
+    url: "https://www.airbnb.com/rooms/984789698823930011?unique_share_id=b3c0d855-bb59-462c-b453-fb2b33e537c8&viralityEntryPoint=1&s=76&source_impression_id=p3_1778244549_P3xs_F7EWD0e7qYm",
+    calendarUrl: "",
+    map: { lot: "190" },
+    cta: "Book on Airbnb"
+  },
+  {
+    title: "Dog Friendly Glamping",
+    type: "RV Rental",
+    platform: "Airbnb",
+    platformTag: "airbnb",
+    tags: ["rv-rental", "airbnb"],
+    view: "Dog-friendly camper",
+    details: ["1 bedroom", "1 bed", "Private bath"],
+    description: "Dog-friendly camper rental with a private bath, cozy one-bedroom setup, and easy resort access.",
+    image: "Assets/listings/dog-friendly-glamping.jpeg",
+    url: "https://www.airbnb.com/rooms/952397626997597257?source_impression_id=p3_1778247365_P3qxQPFuM5yvpbpe",
+    calendarUrl: "",
+    cta: "Book on Airbnb"
+  },
+  {
+    title: "Gatlinburg Glamper",
+    type: "RV Rental",
+    platform: "Airbnb",
+    platformTag: "airbnb",
+    tags: ["rv-rental", "airbnb"],
+    view: "Pets ok camper",
+    details: ["Lot 5", "1 bedroom", "Private bath"],
+    description: "Pet-friendly camper rental near the Smokies with a private bath and cozy one-bedroom setup.",
+    image: "Assets/listings/gatlinburg-glamper.jpeg",
+    url: "https://www.airbnb.com/rooms/1569744269891595719?source_impression_id=p3_1778249263_P39T5Iz1-iPaU3c1",
+    calendarUrl: "",
+    map: { lot: "5" },
+    cta: "Book on Airbnb"
+  },
+  {
+    title: "Lot 241",
     type: "RV Rental",
     platform: "Owner Direct",
     platformTag: "owner",
     tags: ["rv-rental", "owner-direct"],
-    view: "Owner-direct park models",
-    details: ["Lots 241/366", "Lake area", "Owner"],
-    description: "Owner-direct furnished park models near the lake area and adult pool. Verify dates with owner.",
-    image: "Assets/Entrance.png",
+    view: "Furnished park model",
+    details: ["Lot 241", "Queen bed", "Lake area"],
+    description: "Fully furnished 40 ft park model with linens, two TVs with cable, outdoor furniture, and a spot close to the adult pool and lake.",
+    image: "Assets/listings/lot-241-owner-direct.png",
     url: "https://orgtn.org/private-owner-lot-rental",
     calendarUrl: "",
+    map: { lot: "241", x: 82, y: 66.9 },
     cta: "View Owner Page",
     availabilityLabel: "Verify on owner page"
   },
   {
-    title: "Vacant Lot 189",
-    type: "Lot Rental, Bring your RV",
+    title: "Lot 366",
+    type: "RV Rental",
     platform: "Owner Direct",
     platformTag: "owner",
-    tags: ["rv-lot", "owner-direct", "hipcamp"],
-    view: "Large paved RV lot",
-    details: ["Lot 189", "60 ft", "Hookups"],
-    description: "Large paved RV lot with full hookups, slide-out room, green space, and mountain views.",
-    image: "Assets/Rainbow over pond.jpg",
+    tags: ["rv-rental", "owner-direct"],
+    view: "Lakefront park model",
+    details: ["Lot 366", "Sleeps 5", "Lakefront"],
+    description: "Fully furnished 40 ft park model on the lake with linens, cable TVs, outdoor furniture, fire pit, and propane grill.",
+    image: "Assets/listings/lot-366-owner-direct.png",
     url: "https://orgtn.org/private-owner-lot-rental",
     calendarUrl: "",
+    map: { lot: "366", x: 75.8, y: 62.9 },
     cta: "View Owner Page",
     availabilityLabel: "Verify on owner page"
+  },
+  {
+    title: "Gatlinburg RV Campsite",
+    type: "Lot Rental, Bring your RV",
+    platform: "Hipcamp",
+    platformTag: "hipcamp",
+    tags: ["rv-lot", "hipcamp"],
+    view: "Lot 189 RV campsite",
+    details: ["Lot 189", "60 ft", "Hookups"],
+    description: "Lot 189 RV campsite with full hookups, slide-out room, green space, and mountain views.",
+    image: "Assets/listings/gatlinburg-rv-campsite-lot-189.jpg",
+    url: "https://www.hipcamp.com/en-US/land/tennessee-gatlinburg-rv-campsite-ozxhz2p8?adults=1&children=0",
+    calendarUrl: "",
+    map: { lot: "189" },
+    cta: "Book on Hipcamp"
   },
   {
     title: "Lot 111",
@@ -157,6 +272,7 @@ const listings = [
     image: "Assets/Rainbow over pond.jpg",
     url: "https://orgtn.org/private-owner-lot-rental",
     calendarUrl: "",
+    map: { lot: "111", x: 20.6, y: 85.3 },
     cta: "View Owner Page",
     availabilityLabel: "Verify on owner page"
   }
@@ -164,9 +280,31 @@ const listings = [
 
 let currentFilter = "all";
 const calendarState = new Map();
+const lotColorByNumber = {
+  "5": "green",
+  "18": "red",
+  "88": "green",
+  "103": "red",
+  "108": "red",
+  "111": "red",
+  "140": "yellow",
+  "172": "orange",
+  "174": "orange",
+  "189": "orange",
+  "190": "orange",
+  "241": "blue",
+  "262": "yellow",
+  "294": "yellow",
+  "299": "yellow",
+  "366": "blue"
+};
 
 function getListingKey(listing) {
   return listing.title;
+}
+
+function getListingId(listing) {
+  return `listing-${listing.title.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "")}`;
 }
 
 function getCalendarState(listing) {
@@ -243,12 +381,22 @@ async function fetchCalendar(listing) {
 }
 
 function sortListingsForDisplay(listingsToSort) {
+  const hasAvailabilitySearch = calendarState.size > 0;
+
   return [...listingsToSort].sort((a, b) => {
-    const stateA = getCalendarState(a)?.status;
-    const stateB = getCalendarState(b)?.status;
-    const availableA = stateA === "available" ? 0 : 1;
-    const availableB = stateB === "available" ? 0 : 1;
-    if (availableA !== availableB) return availableA - availableB;
+    if (hasAvailabilitySearch) {
+      const stateA = getCalendarState(a)?.status;
+      const stateB = getCalendarState(b)?.status;
+      const availableA = stateA === "available" ? 0 : 1;
+      const availableB = stateB === "available" ? 0 : 1;
+      if (availableA !== availableB) return availableA - availableB;
+    }
+
+    if (currentFilter !== "rv-lot") {
+      const lotA = a.tags.includes("rv-lot") ? 1 : 0;
+      const lotB = b.tags.includes("rv-lot") ? 1 : 0;
+      if (lotA !== lotB) return lotA - lotB;
+    }
 
     const rankA = a.featuredCalendarRank || 999;
     const rankB = b.featuredCalendarRank || 999;
@@ -264,6 +412,9 @@ function buildListingCard(listing) {
   const isAvailable = state?.status === "available";
   const availabilityBadge = isAvailable ? `<span class="availability-pill">Available</span>` : "";
   const cardClass = isAvailable ? " listing-card--available" : "";
+  const lotBadge = listing.map?.lot
+    ? `<span class="listing-lot-badge listing-lot-badge--${lotColorByNumber[listing.map.lot] || "neutral"}">Lot ${listing.map.lot}</span>`
+    : "";
 
   return `
     <article class="listing-card${cardClass}" data-tags="${listing.tags.join(" ")}">
@@ -271,6 +422,7 @@ function buildListingCard(listing) {
         <img src="${listing.image}" alt="${listing.title} at Outdoor Resorts Gatlinburg" loading="lazy" />
         <span class="badge badge--${listing.platformTag}">${listing.platform}</span>
         ${availabilityBadge}
+        ${lotBadge}
       </div>
       <div class="listing-card__body">
         <p class="listing-card__meta">${listing.type}</p>
