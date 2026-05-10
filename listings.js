@@ -453,7 +453,7 @@ function buildListingCard(listing) {
   return `
     <article class="listing-card${cardClass}" data-tags="${listing.tags.join(" ")}">
       <div class="listing-card__image">
-        <img src="${listing.image}" alt="${listing.title} at Outdoor Resorts Gatlinburg" loading="lazy" />
+        <img src="${listing.image}" alt="${listing.title} at Outdoor Resorts Gatlinburg" decoding="async" onerror="this.onerror=null;this.src='Assets/Rainbow over pond.jpg';" />
         <span class="badge badge--${listing.platformTag}">${listing.platform}</span>
         ${availabilityBadge}
         ${lotBadge}

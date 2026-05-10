@@ -29,12 +29,16 @@
     mobileRow.className = "nav__mobile-row";
 
     const browseClone = browseLink.cloneNode(true);
+    browseClone.setAttribute("aria-label", "Browse rentals");
+    browseClone.textContent = "Browse Rentals";
     const stayClone = (stayLink || (() => {
       const fallback = document.createElement("a");
       fallback.href = "/stay-guide.html";
       fallback.textContent = "Stay Guide";
       return fallback;
     })()).cloneNode(true);
+    stayClone.setAttribute("aria-label", "Stay Guide");
+    stayClone.textContent = "Stay Guide";
     stayClone.classList.add("nav__mobile-stay");
 
     const menuButton = document.createElement("button");
@@ -67,6 +71,7 @@
       if (!directLink) return;
 
       if (directLink.classList.contains("nav__browse")) return;
+      if (directLink.classList.contains("nav__cta")) return;
       if (normalizePath(directLink.getAttribute("href")) === "/stay-guide.html") return;
 
       if (item.classList.contains("nav__drop")) {
@@ -91,12 +96,14 @@
     const closeMenu = () => {
       nav.classList.remove("nav--menu-open");
       menuButton.setAttribute("aria-expanded", "false");
+      menuButton.textContent = "Menu";
       mobilePanel.setAttribute("hidden", "hidden");
     };
 
     const openMenu = () => {
       nav.classList.add("nav--menu-open");
       menuButton.setAttribute("aria-expanded", "true");
+      menuButton.textContent = "Close";
       mobilePanel.removeAttribute("hidden");
     };
 

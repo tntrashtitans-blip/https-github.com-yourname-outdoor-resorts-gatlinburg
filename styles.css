@@ -24,10 +24,12 @@
 
 html {
   scroll-behavior: smooth;
+  overflow-x: clip;
 }
 
 body {
   margin: 0;
+  overflow-x: clip;
   font-family: Inter, sans-serif;
   color: var(--text);
   background: var(--white);
@@ -72,6 +74,7 @@ a {
   font-size: 1.45rem;
   font-weight: 800;
   letter-spacing: 0;
+  line-height: 1.08;
   color: var(--forest-dark);
   white-space: nowrap;
 }
@@ -935,6 +938,16 @@ a {
   color: var(--white);
 }
 
+.page-hero--dollywood {
+  position: relative;
+  overflow: hidden;
+  padding: 112px 0 102px;
+  background:
+    linear-gradient(90deg, rgba(13, 26, 21, .86), rgba(13, 26, 21, .58) 52%, rgba(13, 26, 21, .24)),
+    url("Assets/Pool.jpeg") center 48% / cover;
+  color: var(--white);
+}
+
 .page-hero--smokies {
   position: relative;
   overflow: hidden;
@@ -980,6 +993,10 @@ a {
   color: rgba(255, 255, 255, .82);
 }
 
+.page-hero--dollywood p {
+  color: rgba(255, 255, 255, .82);
+}
+
 .page-hero--smokies p {
   color: rgba(255, 255, 255, .82);
 }
@@ -1001,6 +1018,10 @@ a {
 }
 
 .page-hero--dining .eyebrow {
+  color: #e2ad4f;
+}
+
+.page-hero--dollywood .eyebrow {
   color: #e2ad4f;
 }
 
@@ -1547,6 +1568,7 @@ a {
 
 .map-reference {
   display: block;
+  min-width: 0;
   margin: 10px 0 34px;
   padding: 18px;
   border: 1px solid var(--line);
@@ -1577,6 +1599,7 @@ a {
 
 .map-reference__frame {
   overflow: hidden;
+  max-width: 100%;
   border: 1px solid var(--line);
   border-radius: 8px;
   background: var(--white);
@@ -1774,9 +1797,9 @@ a {
     height: auto;
     padding-top: 12px;
     padding-bottom: 12px;
-    flex-direction: row;
-    align-items: flex-start;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    align-items: start;
     gap: 10px;
   }
 
@@ -1794,6 +1817,8 @@ a {
 
   .nav__logo {
     font-size: 1.3rem;
+    max-width: 100%;
+    white-space: normal;
   }
 
   .nav__mobile-row {
@@ -1812,19 +1837,27 @@ a {
 
   .nav__mobile-stay,
   .nav__menu-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
     min-height: 46px;
     border-radius: 8px;
     padding: 0 14px;
     border: 1px solid var(--line);
-    background: var(--white);
     color: #44524d;
     font-size: .92rem;
     font-weight: 800;
     line-height: 1;
+    text-align: center;
     white-space: nowrap;
   }
 
+  .nav__mobile-stay {
+    background: var(--mist);
+  }
+
   .nav__menu-btn {
+    background: var(--white);
     cursor: pointer;
   }
 
@@ -1835,6 +1868,7 @@ a {
 
   .nav__mobile-panel {
     width: 100%;
+    min-width: 0;
     background: var(--white);
     border: 1px solid var(--line);
     border-radius: 10px;
@@ -1917,6 +1951,24 @@ a {
     padding: 16px;
   }
 
+  .filter-bar {
+    flex-wrap: wrap;
+    width: 100%;
+    max-width: 100%;
+    padding: 18px 0 12px;
+    overflow: visible;
+  }
+
+  .filter-btn {
+    flex: 0 1 auto;
+  }
+
+  .rentals-intro {
+    grid-template-columns: 1fr;
+    gap: 12px;
+    padding-top: 34px;
+  }
+
   .availability__inner {
     grid-template-columns: repeat(2, minmax(0, 1fr));
     align-items: start;
@@ -1955,14 +2007,33 @@ a {
   }
 
   .nav__mobile-row .nav__browse {
+    min-width: 0;
     padding: 0 12px;
     font-size: .82rem;
   }
 
-  .nav__mobile-stay,
+  .nav__mobile-stay {
+    padding: 0 10px;
+    font-size: .82rem;
+  }
+
   .nav__menu-btn {
     padding: 0 10px;
     font-size: .82rem;
+  }
+
+  .listing-grid {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 18px;
+  }
+
+  .listing-card__details {
+    flex-wrap: wrap;
+    overflow: visible;
+  }
+
+  .map-note {
+    padding: 18px;
   }
 
   .hero__content {
