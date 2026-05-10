@@ -11,15 +11,30 @@
     const navLinks = nav.querySelector(".nav__links");
     if (!navInner || !navLinks) return;
 
-    const browseLink = navLinks.querySelector(".nav__browse");
-    const stayLink = navLinks.querySelector('a[href="/stay-guide.html"]');
-    if (!browseLink || !stayLink) return;
+    const normalizePath = (href) => {
+      if (!href) return "";
+      return href
+        .replace(/^https?:\/\/[^/]+/i, "")
+        .replace(/\.\/+/g, "/")
+        .replace(/\/+$/, "");
+    };
+
+    const browseLink = navLinks.querySelector(".nav__browse") || navLinks.querySelector("a");
+    if (!browseLink) return;
+
+    const allLinks = [...navLinks.querySelectorAll("a")];
+    const stayLink = allLinks.find((link) => normalizePath(link.getAttribute("href")) === "/stay-guide.html");
 
     const mobileRow = document.createElement("div");
     mobileRow.className = "nav__mobile-row";
 
     const browseClone = browseLink.cloneNode(true);
-    const stayClone = stayLink.cloneNode(true);
+    const stayClone = (stayLink || (() => {
+      const fallback = document.createElement("a");
+      fallback.href = "/stay-guide.html";
+      fallback.textContent = "Stay Guide";
+      return fallback;
+    })()).cloneNode(true);
     stayClone.classList.add("nav__mobile-stay");
 
     const menuButton = document.createElement("button");
@@ -48,11 +63,11 @@
     };
 
     [...navLinks.children].forEach((item) => {
-      const directLink = item.querySelector(":scope > a");
+      const directLink = [...item.children].find((child) => child.tagName === "A");
       if (!directLink) return;
 
       if (directLink.classList.contains("nav__browse")) return;
-      if (directLink.getAttribute("href") === "/stay-guide.html") return;
+      if (normalizePath(directLink.getAttribute("href")) === "/stay-guide.html") return;
 
       if (item.classList.contains("nav__drop")) {
         const dropdownLinks = item.querySelectorAll(".nav__dropdown a");
@@ -120,6 +135,7 @@
     const insertBeforeNode = navLinks.nextSibling;
     navInner.insertBefore(mobileRow, navLinks);
     navInner.insertBefore(mobilePanel, insertBeforeNode);
+    nav.classList.add("nav--mobile-ready");
     nav.dataset.mobileInit = "true";
   });
 })();
