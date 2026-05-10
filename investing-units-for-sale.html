@@ -66,7 +66,15 @@ body {
   filter: brightness(0.42);
   z-index: 0;
 }
-.hero-content { position: relative; z-index: 1; width: 100%; }
+.hero-content {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
 .hero-eyebrow {
   font-size: 0.78rem;
   font-weight: 600;
@@ -113,7 +121,7 @@ body {
   text-align: left;
 }
 .hero-path:hover { background: var(--forest-mid); }
-.hero-path-num { font-size: 0.65rem; font-weight: 600; letter-spacing: 0.14em; color: var(--gold); }
+.hero-path-num { font-size: 1.3rem; font-weight: 600; letter-spacing: 0.14em; color: var(--gold); }
 .hero-path-label {
   font-family: 'Playfair Display', serif;
   font-size: 1.25rem;
