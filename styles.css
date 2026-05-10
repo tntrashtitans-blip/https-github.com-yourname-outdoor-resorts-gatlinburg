@@ -857,6 +857,13 @@ a {
   font-weight: 800;
 }
 
+.photo-credit {
+  margin-top: 12px;
+  font-size: .72rem;
+  line-height: 1.45;
+  color: rgba(255, 255, 255, .42);
+}
+
 .footer h3 {
   margin: 0 0 10px;
   color: var(--white);
@@ -944,7 +951,7 @@ a {
   padding: 112px 0 102px;
   background:
     linear-gradient(90deg, rgba(13, 26, 21, .86), rgba(13, 26, 21, .58) 52%, rgba(13, 26, 21, .24)),
-    url("Assets/Pool.jpeg") center 48% / cover;
+    url("Assets/dollywood/dollywood-family-wild-eagle.jpg") center 48% / cover;
   color: var(--white);
 }
 
