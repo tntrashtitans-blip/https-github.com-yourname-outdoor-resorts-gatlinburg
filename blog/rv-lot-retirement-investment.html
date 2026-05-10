@@ -53,6 +53,15 @@ nav { background: #fff; border-bottom: 1px solid var(--border); padding: 0 2rem;
 .phase-body h4 { font-size: 0.92rem; font-weight: 600; color: var(--text-dark); margin-bottom: 0.4rem; }
 .phase-body p { font-size: 0.9rem; color: var(--text-muted); margin: 0; line-height: 1.6; }
 .disclaimer { background: var(--gold-light); border: 1px solid #dfc87a; border-radius: 8px; padding: 1.25rem 1.5rem; margin: 2.5rem 0; font-size: 0.88rem; color: var(--text-mid); line-height: 1.65; }
+.related-guides { margin: 3rem 0 0; padding: 1.5rem; border: 1px solid var(--border); border-radius: 10px; background: var(--cream); }
+.related-guides__label { font-size: 0.72rem; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--gold); margin-bottom: 0.35rem; }
+.related-guides h3 { margin: 0 0 1rem; color: var(--forest); }
+.related-guides__grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0.8rem; }
+.related-guides__card { display: block; min-height: 100%; border: 1px solid var(--border); border-radius: 8px; padding: 1rem; background: #fff; text-decoration: none; transition: border-color 0.15s, transform 0.15s; }
+.related-guides__card:hover { border-color: var(--gold); transform: translateY(-2px); }
+.related-guides__card strong { display: block; color: var(--forest); font-size: 0.95rem; line-height: 1.25; margin-bottom: 0.35rem; }
+.related-guides__card span { display: block; color: var(--text-muted); font-size: 0.82rem; line-height: 1.45; }
+@media (max-width: 760px) { .related-guides__grid { grid-template-columns: 1fr; } }
 .article-cta { background: var(--forest); border-radius: 10px; padding: 2.5rem; margin: 3rem 0 0; text-align: center; }
 .article-cta h3 { font-family: 'Playfair Display', serif; font-size: 1.4rem; color: #fff; margin-bottom: 0.75rem; }
 .article-cta p { color: rgba(255,255,255,0.75); font-size: 0.97rem; margin-bottom: 1.5rem; }
@@ -67,6 +76,51 @@ footer p { font-size: 0.8rem; color: rgba(255,255,255,0.32); line-height: 1.7; }
 footer a { color: rgba(255,255,255,0.48); text-decoration: none; }
 @media (max-width: 760px) { .nav-links { display: none; } .article-hero { height: 320px; } .phase { grid-template-columns: 1fr; } .phase-label { padding: 1rem 1.25rem; } }
 </style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Invest Now, Retire Here: Buying an ORG Lot With the Long Game in Mind",
+  "description": "For buyers in their 40s and 50s, an Outdoor Resorts Gatlinburg lot can generate rental income today and become a paid-off Smoky Mountain retreat by retirement. Here's how to think through the timeline.",
+  "image": "https://outdoorresortsgatlinburg.com/Assets/Rainbow%20over%20pond.jpg",
+  "mainEntityOfPage": "https://outdoorresortsgatlinburg.com/blog/rv-lot-retirement-investment.html",
+  "publisher": {
+    "@type": "Organization",
+    "name": "Outdoor Resorts Gatlinburg",
+    "url": "https://outdoorresortsgatlinburg.com/"
+  },
+  "author": {
+    "@type": "Organization",
+    "name": "Outdoor Resorts Gatlinburg"
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://outdoorresortsgatlinburg.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Investing",
+      "item": "https://outdoorresortsgatlinburg.com/investing-units-for-sale.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Invest Now, Retire Here: Buying an ORG Lot With the Long Game in Mind",
+      "item": "https://outdoorresortsgatlinburg.com/blog/rv-lot-retirement-investment.html"
+    }
+  ]
+}
+</script>
 </head>
 <body>
 
@@ -74,11 +128,11 @@ footer a { color: rgba(255,255,255,0.48); text-decoration: none; }
   <div class="nav-inner">
     <a class="nav-logo" href="https://outdoorresortsgatlinburg.com/">Outdoor Resorts Gatlinburg</a>
     <ul class="nav-links">
-      <li><a href="https://outdoorresortsgatlinburg.com/rentals">Browse Rentals →</a></li>
-      <li><a href="https://outdoorresortsgatlinburg.com/stay-guide">Stay Guide</a></li>
-      <li><a href="https://outdoorresortsgatlinburg.com/things-to-do">Explore</a></li>
+      <li><a href="https://outdoorresortsgatlinburg.com/rentals.html">Browse Rentals →</a></li>
+      <li><a href="https://outdoorresortsgatlinburg.com/stay-guide.html">Stay Guide</a></li>
+      <li><a href="https://outdoorresortsgatlinburg.com/things-to-do.html">Explore</a></li>
       <li><a href="https://outdoorresortsgatlinburg.com/investing-units-for-sale.html">Investing</a></li>
-      <li><a href="https://outdoorresortsgatlinburg.com/list-your-rv">List Your RV</a></li>
+      <li><a href="https://outdoorresortsgatlinburg.com/list-your-rv.html">List Your RV</a></li>
     </ul>
   </div>
 </nav>
@@ -186,6 +240,25 @@ footer a { color: rgba(255,255,255,0.48); text-decoration: none; }
   <div class="disclaimer">
     This article is for informational purposes only and does not constitute financial, tax, or retirement planning advice. Investment returns, rental income, and tax treatment in retirement depend on individual circumstances. Consult a licensed financial advisor, CPA, and real estate professional before making any investment decisions.
   </div>
+
+  <section class="related-guides" aria-label="Related investor guides">
+    <p class="related-guides__label">Related Guides</p>
+    <h3>Keep researching Outdoor Resorts Gatlinburg lots</h3>
+    <div class="related-guides__grid">
+      <a class="related-guides__card" href="https://outdoorresortsgatlinburg.com/blog/outdoor-resorts-gatlinburg-rental-income.html">
+        <strong>What ORG lots actually rent for</strong>
+        <span>Peak rates, shoulder-season reality, platform fees, HOA costs, and year-one expectations.</span>
+      </a>
+      <a class="related-guides__card" href="https://outdoorresortsgatlinburg.com/blog/heloc-rv-lot-vs-storage.html">
+        <strong>Using a HELOC to buy an RV lot</strong>
+        <span>How monthly RV storage costs compare with ownership, equity, and rental income.</span>
+      </a>
+      <a class="related-guides__card" href="https://outdoorresortsgatlinburg.com/blog/org-lot-map-buyers-guide.html">
+        <strong>ORG lot map buyer guide</strong>
+        <span>How creek, lake, hillside, and interior lot positions affect buyer and renter appeal.</span>
+      </a>
+    </div>
+  </section>
 
   <div class="article-cta">
     <h3>Thinking about the long game at ORG?</h3>

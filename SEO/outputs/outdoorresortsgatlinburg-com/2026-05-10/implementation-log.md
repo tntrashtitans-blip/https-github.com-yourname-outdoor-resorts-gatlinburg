@@ -1,22 +1,16 @@
-# Implementation Log — 2026-05-10
+# Implementation Log
 
-## What was executed
-- Ran local SEO scan across all site and blog HTML files.
-- Ran live production HTTP status checks for root, www redirect, robots, sitemap, and key money pages.
-- Generated full 20-module SEO output package.
+## 2026-05-10
 
-## Files created in this run
-- `SEO/context/outdoorresortsgatlinburg-com.md`
-- `SEO/outputs/outdoorresortsgatlinburg-com/2026-05-10/01-summary.md`
-- `SEO/outputs/outdoorresortsgatlinburg-com/2026-05-10/02-priority-actions.csv`
-- `SEO/outputs/outdoorresortsgatlinburg-com/2026-05-10/modules/*.md` (20 module notes)
-- `SEO/outputs/outdoorresortsgatlinburg-com/2026-05-10/next-30-days.md`
-- `SEO/outputs/outdoorresortsgatlinburg-com/2026-05-10/implementation-log.md`
+- Updated six investor blog nav links to canonical `.html` URLs.
+- Added `BlogPosting` JSON-LD to six investor articles.
+- Added `BreadcrumbList` JSON-LD to six investor articles.
+- Added an investor research path to `/investing-units-for-sale.html`.
+- Added related-guide blocks to all six investor articles.
+- Updated the 1031 investor article and investor hub with Big Beautiful Bill bonus depreciation language, using CPA-first real-estate-professional/passive-activity wording.
+- Updated SEO context to reflect sitemap and placeholder page progress.
 
-## Site code changes
-- No production page HTML/CSS/JS was modified in this run.
-- This run produced audit documentation only.
+## Not Changed
 
-## Blocking constraints noted
-- Missing access for GBP/GSC/GA4/Ahrefs-level modules.
-- Competitor benchmark dataset not yet provided.
+- `AGENTS.md` local timestamp/context change remains unstaged and unrelated.
+- No GBP, GSC, GA4, or competitor data was fabricated.

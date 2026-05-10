@@ -53,6 +53,15 @@ nav { background: #fff; border-bottom: 1px solid var(--border); padding: 0 2rem;
 .math-row.total .value { color: var(--forest); font-size: 1.05rem; }
 .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 1.25rem; margin: 2rem 0; }
 .disclaimer { background: var(--gold-light); border: 1px solid #dfc87a; border-radius: 8px; padding: 1.25rem 1.5rem; margin: 2.5rem 0; font-size: 0.88rem; color: var(--text-mid); line-height: 1.65; }
+.related-guides { margin: 3rem 0 0; padding: 1.5rem; border: 1px solid var(--border); border-radius: 10px; background: var(--cream); }
+.related-guides__label { font-size: 0.72rem; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--gold); margin-bottom: 0.35rem; }
+.related-guides h3 { margin: 0 0 1rem; color: var(--forest); }
+.related-guides__grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0.8rem; }
+.related-guides__card { display: block; min-height: 100%; border: 1px solid var(--border); border-radius: 8px; padding: 1rem; background: #fff; text-decoration: none; transition: border-color 0.15s, transform 0.15s; }
+.related-guides__card:hover { border-color: var(--gold); transform: translateY(-2px); }
+.related-guides__card strong { display: block; color: var(--forest); font-size: 0.95rem; line-height: 1.25; margin-bottom: 0.35rem; }
+.related-guides__card span { display: block; color: var(--text-muted); font-size: 0.82rem; line-height: 1.45; }
+@media (max-width: 760px) { .related-guides__grid { grid-template-columns: 1fr; } }
 .article-cta { background: var(--forest); border-radius: 10px; padding: 2.5rem; margin: 3rem 0 0; text-align: center; }
 .article-cta h3 { font-family: 'Playfair Display', serif; font-size: 1.4rem; color: #fff; margin-bottom: 0.75rem; }
 .article-cta p { color: rgba(255,255,255,0.75); font-size: 0.97rem; margin-bottom: 1.5rem; }
@@ -67,6 +76,51 @@ footer p { font-size: 0.8rem; color: rgba(255,255,255,0.32); line-height: 1.7; }
 footer a { color: rgba(255,255,255,0.48); text-decoration: none; }
 @media (max-width: 760px) { .nav-links { display: none; } .article-hero { height: 320px; } .two-col { grid-template-columns: 1fr; } }
 </style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "How to Use a HELOC to Buy an RV Lot — and Why It Beats Paying Storage",
+  "description": "If you own an RV and pay monthly storage, buying an ORG lot with a HELOC may cost the same — with equity, rental income, and a Smoky Mountain retreat on the other side.",
+  "image": "https://outdoorresortsgatlinburg.com/Assets/B%20Roll%201.png",
+  "mainEntityOfPage": "https://outdoorresortsgatlinburg.com/blog/heloc-rv-lot-vs-storage.html",
+  "publisher": {
+    "@type": "Organization",
+    "name": "Outdoor Resorts Gatlinburg",
+    "url": "https://outdoorresortsgatlinburg.com/"
+  },
+  "author": {
+    "@type": "Organization",
+    "name": "Outdoor Resorts Gatlinburg"
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://outdoorresortsgatlinburg.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Investing",
+      "item": "https://outdoorresortsgatlinburg.com/investing-units-for-sale.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "How to Use a HELOC to Buy an RV Lot — and Why It Beats Paying Storage",
+      "item": "https://outdoorresortsgatlinburg.com/blog/heloc-rv-lot-vs-storage.html"
+    }
+  ]
+}
+</script>
 </head>
 <body>
 
@@ -74,11 +128,11 @@ footer a { color: rgba(255,255,255,0.48); text-decoration: none; }
   <div class="nav-inner">
     <a class="nav-logo" href="https://outdoorresortsgatlinburg.com/">Outdoor Resorts Gatlinburg</a>
     <ul class="nav-links">
-      <li><a href="https://outdoorresortsgatlinburg.com/rentals">Browse Rentals →</a></li>
-      <li><a href="https://outdoorresortsgatlinburg.com/stay-guide">Stay Guide</a></li>
-      <li><a href="https://outdoorresortsgatlinburg.com/things-to-do">Explore</a></li>
+      <li><a href="https://outdoorresortsgatlinburg.com/rentals.html">Browse Rentals →</a></li>
+      <li><a href="https://outdoorresortsgatlinburg.com/stay-guide.html">Stay Guide</a></li>
+      <li><a href="https://outdoorresortsgatlinburg.com/things-to-do.html">Explore</a></li>
       <li><a href="https://outdoorresortsgatlinburg.com/investing-units-for-sale.html">Investing</a></li>
-      <li><a href="https://outdoorresortsgatlinburg.com/list-your-rv">List Your RV</a></li>
+      <li><a href="https://outdoorresortsgatlinburg.com/list-your-rv.html">List Your RV</a></li>
     </ul>
   </div>
 </nav>
@@ -178,6 +232,25 @@ footer a { color: rgba(255,255,255,0.48); text-decoration: none; }
   <div class="disclaimer">
     HELOC rates, tax deductibility of interest, and rental income projections in this article are illustrative and not guarantees. HELOC rates are variable and depend on your lender, credit profile, and the prime rate at the time of borrowing. Consult a licensed CPA regarding interest deductibility and a licensed real estate professional before making any investment decision.
   </div>
+
+  <section class="related-guides" aria-label="Related investor guides">
+    <p class="related-guides__label">Related Guides</p>
+    <h3>Keep researching Outdoor Resorts Gatlinburg lots</h3>
+    <div class="related-guides__grid">
+      <a class="related-guides__card" href="https://outdoorresortsgatlinburg.com/blog/rv-lot-vs-smoky-mountain-cabin.html">
+        <strong>RV lot vs. Smoky Mountain cabin cash flow</strong>
+        <span>Compare purchase price, operating costs, nightly rates, and cash-flow expectations.</span>
+      </a>
+      <a class="related-guides__card" href="https://outdoorresortsgatlinburg.com/blog/outdoor-resorts-gatlinburg-rental-income.html">
+        <strong>What ORG lots actually rent for</strong>
+        <span>Peak rates, shoulder-season reality, platform fees, HOA costs, and year-one expectations.</span>
+      </a>
+      <a class="related-guides__card" href="https://outdoorresortsgatlinburg.com/blog/rv-lot-retirement-investment.html">
+        <strong>Invest now, retire here</strong>
+        <span>Think through an ORG lot as both a rental asset today and a future Smoky Mountain base.</span>
+      </a>
+    </div>
+  </section>
 
   <div class="article-cta">
     <h3>Already own an RV? Let's run the numbers together.</h3>

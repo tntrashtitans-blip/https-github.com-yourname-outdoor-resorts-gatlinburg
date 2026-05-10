@@ -318,6 +318,41 @@ body {
 }
 .blog-header p { font-size: 1rem; color: var(--text-muted); max-width: 580px; line-height: 1.7; }
 
+.investor-path {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  margin: 0 0 2rem;
+}
+.investor-path a {
+  display: block;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 1rem 1.1rem;
+  background: #fff;
+  text-decoration: none;
+  transition: border-color 0.15s, transform 0.15s;
+}
+.investor-path a:hover {
+  border-color: var(--gold);
+  transform: translateY(-2px);
+}
+.investor-path span {
+  display: block;
+  margin-bottom: 0.35rem;
+  color: var(--gold);
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+.investor-path strong {
+  display: block;
+  color: var(--forest);
+  font-size: 0.98rem;
+  line-height: 1.3;
+}
+
 .blog-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -477,6 +512,7 @@ footer a:hover { color: rgba(255,255,255,0.72); }
   .scenario-nav-inner { grid-template-columns: repeat(2, 1fr); }
   .scenario-grid { grid-template-columns: 1fr; }
   .highlight-card, .gold-card { grid-column: 1; }
+  .investor-path { grid-template-columns: 1fr; }
   .blog-grid { grid-template-columns: 1fr; }
   .contact-inner { grid-template-columns: 1fr; gap: 2.5rem; }
   .form-row { grid-template-columns: 1fr; }
@@ -675,6 +711,10 @@ footer a:hover { color: rgba(255,255,255,0.72); }
       <p>Land cannot be depreciated — but the camper sitting on the lot can be. When a lot comes with an existing camper, your CPA can allocate a portion of the purchase price to the camper as personal property and depreciate it on an accelerated schedule. That depreciation can create meaningful tax advantages in the early years of ownership — and is a key reason a lot-and-camper purchase can outperform a vacant lot from a tax standpoint.</p>
     </div>
     <div class="insight-card">
+      <p class="insight-card-label">Big Beautiful Bill bonus depreciation</p>
+      <p>The One, Big, Beautiful Bill restored permanent 100% first-year bonus depreciation for many eligible depreciable assets acquired after January 19, 2025. For ORG buyers, the key question is not the land — land still is not depreciable — but whether the camper, furnishings, or other personal property in a lot-and-camper purchase can qualify. Full-time real estate professionals who materially participate in their rental activity should raise this with their CPA early, because passive activity rules can change how depreciation deductions are used.</p>
+    </div>
+    <div class="insight-card">
       <p class="insight-card-label">ORG as an investment property</p>
       <p>For the 1031 to work, the property must be held for investment or productive use in a trade or business — not primarily for personal use. ORG owners who actively rent their units and manage them as short-term rental investments are generally on the right side of this line, but your specific situation and intent matter. Document your investment purpose clearly from the start.</p>
     </div>
@@ -688,6 +728,7 @@ footer a:hover { color: rgba(255,255,255,0.72); }
       <li>You have 180 days total to close on the replacement property — this runs concurrently with the identification period.</li>
       <li>Lots with existing campers at ORG can move quickly; having financing or cash ready before your identification window opens matters.</li>
       <li>Ask your CPA specifically about depreciating the camper separately from the land — that's where a lot-and-camper purchase outperforms a vacant lot.</li>
+      <li>If you qualify as a real estate professional, ask how Big Beautiful Bill bonus depreciation and passive activity rules could affect the way camper depreciation is used.</li>
     </ul>
   </div>
 </section>
@@ -701,6 +742,21 @@ footer a:hover { color: rgba(255,255,255,0.72); }
       <p class="blog-eyebrow">From the Blog</p>
       <h2>Go deeper on Smoky Mountain investment property</h2>
       <p>Each article explores a specific angle for buyers considering an ORG lot — from financing comparisons to 1031 timelines to reading the resort map before you make an offer.</p>
+    </div>
+
+    <div class="investor-path" aria-label="Outdoor Resorts Gatlinburg investor research paths">
+      <a href="/blog/rv-lot-vs-smoky-mountain-cabin.html">
+        <span>Start Here</span>
+        <strong>Compare an ORG RV lot with a Smoky Mountain cabin investment.</strong>
+      </a>
+      <a href="/blog/outdoor-resorts-gatlinburg-rental-income.html">
+        <span>Income</span>
+        <strong>Understand realistic nightly rates, fees, and year-one rental expectations.</strong>
+      </a>
+      <a href="/blog/org-lot-map-buyers-guide.html">
+        <span>Lot Selection</span>
+        <strong>Use the resort map before comparing creek, lake, hillside, and interior lots.</strong>
+      </a>
     </div>
 
     <div class="blog-grid">
@@ -739,8 +795,8 @@ footer a:hover { color: rgba(255,255,255,0.72); }
         <img src="https://outdoorresortsgatlinburg.com/Assets/Fishing 2.jpeg" alt="Fishing pond and mountain view at Outdoor Resorts Gatlinburg" class="blog-card-img">
         <div class="blog-card-body">
           <p class="blog-card-tag">Tax Strategy</p>
-          <h3>What to know about 1031 exchanges into RV resort property</h3>
-          <p>The 1031 is one of the most powerful tools in real estate investing — and some ORG lot purchases may qualify.</p>
+          <h3>1031 exchanges, bonus depreciation, and RV resort property</h3>
+          <p>How ORG lot-and-camper purchases fit 1031 planning, camper depreciation, and Big Beautiful Bill questions for your CPA.</p>
           <p class="blog-card-read">Read article →</p>
         </div>
       </a>

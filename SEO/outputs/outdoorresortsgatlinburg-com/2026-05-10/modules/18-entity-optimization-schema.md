@@ -10,9 +10,8 @@ Status: Partial
   - `investing-units-for-sale.html`
   - `list-your-rv.html`
   - all investor blog pages
-  - dollywood + gatlinburg-camping
+  - dollywood
 
 ## Priority fix
 - Add `Article` schema to each investor blog.
 - Add page-level schema for list-your-rv and investing hub.
-

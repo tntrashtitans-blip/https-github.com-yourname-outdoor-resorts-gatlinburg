@@ -6,8 +6,7 @@ Status: Partial
   - things to do, dining, smoky mountains, rocky top.
 
 ## Gaps
-- Dollywood page and Gatlinburg-camping page are too thin for full local coverage value.
+- Dollywood page was previously thin and has been strengthened.
 
 ## Recommended build
 - Upgrade both pages with substantial local intent content and stronger internal links to rentals.
-

@@ -106,18 +106,16 @@
 - Existing blog/article hubs:
   - `/blog/*.html` investor cluster (6 articles)
 - Weak/thin/outdated pages:
-  - `/dollywood.html` (placeholder/thin)
-  - `/gatlinburg-camping.html` (placeholder/thin)
+  - None currently flagged after 2026-05-10 implementation pass.
 
 ## Technical Baseline
 
 - Platform/CMS: static HTML/CSS/JS on Netlify
-- Sitemap URL: currently missing/404 at `/sitemap.xml`
+- Sitemap URL: `/sitemap.xml`
 - Robots URL: `/robots.txt` live
 - Known crawl/indexing issues:
-  - No sitemap published
-  - Missing canonical on select pages
-  - Missing OG/meta coverage on some pages
+  - Need post-deploy verification that `/sitemap.xml` returns 200 in production
+  - Need Google Search Console sitemap submission/inspection when access is available
 - Existing schema types in use:
   - `Campground` + `PostalAddress` + `LocationFeatureSpecification` (home)
   - `ItemList` (listing/content grids)
@@ -145,9 +143,9 @@
 
 ## Immediate Priorities (Next 30 Days)
 
-1. Publish XML sitemap and declare it in robots.
-2. Resolve metadata/canonical gaps + thin placeholder pages.
-3. Expand schema coverage and set up baseline reporting (GSC/GA4 if available).
+1. Verify sitemap indexing in Google Search Console after deployment.
+2. Build GBP/review/citation inputs when access is available.
+3. Expand blog/article schema and add an investor hub content map.
 
 ## Risks / Missing Data
 
