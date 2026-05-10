@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Know the Layout Before You Buy: An ORG Lot Map Walkthrough for Investors</title>
+<meta name="description" content="Not all lots at Outdoor Resorts Gatlinburg are equal. A section-by-section investor's walkthrough of the ORG campground map — creek lots, lake lots, interior lots, and what each means for rental income.">
+<link rel="canonical" href="https://outdoorresortsgatlinburg.com/blog/org-lot-map-buyers-guide.html">
+<meta property="og:title" content="ORG Lot Map Walkthrough: What Investors Need to Know Before They Buy">
+<meta property="og:description" content="Creek lots, lake lots, interior lots — location within Outdoor Resorts Gatlinburg matters as much as what's on the lot. Here's how to read the map.">
+<meta property="og:url" content="https://outdoorresortsgatlinburg.com/blog/org-lot-map-buyers-guide.html">
+<meta property="og:image" content="https://outdoorresortsgatlinburg.com/Assets/Campground Map.png">
+<meta property="og:type" content="article">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600&family=Source+Sans+3:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+:root {
+  --forest: #2d4a2d; --forest-mid: #3d6b3d; --forest-light: #e8f0e8;
+  --gold: #c9993a; --gold-light: #f7f0e2; --stone: #6b6457;
+  --cream: #faf8f4; --text-dark: #1a1a16; --text-mid: #3d3a33;
+  --text-muted: #7a7060; --border: #ddd8ce;
+}
+body { font-family: 'Source Sans 3', sans-serif; color: var(--text-dark); background: #fff; font-size: 17px; line-height: 1.7; }
+nav { background: #fff; border-bottom: 1px solid var(--border); padding: 0 2rem; position: sticky; top: 0; z-index: 100; }
+.nav-inner { max-width: 1100px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; height: 60px; }
+.nav-logo { font-family: 'Playfair Display', serif; font-size: 1rem; font-weight: 500; color: var(--forest); text-decoration: none; }
+.nav-links { display: flex; gap: 1.75rem; list-style: none; }
+.nav-links a { font-size: 0.88rem; font-weight: 500; color: var(--text-mid); text-decoration: none; letter-spacing: 0.02em; }
+.nav-links a:hover { color: var(--forest); }
+
+/* Simple text hero for map article — no photo overlay */
+.article-hero-text {
+  background: var(--forest);
+  padding: 4rem 2rem 3.5rem;
+}
+.article-hero-text-inner { max-width: 1100px; margin: 0 auto; }
+.article-eyebrow { font-size: 0.74rem; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: var(--gold); margin-bottom: 0.75rem; }
+.article-hero-text h1 { font-family: 'Playfair Display', serif; font-size: clamp(1.75rem, 4vw, 2.75rem); font-weight: 500; color: #fff; line-height: 1.18; max-width: 780px; }
+
+/* Map display — wide, full bleed */
+.map-section { background: var(--cream); padding: 2.5rem 2rem; border-bottom: 1px solid var(--border); }
+.map-section-inner { max-width: 1100px; margin: 0 auto; }
+.map-section p { font-size: 0.88rem; color: var(--text-muted); margin-top: 0.75rem; text-align: center; }
+.map-img { width: 100%; max-width: 1100px; display: block; border-radius: 8px; border: 1px solid var(--border); }
+
+.article-wrap { max-width: 780px; margin: 0 auto; padding: 3.5rem 2rem 5rem; }
+.article-meta { font-size: 0.82rem; color: var(--text-muted); margin-bottom: 2.5rem; padding-bottom: 1.5rem; border-bottom: 1px solid var(--border); }
+.article-wrap h2 { font-family: 'Playfair Display', serif; font-size: 1.55rem; font-weight: 500; color: var(--forest); margin: 2.5rem 0 1rem; line-height: 1.25; }
+.article-wrap h3 { font-family: 'Playfair Display', serif; font-size: 1.2rem; font-weight: 500; color: var(--forest); margin: 2rem 0 0.75rem; }
+.article-wrap p { color: var(--text-mid); margin-bottom: 1.25rem; line-height: 1.8; }
+.article-wrap ul { margin: 0 0 1.25rem 1.25rem; color: var(--text-mid); line-height: 1.8; }
+.article-wrap li { margin-bottom: 0.5rem; }
+.callout { background: var(--forest-light); border-left: 3px solid var(--forest); border-radius: 0 8px 8px 0; padding: 1.25rem 1.5rem; margin: 2rem 0; }
+.callout p { margin: 0; color: var(--forest); font-size: 0.97rem; }
+.lot-type-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin: 2rem 0; }
+.lot-type-card { background: var(--cream); border: 1px solid var(--border); border-radius: 8px; padding: 1.25rem 1.4rem; }
+.lot-type-card h4 { font-family: 'Playfair Display', serif; font-size: 1rem; color: var(--forest); margin-bottom: 0.4rem; }
+.lot-type-card .badge { display: inline-block; font-size: 0.68rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; background: var(--forest-light); color: var(--forest); padding: 0.2rem 0.6rem; border-radius: 4px; margin-bottom: 0.6rem; }
+.lot-type-card p { font-size: 0.88rem; color: var(--text-muted); margin: 0; line-height: 1.55; }
+.article-cta { background: var(--forest); border-radius: 10px; padding: 2.5rem; margin: 3rem 0 0; text-align: center; }
+.article-cta h3 { font-family: 'Playfair Display', serif; font-size: 1.4rem; color: #fff; margin-bottom: 0.75rem; }
+.article-cta p { color: rgba(255,255,255,0.75); font-size: 0.97rem; margin-bottom: 1.5rem; }
+.article-cta a { display: inline-block; background: var(--gold); color: #fff; text-decoration: none; padding: 0.75rem 2rem; border-radius: 6px; font-weight: 600; font-size: 0.9rem; transition: background 0.15s; }
+.article-cta a:hover { background: #b88830; }
+.breadcrumb { font-size: 0.8rem; color: var(--text-muted); margin-bottom: 2rem; }
+.breadcrumb a { color: var(--text-muted); text-decoration: none; }
+.breadcrumb a:hover { color: var(--forest); }
+.breadcrumb span { margin: 0 0.4rem; }
+footer { background: #111; padding: 2.5rem 2rem; text-align: center; }
+footer p { font-size: 0.8rem; color: rgba(255,255,255,0.32); line-height: 1.7; }
+footer a { color: rgba(255,255,255,0.48); text-decoration: none; }
+@media (max-width: 760px) { .nav-links { display: none; } .lot-type-grid { grid-template-columns: 1fr; } }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <a class="nav-logo" href="https://outdoorresortsgatlinburg.com/">Outdoor Resorts Gatlinburg</a>
+    <ul class="nav-links">
+      <li><a href="https://outdoorresortsgatlinburg.com/rentals">Browse Rentals →</a></li>
+      <li><a href="https://outdoorresortsgatlinburg.com/stay-guide">Stay Guide</a></li>
+      <li><a href="https://outdoorresortsgatlinburg.com/things-to-do">Explore</a></li>
+      <li><a href="https://outdoorresortsgatlinburg.com/investing-units-for-sale.html">Investing</a></li>
+      <li><a href="https://outdoorresortsgatlinburg.com/list-your-rv">List Your RV</a></li>
+    </ul>
+  </div>
+</nav>
+
+<div class="article-hero-text">
+  <div class="article-hero-text-inner">
+    <p class="article-eyebrow">Buyer's Guide</p>
+    <h1>Know the layout before you buy: an ORG lot map walkthrough for investors</h1>
+  </div>
+</div>
+
+<!-- MAP — FULL WIDTH, READABLE -->
+<div class="map-section">
+  <div class="map-section-inner">
+    <img
+      src="https://outdoorresortsgatlinburg.com/Assets/Campground Map.png"
+      alt="Outdoor Resorts Gatlinburg full campground map showing all lot numbers, lake, creek, amenities, and resort sections"
+      class="map-img"
+    >
+    <p>Outdoor Resorts Gatlinburg — 4229 East Parkway, Gatlinburg, TN 37738 · Full lot map with section designations</p>
+  </div>
+</div>
+
+<div class="article-wrap">
+  <div class="breadcrumb">
+    <a href="https://outdoorresortsgatlinburg.com/">Home</a>
+    <span>›</span>
+    <a href="https://outdoorresortsgatlinburg.com/investing-units-for-sale.html">Investing</a>
+    <span>›</span>
+    Lot map guide
+  </div>
+  <p class="article-meta">Outdoor Resorts Gatlinburg · Buyer's Guide</p>
+
+  <p>Every lot at Outdoor Resorts Gatlinburg sits on the same resort and enjoys the same amenities — pools, fishing pond, putt-putt, creek access, proximity to Gatlinburg. But not every lot has the same investment profile. Location within the resort affects nightly rate, renter appeal, and how fast a listing fills up in peak season.</p>
+
+  <p>This guide walks through the resort map section by section so you understand what you're looking at before you make an offer.</p>
+
+  <h2>The four lot types that matter for investors</h2>
+
+  <div class="lot-type-grid">
+    <div class="lot-type-card">
+      <div class="badge">Highest demand</div>
+      <h4>Creekside lots</h4>
+      <p>Lots along the creek running through the resort. The sound of running water is a genuine premium amenity — guests search for it, pay more for it, and mention it in reviews. These lots command the highest nightly rates and fill fastest in peak season.</p>
+    </div>
+    <div class="lot-type-card">
+      <div class="badge">Strong performer</div>
+      <h4>Lake-area lots</h4>
+      <p>Lots fronting or near the fishing pond. The pond view and fishing access are appealing to families and couples alike. Lake-adjacent lots consistently outperform interior lots in both rate and occupancy.</p>
+    </div>
+    <div class="lot-type-card">
+      <div class="badge">Good value</div>
+      <h4>Interior lots</h4>
+      <p>Lots away from the creek and lake but still within the resort. Lower acquisition cost relative to waterfront lots. Can still perform well with a quality camper, good photography, and competitive pricing — especially during peak season when all inventory fills.</p>
+    </div>
+    <div class="lot-type-card">
+      <div class="badge">Amenity access</div>
+      <h4>Near amenities</h4>
+      <p>Lots close to the pool, bath house, or resort center. Proximity to amenities is a secondary selling point — guests with kids often specifically note it. Can offset the lack of water frontage in a listing description.</p>
+    </div>
+  </div>
+
+  <h2>Reading the map as an investor</h2>
+
+  <p>The campground map above shows every lot number in the resort. When you're evaluating a specific lot for purchase, use the map to answer these questions before you do anything else:</p>
+
+  <ul>
+    <li>Is this lot on the creek, near the lake, or interior? That single factor will affect nightly rate more than almost anything else.</li>
+    <li>How close is it to the main amenity cluster — pool, bath house, putt-putt? Proximity matters to families with kids.</li>
+    <li>Is the lot paved? Paved lots photograph better and feel more finished to renters than gravel or dirt pads.</li>
+    <li>How is parking? Lots with room for two vehicles have broader appeal to groups and families.</li>
+    <li>What's the shade situation? Lots with mature tree coverage are more comfortable in summer and photograph beautifully in fall — a genuine marketing asset.</li>
+  </ul>
+
+  <div class="callout">
+    <p>Before you visit a lot in person, look up its number on this map and trace a walking path to the creek, lake, pool, and entrance. That 30-second exercise tells you a lot about its rental positioning.</p>
+  </div>
+
+  <h2>What the map doesn't tell you</h2>
+
+  <p>The map shows location, but it doesn't show condition — the thing that matters most in any individual lot evaluation. Two creekside lots with identical numbers can be dramatically different investments depending on what's on them and how well they've been maintained.</p>
+
+  <p>When you visit a lot, pay attention to:</p>
+
+  <ul>
+    <li>The condition of any existing camper — interior finish, appliance age, A/C function, slide-out operation</li>
+    <li>The outdoor space — patio, furniture, fire pit, lighting, landscaping</li>
+    <li>The utility hookups — water, electric, sewer connection condition</li>
+    <li>The overall visual appeal from the lot entrance — first impressions in listing photos are everything</li>
+    <li>Neighbor lots — a well-kept lot next to neglected neighbors photographs differently than one surrounded by quality units</li>
+  </ul>
+
+  <h2>The lot number is your starting point, not your answer</h2>
+
+  <p>Smart buyers use the map to build a shortlist — lots in preferred sections at a price point that works — and then evaluate each one on the ground. The resort map is the frame; condition, camper quality, and outdoor presentation are what determine whether a specific lot is a good investment.</p>
+
+  <p>If you're not familiar with the resort layout and want a walkthrough of what's currently available, that's exactly the kind of conversation worth having before you start making offers.</p>
+
+  <div class="article-cta">
+    <h3>Want a guided look at what's currently available?</h3>
+    <p>I'm an owner at Outdoor Resorts Gatlinburg and a licensed Tennessee real estate agent. I can walk you through active listings, show you how specific lots perform on the map, and help you evaluate what you're looking at.</p>
+    <a href="https://outdoorresortsgatlinburg.com/investing-units-for-sale.html#contact">Talk to an agent →</a>
+  </div>
+</div>
+
+<footer>
+  <p>
+    <a href="https://outdoorresortsgatlinburg.com/">OutdoorResortsGatlinburg.com</a> &nbsp;·&nbsp;
+    4229 East Parkway, Gatlinburg, TN 37738 &nbsp;·&nbsp;
+    Independent resort information and RV rental directory<br>
+    This page is for informational purposes only and does not constitute legal, tax, or financial advice.
+  </p>
+</footer>
+</body>
+</html>
