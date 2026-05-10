@@ -34,6 +34,21 @@ const listings = [
     cta: "Book on Airbnb"
   },
   {
+    title: "Eagle's Nest Getaway",
+    type: "RV Rental",
+    platform: "Airbnb",
+    platformTag: "airbnb",
+    tags: ["rv-rental", "airbnb"],
+    view: "RV rental on Lot 48",
+    details: ["Lot 48", "36 ft camper", "Fire pit"],
+    description: "36 ft camper on a landscaped lot with a queen bedroom, farmhouse kitchen, outdoor seating, and fire pit.",
+    image: "Assets/listings/eagles-nest-getaway-lot-48.jpg",
+    url: "https://www.airbnb.com/rooms/1249139824465679896?source_impression_id=p3_1778345688_P3LfesmmduvbXNfU",
+    calendarUrl: "",
+    map: { lot: "48" },
+    cta: "Book on Airbnb"
+  },
+  {
     title: "Creekside Vibes",
     type: "Lot Rental, Bring your RV",
     platform: "Hipcamp",
@@ -299,6 +314,7 @@ const calendarState = new Map();
 const lotColorByNumber = {
   "5": "green",
   "18": "red",
+  "48": "red",
   "88": "green",
   "103": "red",
   "108": "red",

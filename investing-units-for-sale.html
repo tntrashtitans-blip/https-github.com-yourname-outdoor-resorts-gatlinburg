@@ -5,16 +5,17 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Outdoor Resorts Gatlinburg Lots for Sale — Investor's Guide</title>
 <meta name="description" content="Thinking about buying an Outdoor Resorts Gatlinburg lot? Three investor scenarios — lot + RV financing, lot + existing camper, and 1031 exchanges — explained by an owner and licensed real estate agent.">
-<link rel="canonical" href="https://outdoorresortsgatlinburg.com/investing-units-for-sale">
+<link rel="canonical" href="https://outdoorresortsgatlinburg.com/investing-units-for-sale.html">
 <meta property="og:title" content="Outdoor Resorts Gatlinburg Lots for Sale — Investor's Guide">
 <meta property="og:description" content="Three ways to buy into Outdoor Resorts Gatlinburg — finance it, use your existing camper, or roll a 1031. Talk to an on-site owner and licensed agent.">
 <meta property="og:image" content="https://outdoorresortsgatlinburg.com/Assets/OutdoorResortsHero.MOV.png">
-<meta property="og:url" content="https://outdoorresortsgatlinburg.com/investing-units-for-sale">
+<meta property="og:url" content="https://outdoorresortsgatlinburg.com/investing-units-for-sale.html">
 <meta property="og:type" content="website">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600&family=Source+Sans+3:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
 
 <style>
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -51,6 +52,7 @@ nav {
   top: 0;
   z-index: 100;
 }
+.nav { padding: 0; }
 .nav-inner {
   max-width: 1100px;
   margin: 0 auto;
@@ -511,15 +513,24 @@ footer a:hover { color: rgba(255,255,255,0.72); }
 <body>
 
 <!-- NAV -->
-<nav>
-  <div class="nav-inner">
-    <a class="nav-logo" href="https://outdoorresortsgatlinburg.com/">Outdoor Resorts Gatlinburg</a>
-    <ul class="nav-links">
-      <li><a href="https://outdoorresortsgatlinburg.com/rentals">Browse Rentals →</a></li>
-      <li><a href="https://outdoorresortsgatlinburg.com/stay-guide">Stay Guide</a></li>
-      <li><a href="https://outdoorresortsgatlinburg.com/things-to-do">Explore</a></li>
-      <li><a href="https://outdoorresortsgatlinburg.com/investing-units-for-sale" class="active">Investing</a></li>
-      <li><a href="https://outdoorresortsgatlinburg.com/list-your-rv">List Your RV</a></li>
+<nav class="nav">
+  <div class="container nav__inner">
+    <a class="nav__logo" href="/">Outdoor Resorts <span>Gatlinburg</span></a>
+    <ul class="nav__links">
+      <li><a class="nav__browse" href="/rentals.html">Browse Rentals &rarr;</a></li>
+      <li><a href="/stay-guide.html">Stay Guide</a></li>
+      <li class="nav__drop">
+        <a href="/things-to-do.html">Explore &#9662;</a>
+        <ul class="nav__dropdown">
+          <li><a href="/things-to-do.html">Things to Do</a></li>
+          <li><a href="/dining-near-the-resort.html">Places to Eat</a></li>
+          <li><a href="/great-smoky-mountains.html">Great Smoky Mountains</a></li>
+          <li><a href="https://www.dollywood.com" target="_blank" rel="noopener">Dollywood</a></li>
+          <li><a href="/rocky-top-sports-world.html">Rocky Top Sports</a></li>
+        </ul>
+      </li>
+      <li><a class="active" href="/investing-units-for-sale.html">Investing / Units for Sale</a></li>
+      <li><a class="nav__cta" href="/list-your-rv.html">List Your RV</a></li>
     </ul>
   </div>
 </nav>

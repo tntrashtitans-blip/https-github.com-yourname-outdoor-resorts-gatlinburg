@@ -122,6 +122,15 @@ a {
   position: relative;
 }
 
+.nav__drop::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: -22px;
+  right: -22px;
+  height: 24px;
+}
+
 .nav__dropdown {
   position: absolute;
   top: calc(100% + 24px);
@@ -896,6 +905,36 @@ a {
   color: var(--white);
 }
 
+.page-hero--things {
+  position: relative;
+  overflow: hidden;
+  padding: 112px 0 102px;
+  background:
+    linear-gradient(90deg, rgba(13, 26, 21, .86), rgba(13, 26, 21, .58) 52%, rgba(13, 26, 21, .24)),
+    url("Assets/B Roll 2.png") center 48% / cover;
+  color: var(--white);
+}
+
+.page-hero--dining {
+  position: relative;
+  overflow: hidden;
+  padding: 112px 0 102px;
+  background:
+    linear-gradient(90deg, rgba(13, 26, 21, .86), rgba(13, 26, 21, .58) 52%, rgba(13, 26, 21, .24)),
+    url("Assets/Trishs Mountain Diner Hero.png") center 52% / cover;
+  color: var(--white);
+}
+
+.page-hero--smokies {
+  position: relative;
+  overflow: hidden;
+  padding: 112px 0 102px;
+  background:
+    linear-gradient(90deg, rgba(13, 26, 21, .88), rgba(13, 26, 21, .62) 52%, rgba(13, 26, 21, .22)),
+    url("https://www.nps.gov/grsm/planyourvisit/images/2-1Greenbrier_NPS-Photo-1.JPG?maxwidth=1600&autorotate=false") center 54% / cover;
+  color: var(--white);
+}
+
 .page-hero--rentals .container {
   position: relative;
   z-index: 1;
@@ -923,6 +962,18 @@ a {
   color: rgba(255, 255, 255, .82);
 }
 
+.page-hero--things p {
+  color: rgba(255, 255, 255, .82);
+}
+
+.page-hero--dining p {
+  color: rgba(255, 255, 255, .82);
+}
+
+.page-hero--smokies p {
+  color: rgba(255, 255, 255, .82);
+}
+
 .page-hero--rentals p {
   color: rgba(255, 255, 255, .82);
 }
@@ -932,6 +983,18 @@ a {
 }
 
 .page-hero--stay .eyebrow {
+  color: #e2ad4f;
+}
+
+.page-hero--things .eyebrow {
+  color: #e2ad4f;
+}
+
+.page-hero--dining .eyebrow {
+  color: #e2ad4f;
+}
+
+.page-hero--smokies .eyebrow {
   color: #e2ad4f;
 }
 
@@ -1080,6 +1143,273 @@ a {
   color: var(--muted);
   font-size: .92rem;
   font-weight: 600;
+}
+
+.things-head {
+  max-width: 900px;
+}
+
+.things-head p {
+  font-weight: 600;
+  line-height: 1.58;
+}
+
+.activity-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 22px;
+}
+
+.activity-grid--two {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.activity-card {
+  display: flex;
+  min-height: 100%;
+  flex-direction: column;
+  padding: 26px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--white);
+  box-shadow: 0 6px 24px rgba(23, 35, 31, .08);
+}
+
+.activity-card--primary {
+  background: var(--forest-dark);
+  color: var(--white);
+}
+
+.activity-card--with-image {
+  overflow: hidden;
+  padding: 0;
+}
+
+.activity-card__image {
+  aspect-ratio: 16 / 9;
+  background: var(--mist);
+}
+
+.activity-card__image img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.activity-card__body {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  padding: 26px;
+}
+
+.activity-card__top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  margin-bottom: 20px;
+}
+
+.activity-card__tag,
+.activity-card__type {
+  display: inline-flex;
+  align-items: center;
+  min-height: 30px;
+  border-radius: 999px;
+  padding: 0 11px;
+  font-size: .7rem;
+  font-weight: 900;
+  line-height: 1;
+  white-space: nowrap;
+}
+
+.activity-card__tag {
+  background: rgba(216, 164, 72, .18);
+  color: var(--gold);
+}
+
+.activity-card__type {
+  background: var(--mist);
+  color: var(--forest);
+}
+
+.activity-card--primary .activity-card__type {
+  background: rgba(255, 255, 255, .13);
+  color: rgba(255, 255, 255, .86);
+}
+
+.activity-card h3,
+.thing-card h3 {
+  margin: 0 0 10px;
+  font-family: "Playfair Display", serif;
+  font-size: 1.42rem;
+  line-height: 1.14;
+}
+
+.activity-card p {
+  flex: 1;
+  margin: 0 0 22px;
+  color: var(--muted);
+  font-size: .94rem;
+  font-weight: 600;
+  line-height: 1.58;
+}
+
+.activity-card--primary p {
+  color: rgba(255, 255, 255, .76);
+}
+
+.activity-card--primary .text-link {
+  color: var(--white);
+}
+
+.thing-card-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.thing-card {
+  display: flex;
+  min-height: 100%;
+  flex-direction: column;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--white);
+  box-shadow: 0 6px 24px rgba(23, 35, 31, .08);
+}
+
+.thing-card__image {
+  height: 180px;
+  background: var(--line);
+}
+
+.thing-card__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.thing-card__body {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  padding: 22px;
+}
+
+.thing-card p:not(.card__label) {
+  flex: 1;
+  margin: 0 0 18px;
+  color: var(--muted);
+  font-size: .9rem;
+  font-weight: 600;
+  line-height: 1.55;
+}
+
+.smokies-head {
+  max-width: 980px;
+}
+
+.smokies-head p {
+  font-weight: 600;
+  line-height: 1.58;
+}
+
+.smokies-route-grid {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.smokies-route-card {
+  display: flex;
+  min-height: 128px;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 16px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 18px;
+  background: var(--white);
+  box-shadow: 0 6px 24px rgba(23, 35, 31, .08);
+}
+
+.smokies-route-card strong {
+  color: var(--forest);
+  font-size: .78rem;
+  font-weight: 900;
+  letter-spacing: .08em;
+  line-height: 1.25;
+  text-transform: uppercase;
+}
+
+.smokies-route-card span {
+  color: var(--ink);
+  font-family: "Playfair Display", serif;
+  font-size: 1.12rem;
+  font-weight: 800;
+  line-height: 1.16;
+}
+
+.smokies-area-list {
+  display: grid;
+  gap: 22px;
+}
+
+.smokies-area-card {
+  display: grid;
+  grid-template-columns: minmax(300px, .82fr) minmax(0, 1fr);
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--white);
+  box-shadow: 0 6px 24px rgba(23, 35, 31, .08);
+}
+
+.smokies-area-card:nth-child(even) {
+  grid-template-columns: minmax(0, 1fr) minmax(300px, .82fr);
+}
+
+.smokies-area-card:nth-child(even) .smokies-area-card__image {
+  order: 2;
+}
+
+.smokies-area-card__image {
+  min-height: 330px;
+  background: var(--mist);
+}
+
+.smokies-area-card__image img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.smokies-area-card__body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: clamp(28px, 4vw, 54px);
+}
+
+.smokies-area-card__body h2 {
+  margin: 0 0 12px;
+  font-family: "Playfair Display", serif;
+  font-size: clamp(2rem, 3vw, 3rem);
+  line-height: 1.06;
+}
+
+.smokies-area-card__body p:not(.card__label) {
+  max-width: 680px;
+  margin: 0 0 24px;
+  color: var(--muted);
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.6;
 }
 
 .availability {
@@ -1463,6 +1793,12 @@ a {
   .card-grid,
   .featured-listings,
   .amenity-grid,
+  .activity-grid,
+  .activity-grid--two,
+  .smokies-route-grid,
+  .smokies-area-card,
+  .smokies-area-card:nth-child(even),
+  .thing-card-grid,
   .stay-type-grid,
   .guide-columns,
   .guide-columns--reverse,
@@ -1486,6 +1822,14 @@ a {
 
   .map-note__badge {
     justify-self: start;
+  }
+
+  .smokies-area-card:nth-child(even) .smokies-area-card__image {
+    order: 0;
+  }
+
+  .smokies-area-card__image {
+    min-height: 250px;
   }
 
   .map-reference {
