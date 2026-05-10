@@ -3,12 +3,257 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>List Your RV | Outdoor Resorts Gatlinburg</title>
-  <meta name="description" content="Owner information for listing an RV rental or lot rental on OutdoorResortsGatlinburg.com." />
+  <title>List Your RV | Outdoor Resorts Gatlinburg Owner Intake</title>
+  <meta name="description" content="Submit your ORG lot or RV rental details with your iCal link so your listing can be added to OutdoorResortsGatlinburg.com search and availability filters." />
   <link rel="stylesheet" href="styles.css" />
+  <style>
+    .owner-intake {
+      padding: 52px 0 72px;
+      background: #fff;
+    }
+
+    .owner-intake__grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+      gap: 38px;
+      align-items: start;
+    }
+
+    .owner-help h2,
+    .owner-form h2 {
+      margin: 0 0 14px;
+      font-family: "Playfair Display", serif;
+      font-size: clamp(1.7rem, 3.1vw, 2.45rem);
+      line-height: 1.14;
+      color: var(--forest-dark);
+    }
+
+    .owner-help p {
+      margin: 0 0 15px;
+      color: var(--muted);
+      font-size: 1rem;
+      line-height: 1.65;
+      max-width: 62ch;
+    }
+
+    .owner-help__note {
+      margin-top: 22px;
+      padding: 14px 16px;
+      border: 1px solid var(--line);
+      border-left: 4px solid var(--clay);
+      border-radius: 8px;
+      background: var(--mist);
+      color: var(--forest-dark);
+      font-weight: 700;
+      line-height: 1.5;
+    }
+
+    .owner-help h3 {
+      margin: 22px 0 8px;
+      font-size: 1rem;
+      font-weight: 800;
+      letter-spacing: .03em;
+      color: var(--forest-dark);
+      text-transform: none;
+    }
+
+    .owner-help ol {
+      margin: 0;
+      padding-left: 22px;
+      color: var(--muted);
+    }
+
+    .owner-help li {
+      margin-bottom: 8px;
+      line-height: 1.58;
+    }
+
+    .owner-form {
+      border: 1px solid var(--line);
+      border-radius: 10px;
+      padding: 24px;
+      background: #fff;
+    }
+
+    .owner-form p {
+      margin: 0 0 18px;
+      color: var(--muted);
+      line-height: 1.55;
+    }
+
+    .owner-form .form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+    }
+
+    .owner-form .field {
+      margin-bottom: 14px;
+    }
+
+    .owner-form label {
+      display: block;
+      margin-bottom: 6px;
+      color: var(--forest-dark);
+      font-size: .78rem;
+      font-weight: 800;
+      letter-spacing: .09em;
+      text-transform: uppercase;
+    }
+
+    .owner-form input {
+      width: 100%;
+      min-height: 48px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 0 14px;
+      font: inherit;
+      color: var(--text);
+      background: #fff;
+    }
+
+    .owner-form input:focus {
+      outline: none;
+      border-color: var(--river);
+      box-shadow: 0 0 0 3px rgba(44, 111, 133, 0.15);
+    }
+
+    .owner-form__fine {
+      margin: 2px 0 16px;
+      color: var(--muted);
+      font-size: .84rem;
+      line-height: 1.45;
+    }
+
+    .owner-form .button {
+      width: 100%;
+      justify-content: center;
+      border: 0;
+      cursor: pointer;
+      font-size: 1rem;
+      font-weight: 800;
+    }
+
+    @media (max-width: 920px) {
+      .owner-intake__grid {
+        grid-template-columns: 1fr;
+      }
+
+      .owner-form .form-row {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
 </head>
 <body>
   <nav class="nav"><div class="container nav__inner"><a class="nav__logo" href="/">Outdoor Resorts <span>Gatlinburg</span></a><ul class="nav__links"><li><a class="nav__browse" href="/rentals.html">Browse Rentals &rarr;</a></li><li><a href="/stay-guide.html">Stay Guide</a></li><li class="nav__drop"><a href="/things-to-do.html">Explore &#9662;</a><ul class="nav__dropdown"><li><a href="/things-to-do.html">Things to Do</a></li><li><a href="/dining-near-the-resort.html">Places to Eat</a></li><li><a href="/great-smoky-mountains.html">Great Smoky Mountains</a></li><li><a href="https://www.dollywood.com" target="_blank" rel="noopener">Dollywood</a></li><li><a href="/rocky-top-sports-world.html">Rocky Top Sports</a></li></ul></li><li><a href="/investing-units-for-sale.html">Investing / Units for Sale</a></li><li><a class="nav__cta active" href="/list-your-rv.html">List Your RV</a></li></ul></div></nav>
-  <header class="page-hero"><div class="container"><p class="eyebrow">Owners</p><h1>List your RV or rental lot</h1><p>A future owner intake page for adding RV rentals, vacant RV lot rentals, iCal links, photos, booking URLs, amenities, and availability information.</p></div></header>
+  <header class="page-hero">
+    <div class="container">
+      <p class="eyebrow">Owners</p>
+      <h1>List your RV or rental lot</h1>
+      <p>Send your ORG listing details with your iCal feed so your card can be added to the rentals page and included in date-based availability search.</p>
+    </div>
+  </header>
+
+  <section class="owner-intake">
+    <div class="container owner-intake__grid">
+      <div class="owner-help">
+        <p class="eyebrow">How iCal Works</p>
+        <h2>Why we need your iCal link</h2>
+        <p>
+          Your iCal feed is what powers the date search on our rentals page. It lets us show whether your unit or lot is available when guests pick check-in and check-out dates.
+        </p>
+        <p>
+          Without an iCal link, we can still show your card, but we cannot surface accurate availability status in search results.
+        </p>
+
+        <h3>Airbnb: find your iCal link</h3>
+        <ol>
+          <li>Open your listing in Airbnb host mode.</li>
+          <li>Go to <strong>Pricing and availability</strong> then <strong>Calendar sync</strong>.</li>
+          <li>Copy the <strong>Export calendar (iCal)</strong> link and paste it into this form.</li>
+        </ol>
+
+        <h3>VRBO: find your iCal link</h3>
+        <ol>
+          <li>Open your listing calendar in VRBO owner dashboard.</li>
+          <li>Go to <strong>Import/Export</strong> or <strong>Calendar sync</strong>.</li>
+          <li>Copy your <strong>Export iCal</strong> URL and paste it into this form.</li>
+        </ol>
+
+        <p class="owner-help__note">We only list properties located inside Outdoor Resorts Gatlinburg (ORG).</p>
+      </div>
+
+      <div class="owner-form">
+        <p class="eyebrow">Owner Intake</p>
+        <h2>Submit your listing details</h2>
+        <p>Use one form per lot or rental listing so we can set it up correctly.</p>
+        <form name="owner-listing-intake" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/thank-you.html">
+          <input type="hidden" name="form-name" value="owner-listing-intake">
+          <input type="hidden" name="bot-field">
+
+          <div class="form-row">
+            <div class="field">
+              <label for="owner-name">Name</label>
+              <input id="owner-name" name="name" type="text" autocomplete="name" required>
+            </div>
+            <div class="field">
+              <label for="owner-email">Email</label>
+              <input id="owner-email" name="email" type="email" autocomplete="email" required>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="field">
+              <label for="owner-phone">Phone</label>
+              <input id="owner-phone" name="phone" type="tel" autocomplete="tel">
+            </div>
+            <div class="field">
+              <label for="owner-lot">Lot Number</label>
+              <input id="owner-lot" name="lot_number" type="text" placeholder="Example: 103" required>
+            </div>
+          </div>
+
+          <div class="field">
+            <label for="owner-ical">iCal Link</label>
+            <input id="owner-ical" name="ical_link" type="url" placeholder="https://...ics" required>
+          </div>
+
+          <p class="owner-form__fine">By submitting, you confirm this listing is inside Outdoor Resorts Gatlinburg and you have permission to share this iCal feed.</p>
+          <button class="button button--primary" type="submit">Submit Listing</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div>
+          <p class="footer__brand">OutdoorResortsGatlinburg.com</p>
+          <p>Resort information, RV camping guides, individually owned RV rentals, and rentable RV lots at Outdoor Resorts Gatlinburg, 4229 East Parkway, Gatlinburg, Tennessee.</p>
+        </div>
+        <div>
+          <h3>Stay</h3>
+          <ul>
+            <li><a href="/rentals.html">Browse Rentals</a></li>
+            <li><a href="/stay-guide.html">Stay Guide</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3>Explore</h3>
+          <ul>
+            <li><a href="/things-to-do.html">Things to Do</a></li>
+            <li><a href="/dining-near-the-resort.html">Places to Eat</a></li>
+            <li><a href="/great-smoky-mountains.html">Great Smoky Mountains</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <span>&copy; 2026 OutdoorResortsGatlinburg.com</span>
+        <span>Independent resort information, RV rental, and RV lot rental directory.</span>
+      </div>
+    </div>
+  </footer>
 </body>
 </html>
