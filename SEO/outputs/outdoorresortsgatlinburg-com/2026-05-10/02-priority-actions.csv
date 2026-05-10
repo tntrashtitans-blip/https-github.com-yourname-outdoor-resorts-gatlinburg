@@ -1,0 +1,13 @@
+Priority,Issue,Evidence,Why it matters,Fix,Owner,ETA,Impact,Effort,Time-to-signal
+P1,Sitemap missing,Live /sitemap.xml returns 404,Weakens discovery and recrawl efficiency,Create /sitemap.xml with all indexable URLs and submit in GSC,Web/Codex,1 day,High,Low,Days
+P1,Robots missing sitemap directive,robots.txt only has allow rules,Bots miss explicit sitemap location,Append sitemap line in robots.txt,Web/Codex,1 day,High,Low,Days
+P1,Canonical gaps,Missing in dollywood.html|gatlinburg-camping.html|list-your-rv.html|thank-you.html,Dilutes canonical clarity and can cause duplicate interpretation,Add canonical tag to each page (thank-you can remain noindex),Web/Codex,1 day,High,Low,Days
+P1,OG metadata gaps,Missing OG tags in dollywood.html|gatlinburg-camping.html|list-your-rv.html|thank-you.html,Weakens sharing previews and social trust consistency,Add OG title/description/url/image to each missing page,Web/Codex,1 day,Medium,Low,Days
+P1,Thin placeholder pages,dollywood.html and gatlinburg-camping.html still placeholder-like,Thin pages can underperform and drag quality signals,Replace with full useful local-intent content or temporary noindex,Content/Codex,2-4 days,High,Medium,Weeks
+P2,Schema missing on money cluster,No JSON-LD on investing page and investor blogs,Missed entity/context signals for rich understanding,Add Article schema on blogs and WebPage/Service schema on investing page,Web/Codex,2-3 days,Medium,Medium,Weeks
+P2,List-your-RV schema gap,list-your-rv.html has no schema,Missed owner-intent and conversion context,Add Service/WebPage schema with owner intake context,Web/Codex,1-2 days,Medium,Low,Weeks
+P2,Meta description length inconsistency,Several descriptions exceed ~160 chars,Long snippets truncate and reduce CTR control,Trim to intent-first 140-160 chars,Content/Codex,1-2 days,Medium,Low,Weeks
+P2,No confirmed analytics/GSC access,GSC/GA4/GBP/Ahrefs unavailable in run,Blocks page-2 sprint and query-level prioritization,Connect tools and capture baseline metrics,Owner,1 week,High,Medium,Weeks
+P3,GBP optimization unverified,No GBP access/data in this run,Limits local map-pack performance tuning,Run modules 1-8 once access granted,Owner + SEO,2-4 weeks,Medium,Medium,Months
+P3,Citation/NAP audit incomplete,No citation tool data in this run,Inconsistent citations can weaken local trust,Run citation sweep and normalize NAP,SEO,2-4 weeks,Medium,Medium,Months
+P3,Backlink gap analysis pending,No Ahrefs/SEMrush/Majestic data in this run,Missed authority growth opportunities,Run competitor backlink gap + outreach plan,SEO,3-6 weeks,Medium,High,Months
