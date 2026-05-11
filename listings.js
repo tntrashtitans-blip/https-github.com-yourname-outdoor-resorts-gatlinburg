@@ -79,21 +79,6 @@ const listings = [
     cta: "Book on Hipcamp"
   },
   {
-    title: "Heaven on Earth Creekside Retreat",
-    type: "RV Rental",
-    platform: "Airbnb",
-    platformTag: "airbnb",
-    tags: ["rv-rental", "airbnb", "creekside", "owner-direct"],
-    view: "Creekside park model",
-    details: ["Lot 174", "Creekside", "Park model"],
-    description: "Creekside park model with a mountain stream setting and comfortable indoor living space.",
-    image: "Assets/listings/org-lot-174.jpg",
-    url: "https://www.airbnb.com/h/heavenonearth-creekside-smoky-mountain-retreat",
-    calendarUrl: "",
-    map: { lot: "174", x: 93.2, y: 77.2 },
-    cta: "Book on Airbnb"
-  },
-  {
     title: "Buck Wild",
     type: "RV Rental",
     platform: "Airbnb",
@@ -323,7 +308,6 @@ const lotColorByNumber = {
   "140": "yellow",
   "150": "yellow",
   "172": "orange",
-  "174": "orange",
   "189": "orange",
   "190": "orange",
   "241": "blue",
