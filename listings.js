@@ -79,6 +79,70 @@ const listings = [
     cta: "Book on Hipcamp"
   },
   {
+    title: "Miss Daisy's Lodge",
+    type: "RV Rental",
+    platform: "Airbnb",
+    platformTag: "airbnb",
+    tags: ["rv-rental", "airbnb"],
+    view: "Spacious park model on Lot 199",
+    details: ["Lot 199", "2 bedrooms", "Sleeps 10"],
+    description: "Spacious 2021 Wildwood Grand Lodge park model with a loft, full kitchen, and room for a larger family stay.",
+    image: "Assets/listings/miss-daisys-lodge-lot-199.jpg",
+    url: "https://www.airbnb.com/rooms/52899716",
+    calendarUrl: "https://www.airbnb.com/calendar/ical/52899716.ics?t=8c13003dd29a4807bdc7692d8d72298e",
+    calendarCacheUrl: "calendars/miss-daisys-lodge-lot-199.ics",
+    map: { lot: "199" },
+    cta: "Book on Airbnb"
+  },
+  {
+    title: "Miss Daisy's Place",
+    type: "RV Rental",
+    platform: "Airbnb",
+    platformTag: "airbnb",
+    tags: ["rv-rental", "airbnb"],
+    view: "Park model RV on Lot 323",
+    details: ["Lot 323", "2 bedrooms", "1.5 baths"],
+    description: "Quiet park model RV with two bedrooms, a full kitchen, outdoor seating, and space for a relaxed ORG stay.",
+    image: "Assets/listings/miss-daisys-place-lot-323.jpg",
+    url: "https://www.airbnb.com/rooms/800058674372062313",
+    calendarUrl: "https://www.airbnb.com/calendar/ical/800058674372062313.ics?t=51476c8861644e3d9161a3281be200ad",
+    calendarCacheUrl: "calendars/miss-daisys-place-lot-323.ics",
+    map: { lot: "323" },
+    cta: "Book on Airbnb"
+  },
+  {
+    title: "Miss Daisy's Retreat",
+    type: "RV Rental",
+    platform: "Airbnb",
+    platformTag: "airbnb",
+    tags: ["rv-rental", "airbnb"],
+    view: "Cozy camper on Lot 106",
+    details: ["Lot 106", "1 bedroom", "Sleeps 4"],
+    description: "Cozy mountain camper with a queen bedroom, futon sleeping space, kitchen, and comfortable resort setup.",
+    image: "Assets/listings/miss-daisys-retreat-lot-106.jpg",
+    url: "https://www.airbnb.com/rooms/760019252335716213",
+    calendarUrl: "https://www.airbnb.com/calendar/ical/760019252335716213.ics?t=8a6b80bbbe1c48a580efb47b96aa3a4c",
+    calendarCacheUrl: "calendars/miss-daisys-retreat-lot-106.ics",
+    map: { lot: "106" },
+    cta: "Book on Airbnb"
+  },
+  {
+    title: "Creekside Luxury Outdoor Resort RV Experience",
+    type: "RV Rental",
+    platform: "Airbnb",
+    platformTag: "airbnb",
+    tags: ["rv-rental", "airbnb", "creekside"],
+    view: "Creekside RV on Lot 248",
+    details: ["Lot 248", "2 bedrooms", "1.5 baths"],
+    description: "Family-friendly RV stay with a creekside common-area setting, full kitchen, king bedroom, queen sleeping space, and resort amenities.",
+    image: "Assets/listings/creekside-luxury-lot-248.jpg",
+    url: "https://www.airbnb.com/rooms/931299462560016279?unique_share_id=94ae1b5c-4cf5-4a13-a32d-77df29fe32d4&viralityEntryPoint=1&s=76",
+    calendarUrl: "",
+    map: { lot: "248" },
+    cta: "Book on Airbnb",
+    availabilityLabel: "Verify on Airbnb"
+  },
+  {
     title: "Buck Wild",
     type: "RV Rental",
     platform: "Airbnb",
@@ -302,6 +366,7 @@ const lotColorByNumber = {
   "48": "red",
   "88": "green",
   "103": "red",
+  "106": "red",
   "108": "red",
   "111": "red",
   "113": "red",
@@ -310,10 +375,13 @@ const lotColorByNumber = {
   "172": "orange",
   "189": "orange",
   "190": "orange",
+  "199": "orange",
   "241": "blue",
+  "248": "blue",
   "262": "yellow",
   "294": "yellow",
   "299": "yellow",
+  "323": "blue",
   "366": "blue"
 };
 
@@ -402,6 +470,9 @@ function sortListingsForDisplay(listingsToSort) {
   const hasAvailabilitySearch = calendarState.size > 0;
 
   return [...listingsToSort].sort((a, b) => {
+    const pinnedA = a.featuredCalendarRank && a.featuredCalendarRank <= 2 ? a.featuredCalendarRank : 999;
+    const pinnedB = b.featuredCalendarRank && b.featuredCalendarRank <= 2 ? b.featuredCalendarRank : 999;
+
     if (hasAvailabilitySearch) {
       const stateA = getCalendarState(a)?.status;
       const stateB = getCalendarState(b)?.status;
@@ -410,15 +481,13 @@ function sortListingsForDisplay(listingsToSort) {
       if (availableA !== availableB) return availableA - availableB;
     }
 
-    if (currentFilter !== "rv-lot") {
-      const lotA = a.tags.includes("rv-lot") ? 1 : 0;
-      const lotB = b.tags.includes("rv-lot") ? 1 : 0;
-      if (lotA !== lotB) return lotA - lotB;
-    }
+    if (pinnedA !== pinnedB) return pinnedA - pinnedB;
 
-    const rankA = a.featuredCalendarRank || 999;
-    const rankB = b.featuredCalendarRank || 999;
-    if (rankA !== rankB) return rankA - rankB;
+    const lotNumberA = Number(a.map?.lot);
+    const lotNumberB = Number(b.map?.lot);
+    const sortableLotA = Number.isFinite(lotNumberA) ? lotNumberA : -1;
+    const sortableLotB = Number.isFinite(lotNumberB) ? lotNumberB : -1;
+    if (sortableLotA !== sortableLotB) return sortableLotB - sortableLotA;
 
     return listings.indexOf(a) - listings.indexOf(b);
   });
