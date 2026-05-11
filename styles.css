@@ -192,8 +192,8 @@ a {
   position: absolute;
   inset: 0;
   background:
-    linear-gradient(to top, rgba(13, 26, 21, .9) 0%, rgba(13, 26, 21, .58) 46%, rgba(13, 26, 21, .12) 100%),
-    linear-gradient(90deg, rgba(13, 26, 21, .46), transparent 70%);
+    linear-gradient(to top, rgba(13, 26, 21, .68) 0%, rgba(13, 26, 21, .44) 46%, rgba(13, 26, 21, .09) 100%),
+    linear-gradient(90deg, rgba(13, 26, 21, .35), transparent 70%);
 }
 
 .hero__content {
@@ -908,7 +908,7 @@ a {
   padding: 104px 0 96px;
   background:
     linear-gradient(90deg, rgba(13, 26, 21, .86), rgba(13, 26, 21, .52)),
-    url("Assets/Rainbow over pond.jpg") center 58% / cover;
+    url("Assets/Rainbow over pond.jpg") center 78% / cover;
   color: var(--white);
 }
 
