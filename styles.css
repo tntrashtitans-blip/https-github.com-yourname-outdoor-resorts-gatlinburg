@@ -857,6 +857,16 @@ a {
   font-weight: 800;
 }
 
+.footer__social {
+  margin-top: 14px;
+  font-size: .9rem;
+  font-weight: 800;
+}
+
+.footer__social a {
+  color: var(--gold);
+}
+
 .photo-credit {
   margin-top: 12px;
   font-size: .72rem;
