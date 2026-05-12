@@ -244,7 +244,8 @@ const listings = [
     description: "Clean RV site with full hookups, a nearby bath house, and access to the resort amenities.",
     image: "Assets/listings/crows-landing-lot-113.jpg",
     url: "https://www.hipcamp.com/en-US/land/tennessee-crow-s-landing-rv-site-gatlinburg-7rvhydxv?adults=1&children=0",
-    calendarUrl: "",
+    calendarUrl: "https://www.hipcamp.com/en-US/bookings/433d2c41-55db-401c-bdd9-e71f6b1298f5/agenda.ics?cal=95319&s=636197",
+    calendarCacheUrl: "calendars/crows-landing-lot-113.ics",
     map: { lot: "113" },
     cta: "Book on Hipcamp"
   },
