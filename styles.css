@@ -864,7 +864,25 @@ a {
 }
 
 .footer__social a {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
   color: var(--gold);
+}
+
+.footer__social-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: #1877f2;
+  color: var(--white);
+  font-family: Arial, sans-serif;
+  font-size: 18px;
+  font-weight: 800;
+  line-height: 1;
 }
 
 .photo-credit {
