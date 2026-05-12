@@ -168,7 +168,8 @@ const listings = [
     description: "Spacious RV lot above Webb Creek with deck seating and room for your camper setup.",
     image: "Assets/listings/org-lot-18.jpg",
     url: "https://www.vrbo.com/4412567?dateless=true",
-    calendarUrl: "",
+    calendarUrl: "https://www.airbnb.com/calendar/ical/1346346061076566342.ics?t=615f14fbf8ad41c1b722a7aba846e8ca&locale=en",
+    calendarCacheUrl: "calendars/webb-creek-camper-lot-18.ics",
     map: { lot: "18", x: 31.3, y: 89.8 },
     cta: "View on VRBO"
   },
