@@ -143,6 +143,22 @@ const listings = [
     availabilityLabel: "Verify on Airbnb"
   },
   {
+    title: "Starry Nights",
+    type: "RV Rental",
+    platform: "Airbnb",
+    platformTag: "airbnb",
+    tags: ["rv-rental", "airbnb"],
+    view: "Starlink WiFi camper on Lot 221",
+    details: ["Lot 221", "1 bedroom", "2 beds"],
+    description: "Cozy camper rental at Outdoor Resorts Gatlinburg with Starlink WiFi, outdoor seating, and easy access to resort amenities.",
+    image: "Assets/listings/starry-nights-lot-221.jpg",
+    url: "https://www.airbnb.com/rooms/1102477496700476874",
+    calendarUrl: "https://www.airbnb.com/calendar/ical/1102477496700476874.ics?t=4906104de79f4b699986287e15f36d8e",
+    calendarCacheUrl: "calendars/starry-nights-lot-221.ics",
+    map: { lot: "221" },
+    cta: "Book on Airbnb"
+  },
+  {
     title: "Buck Wild",
     type: "RV Rental",
     platform: "Airbnb",
@@ -378,6 +394,7 @@ const lotColorByNumber = {
   "189": "orange",
   "190": "orange",
   "199": "orange",
+  "221": "blue",
   "241": "blue",
   "248": "blue",
   "262": "yellow",
