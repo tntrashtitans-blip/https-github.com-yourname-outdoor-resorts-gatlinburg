@@ -501,7 +501,7 @@ a {
 
 .guide-grid {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
   gap: 22px;
 }
 
@@ -2076,23 +2076,28 @@ a {
   }
 
   .nav__mobile-row {
-    grid-template-columns: minmax(0, 1fr) auto auto;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 6px;
+    max-width: 330px;
   }
 
   .nav__mobile-row .nav__browse {
+    width: 100%;
     min-width: 0;
-    padding: 0 12px;
-    font-size: .82rem;
+    padding: 0 8px;
+    font-size: .74rem;
   }
 
   .nav__mobile-stay {
-    padding: 0 10px;
-    font-size: .82rem;
+    width: 100%;
+    padding: 0 8px;
+    font-size: .74rem;
   }
 
   .nav__menu-btn {
-    padding: 0 10px;
-    font-size: .82rem;
+    width: 100%;
+    padding: 0 8px;
+    font-size: .74rem;
   }
 
   .listing-grid {
@@ -2111,6 +2116,29 @@ a {
 
   .hero__content {
     padding-bottom: 44px;
+  }
+
+  .hero h1 {
+    max-width: 320px;
+    font-size: 1.9rem;
+    line-height: 1.08;
+    overflow-wrap: break-word;
+  }
+
+  .hero p {
+    max-width: 320px;
+    font-size: .98rem;
+  }
+
+  .hero .eyebrow {
+    gap: 10px;
+    font-size: .74rem;
+    letter-spacing: .1em;
+  }
+
+  .hero .eyebrow::before {
+    width: 52px;
+    flex-basis: 52px;
   }
 
   .section {
