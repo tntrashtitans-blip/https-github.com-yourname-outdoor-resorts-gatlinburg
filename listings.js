@@ -426,6 +426,7 @@ const listings = [
 
 let currentFilter = "all";
 const calendarState = new Map();
+const CALENDAR_CACHE_MAX_AGE_MS = 24 * 60 * 60 * 1000;
 const lotColorByNumber = {
   "5": "green",
   "18": "red",
@@ -504,30 +505,61 @@ function rangesOverlap(startA, endA, startB, endB) {
   return startA < endB && endA > startB;
 }
 
+function isLocalCalendarUrl(url) {
+  return Boolean(url && !/^https?:\/\//i.test(url));
+}
+
+function getLatestCalendarStamp(calendarText) {
+  const stamps = [...calendarText.matchAll(/DTSTAMP(?:;[^:\r\n]+)?:([^\r\n]+)/g)]
+    .map((match) => parseIcalDate(match[1]))
+    .filter(Boolean);
+
+  if (stamps.length === 0) return null;
+  return new Date(Math.max(...stamps.map((stamp) => stamp.getTime())));
+}
+
+function isStaleLocalCalendar(calendarText, sourceUrl) {
+  if (!isLocalCalendarUrl(sourceUrl)) return false;
+
+  const latestStamp = getLatestCalendarStamp(calendarText);
+  if (!latestStamp) return true;
+
+  return Date.now() - latestStamp.getTime() > CALENDAR_CACHE_MAX_AGE_MS;
+}
+
 async function checkListingAvailability(listing, checkIn, checkOut) {
   if (!listing.calendarUrl) return null;
 
   try {
-    const response = await fetchCalendar(listing);
-
-    const busyRanges = parseBusyRanges(await response.text());
+    const { text: calendarText, sourceUrl } = await fetchCalendarText(listing);
+    const busyRanges = parseBusyRanges(calendarText);
     const searchStart = new Date(`${checkIn}T00:00:00`);
     const searchEnd = new Date(`${checkOut}T00:00:00`);
-    const isAvailable = !busyRanges.some((range) => rangesOverlap(searchStart, searchEnd, range.start, range.end));
+    const hasConflict = busyRanges.some((range) => rangesOverlap(searchStart, searchEnd, range.start, range.end));
 
-    return { status: isAvailable ? "available" : "unavailable" };
+    if (hasConflict) return { status: "unavailable" };
+    if (isStaleLocalCalendar(calendarText, sourceUrl)) return { status: "unknown" };
+
+    return { status: "available" };
   } catch {
     return { status: "unknown" };
   }
 }
 
-async function fetchCalendar(listing) {
+function isValidCalendarText(text) {
+  return Boolean(text && text.includes("BEGIN:VCALENDAR") && text.includes("END:VCALENDAR"));
+}
+
+async function fetchCalendarText(listing) {
   const calendarUrls = [listing.calendarUrl, listing.calendarCacheUrl].filter(Boolean);
 
   for (const url of calendarUrls) {
     try {
       const response = await fetch(url);
-      if (response.ok) return response;
+      if (!response.ok) continue;
+
+      const text = await response.text();
+      if (isValidCalendarText(text)) return { text, sourceUrl: url };
     } catch {
       // Try the next calendar source.
     }
@@ -546,9 +578,9 @@ function sortListingsForDisplay(listingsToSort) {
     if (hasAvailabilitySearch) {
       const stateA = getCalendarState(a)?.status;
       const stateB = getCalendarState(b)?.status;
-      const availableA = stateA === "available" ? 0 : 1;
-      const availableB = stateB === "available" ? 0 : 1;
-      if (availableA !== availableB) return availableA - availableB;
+      const availabilityRankA = stateA === "available" ? 0 : stateA === "unavailable" ? 2 : 1;
+      const availabilityRankB = stateB === "available" ? 0 : stateB === "unavailable" ? 2 : 1;
+      if (availabilityRankA !== availabilityRankB) return availabilityRankA - availabilityRankB;
     }
 
     if (pinnedA !== pinnedB) return pinnedA - pinnedB;
