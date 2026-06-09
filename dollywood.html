@@ -15,39 +15,61 @@
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
+    "@graph": [
       {
-        "@type": "Question",
-        "name": "What is the best route to Dollywood from Outdoor Resorts Gatlinburg?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "On busy Dollywood days, many guests compare the main Parkway route with the back route from the East Parkway side through the Birds Creek and Upper Middle Creek area toward Veterans Boulevard and the Craftsman's Valley side of Dollywood. It can help avoid the worst Pigeon Forge Parkway traffic, but guests should check live maps before leaving."
-        }
+        "@type": "WebPage",
+        "@id": "https://outdoorresortsgatlinburg.com/dollywood.html#webpage",
+        "url": "https://outdoorresortsgatlinburg.com/dollywood.html",
+        "name": "Dollywood Lodging Near Gatlinburg",
+        "description": "Dollywood trip-planning guide for families staying at Outdoor Resorts Gatlinburg on East Parkway.",
+        "isPartOf": {
+          "@type": "WebSite",
+          "name": "Outdoor Resorts Gatlinburg",
+          "url": "https://outdoorresortsgatlinburg.com/"
+        },
+        "about": [
+          {
+            "@type": "TouristAttraction",
+            "name": "Dollywood",
+            "url": "https://www.dollywood.com/"
+          },
+          {
+            "@type": "Campground",
+            "name": "Outdoor Resorts Gatlinburg",
+            "address": {
+              "@type": "PostalAddress",
+              "streetAddress": "4229 East Parkway",
+              "addressLocality": "Gatlinburg",
+              "addressRegion": "TN",
+              "postalCode": "37738",
+              "addressCountry": "US"
+            }
+          }
+        ]
       },
       {
-        "@type": "Question",
-        "name": "Is Outdoor Resorts Gatlinburg a good base for Dollywood?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Yes. Outdoor Resorts Gatlinburg works well for families who want a quieter RV resort setting after Dollywood, with RV rentals, rentable RV lots, pools, playgrounds, and space to reset between park days."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Can I rent an RV that is already set up for a Dollywood trip?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Yes. Some listings at Outdoor Resorts Gatlinburg are ready-to-stay RV rentals or park models. Other listings are vacant RV lots for guests bringing their own camper."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "How do you avoid Dollywood traffic from Gatlinburg?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Avoiding the main Pigeon Forge Parkway approach can matter on Saturdays, holidays, and festival days. From the Outdoor Resorts Gatlinburg side, the back way toward Dollywood often keeps guests out of downtown Gatlinburg and the heaviest Pigeon Forge traffic."
-        }
+        "@type": "BreadcrumbList",
+        "@id": "https://outdoorresortsgatlinburg.com/dollywood.html#breadcrumb",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://outdoorresortsgatlinburg.com/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Explore",
+            "item": "https://outdoorresortsgatlinburg.com/things-to-do.html"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Dollywood",
+            "item": "https://outdoorresortsgatlinburg.com/dollywood.html"
+          }
+        ]
       }
     ]
   }

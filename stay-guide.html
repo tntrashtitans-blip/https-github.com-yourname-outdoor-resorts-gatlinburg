@@ -15,39 +15,48 @@
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
+    "@graph": [
       {
-        "@type": "Question",
-        "name": "Can I rent an RV that is already set up at Outdoor Resorts Gatlinburg?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Yes. Some listings are ready-to-stay RV rentals or park model rentals managed by individual owners. Use the rentals page to compare listings and confirm details on Airbnb, VRBO, Hipcamp, or owner-direct pages."
+        "@type": "WebPage",
+        "@id": "https://outdoorresortsgatlinburg.com/stay-guide.html#webpage",
+        "url": "https://outdoorresortsgatlinburg.com/stay-guide.html",
+        "name": "Outdoor Resorts Gatlinburg Stay Guide",
+        "description": "Practical guidance for guests booking RV rentals, park model rentals, and rentable RV lots at Outdoor Resorts Gatlinburg.",
+        "isPartOf": {
+          "@type": "WebSite",
+          "name": "Outdoor Resorts Gatlinburg",
+          "url": "https://outdoorresortsgatlinburg.com/"
+        },
+        "about": {
+          "@type": "Campground",
+          "name": "Outdoor Resorts Gatlinburg",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "4229 East Parkway",
+            "addressLocality": "Gatlinburg",
+            "addressRegion": "TN",
+            "postalCode": "37738",
+            "addressCountry": "US"
+          }
         }
       },
       {
-        "@type": "Question",
-        "name": "Can I bring my own camper to Outdoor Resorts Gatlinburg?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Yes, some rentable RV lots are for guests bringing their own camper or RV. These are different from ready-to-stay RV rentals, so check the listing type before booking."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Is tent camping offered at Outdoor Resorts Gatlinburg?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Tent camping is not offered at Outdoor Resorts Gatlinburg. The resort is focused on RV camping, ready-to-stay RV rentals, park model rentals, and rentable RV lots."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Where is Outdoor Resorts Gatlinburg located?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Outdoor Resorts Gatlinburg is located at 4229 East Parkway, Gatlinburg, TN 37738, about 10 minutes from downtown Gatlinburg depending on traffic."
-        }
+        "@type": "BreadcrumbList",
+        "@id": "https://outdoorresortsgatlinburg.com/stay-guide.html#breadcrumb",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://outdoorresortsgatlinburg.com/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Stay Guide",
+            "item": "https://outdoorresortsgatlinburg.com/stay-guide.html"
+          }
+        ]
       }
     ]
   }

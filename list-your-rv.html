@@ -12,6 +12,60 @@
   <meta property="og:image" content="https://outdoorresortsgatlinburg.com/Assets/Rainbow%20over%20pond.jpg" />
   <meta property="og:url" content="https://outdoorresortsgatlinburg.com/list-your-rv.html" />
   <link rel="stylesheet" href="styles.css?v=20260510-mobile-fix-2" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebPage",
+        "@id": "https://outdoorresortsgatlinburg.com/list-your-rv.html#webpage",
+        "url": "https://outdoorresortsgatlinburg.com/list-your-rv.html",
+        "name": "List Your RV or Lot at Outdoor Resorts Gatlinburg",
+        "description": "Owner intake page for submitting Outdoor Resorts Gatlinburg RV rentals and rentable RV lots with iCal links.",
+        "isPartOf": {
+          "@type": "WebSite",
+          "name": "Outdoor Resorts Gatlinburg",
+          "url": "https://outdoorresortsgatlinburg.com/"
+        },
+        "mainEntity": {
+          "@type": "Service",
+          "name": "Outdoor Resorts Gatlinburg rental listing intake",
+          "serviceType": "Rental listing directory intake",
+          "areaServed": {
+            "@type": "Place",
+            "name": "Outdoor Resorts Gatlinburg",
+            "address": {
+              "@type": "PostalAddress",
+              "streetAddress": "4229 East Parkway",
+              "addressLocality": "Gatlinburg",
+              "addressRegion": "TN",
+              "postalCode": "37738",
+              "addressCountry": "US"
+            }
+          }
+        }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://outdoorresortsgatlinburg.com/list-your-rv.html#breadcrumb",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://outdoorresortsgatlinburg.com/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "List Your RV",
+            "item": "https://outdoorresortsgatlinburg.com/list-your-rv.html"
+          }
+        ]
+      }
+    ]
+  }
+  </script>
   <style>
     .owner-intake {
       padding: 52px 0 72px;
@@ -225,7 +279,7 @@
             <input id="owner-ical" name="ical_link" type="url" placeholder="https://...ics" required>
           </div>
 
-          <p class="owner-form__fine">By submitting, you confirm this listing is inside Outdoor Resorts Gatlinburg and you have permission to share this iCal feed.</p>
+          <p class="owner-form__fine">By submitting, you confirm this listing is inside Outdoor Resorts Gatlinburg, you have permission to share this iCal feed, and the information may be used to verify and publish your listing on this directory.</p>
           <button class="button button--primary" type="submit">Submit Listing</button>
         </form>
       </div>
