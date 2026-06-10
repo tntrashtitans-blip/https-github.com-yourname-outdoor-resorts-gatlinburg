@@ -426,7 +426,6 @@ const listings = [
 
 let currentFilter = "all";
 const calendarState = new Map();
-const CALENDAR_CACHE_MAX_AGE_MS = 24 * 60 * 60 * 1000;
 const lotColorByNumber = {
   "5": "green",
   "18": "red",
@@ -505,40 +504,17 @@ function rangesOverlap(startA, endA, startB, endB) {
   return startA < endB && endA > startB;
 }
 
-function isLocalCalendarUrl(url) {
-  return Boolean(url && !/^https?:\/\//i.test(url));
-}
-
-function getLatestCalendarStamp(calendarText) {
-  const stamps = [...calendarText.matchAll(/DTSTAMP(?:;[^:\r\n]+)?:([^\r\n]+)/g)]
-    .map((match) => parseIcalDate(match[1]))
-    .filter(Boolean);
-
-  if (stamps.length === 0) return null;
-  return new Date(Math.max(...stamps.map((stamp) => stamp.getTime())));
-}
-
-function isStaleLocalCalendar(calendarText, sourceUrl) {
-  if (!isLocalCalendarUrl(sourceUrl)) return false;
-
-  const latestStamp = getLatestCalendarStamp(calendarText);
-  if (!latestStamp) return true;
-
-  return Date.now() - latestStamp.getTime() > CALENDAR_CACHE_MAX_AGE_MS;
-}
-
 async function checkListingAvailability(listing, checkIn, checkOut) {
   if (!listing.calendarUrl) return null;
 
   try {
-    const { text: calendarText, sourceUrl } = await fetchCalendarText(listing);
+    const calendarText = await fetchCalendarText(listing);
     const busyRanges = parseBusyRanges(calendarText);
     const searchStart = new Date(`${checkIn}T00:00:00`);
     const searchEnd = new Date(`${checkOut}T00:00:00`);
     const hasConflict = busyRanges.some((range) => rangesOverlap(searchStart, searchEnd, range.start, range.end));
 
     if (hasConflict) return { status: "unavailable" };
-    if (isStaleLocalCalendar(calendarText, sourceUrl)) return { status: "unknown" };
 
     return { status: "available" };
   } catch {
@@ -559,7 +535,7 @@ async function fetchCalendarText(listing) {
       if (!response.ok) continue;
 
       const text = await response.text();
-      if (isValidCalendarText(text)) return { text, sourceUrl: url };
+      if (isValidCalendarText(text)) return text;
     } catch {
       // Try the next calendar source.
     }
@@ -652,6 +628,29 @@ document.querySelectorAll(".filter-btn").forEach((button) => {
     currentFilter = button.dataset.filter;
     renderListings();
   });
+});
+
+function formatDateInputValue(date) {
+  const year = date.getFullYear();
+  const month = String(date.getMonth() + 1).padStart(2, "0");
+  const day = String(date.getDate()).padStart(2, "0");
+  return `${year}-${month}-${day}`;
+}
+
+function addCalendarDays(dateValue, days) {
+  const date = new Date(`${dateValue}T00:00:00`);
+  date.setDate(date.getDate() + days);
+  return formatDateInputValue(date);
+}
+
+document.getElementById("checkin")?.addEventListener("change", (event) => {
+  const checkIn = event.target.value;
+  const checkOutInput = document.getElementById("checkout");
+  if (!checkIn || !checkOutInput) return;
+
+  const nextDay = addCalendarDays(checkIn, 1);
+  checkOutInput.min = nextDay;
+  checkOutInput.value = nextDay;
 });
 
 document.getElementById("availabilityBtn")?.addEventListener("click", async () => {
