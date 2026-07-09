@@ -1,0 +1,25 @@
+name: Refresh calendar caches
+
+on:
+  schedule:
+    - cron: "17 */6 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.x"
+      - name: Refresh sanitized iCal cache files
+        run: python scripts/refresh-calendar-caches.py
+      - name: Commit cache updates
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: Refresh calendar availability caches
+          file_pattern: calendars/*.ics
