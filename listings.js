@@ -59,7 +59,8 @@ const listings = [
     description: "Creekside RV lot with hookups for guests bringing their own RV or camper.",
     image: "Assets/listings/creekside-vibes.jpg",
     url: "https://www.hipcamp.com/en-US/land/tennessee-gatlinburg-vibes-rv-camping-r57h9eo8/sites/1124856?siteId=1124856&share_id=24c8h1bwxzz&utm_medium=share&utm_source=share_content&adults=1&children=0",
-    calendarUrl: "calendars/creekside-vibes.ics",
+    calendarUrl: "https://www.hipcamp.com/en-US/bookings/4a7def50-dbd2-4def-9900-3ff14240e190/agenda.ics?cal=95259&s=1124856",
+    calendarCacheUrl: "calendars/creekside-vibes.ics",
     map: { lot: "262", x: 40.2, y: 71.7 },
     cta: "Book on Hipcamp"
   },

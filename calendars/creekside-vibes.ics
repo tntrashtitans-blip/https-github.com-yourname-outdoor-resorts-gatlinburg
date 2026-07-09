@@ -1,23 +1,17 @@
 BEGIN:VCALENDAR
 VERSION:2.0
-PRODID:-//Outdoor Resorts Gatlinburg//Creekside Vibes Availability//EN
+PRODID:-//OutdoorResortsGatlinburg.com//Availability Cache//EN
 CALSCALE:GREGORIAN
 BEGIN:VEVENT
-UID:creekside-vibes-20260515-20260524@outdoorresortsgatlinburg.com
-DTSTART;VALUE=DATE:20260515
-DTEND;VALUE=DATE:20260524
-SUMMARY:Unavailable
+UID:hipcamp-bookings-2c9b4561-3035-4ce6-81f0-acb0a4d2227d
+DTSTART;VALUE=DATE:20260710
+DTEND;VALUE=DATE:20260719
+SUMMARY:Reserved
 END:VEVENT
 BEGIN:VEVENT
-UID:creekside-vibes-20260627-20260705@outdoorresortsgatlinburg.com
-DTSTART;VALUE=DATE:20260627
-DTEND;VALUE=DATE:20260705
-SUMMARY:Unavailable
-END:VEVENT
-BEGIN:VEVENT
-UID:creekside-vibes-20261105-20261110@outdoorresortsgatlinburg.com
+UID:hipcamp-bookings-dafa187b-4774-4ed8-b85c-f6c1c49feb9e
 DTSTART;VALUE=DATE:20261105
 DTEND;VALUE=DATE:20261110
-SUMMARY:Unavailable
+SUMMARY:Reserved
 END:VEVENT
 END:VCALENDAR
