@@ -18,6 +18,9 @@ Date checked: 2026-07-16
   - Status: Success
   - Discovered pages: 16
   - Discovered videos: 0
+- After deploying the forced redirects, started validation for `Alternate page with proper canonical tag`.
+- Validation status shown in Search Console: Validation Started.
+- Validation started date shown: 7/16/26.
 
 ## Page Indexing Review
 
@@ -39,6 +42,16 @@ Date checked: 2026-07-16
 - Updated `_redirects` to force extensionless URL variants to `.html` canonicals using `301!`.
 - Added a contextual internal link from the HELOC/storage article to the ORG lot-map buyer guide.
 - Added the lot-map guide to the HELOC/storage article's related-guides block.
+
+## Deployment Verification
+
+- Deployed commit: `15eb8a6` (`Fix canonical redirects and log GSC follow-up`)
+- Production redirect checks completed after deploy:
+  - `https://outdoorresortsgatlinburg.com/rentals` returns `301` to `/rentals.html`.
+  - `https://outdoorresortsgatlinburg.com/stay-guide` returns `301` to `/stay-guide.html`.
+  - `https://outdoorresortsgatlinburg.com/investing-units-for-sale` returns `301` to `/investing-units-for-sale.html`.
+  - `https://outdoorresortsgatlinburg.com/list-your-rv` returns `301` to `/list-your-rv.html`.
+- Production HELOC/storage article includes the new lot-map guide contextual link and related-guide card.
 
 ## Performance Snapshot
 
@@ -73,9 +86,7 @@ Important canonical issue from Performance:
 
 ## Next Actions After Deploy
 
-1. Deploy the forced `_redirects` change.
-2. Confirm extensionless URLs return `301` to their `.html` canonical URLs.
-3. After confirmed, start validation for `Alternate page with proper canonical tag`.
-4. Recheck URL Inspection for `/blog/org-lot-map-buyers-guide.html` after Google processes the sitemap and indexing request.
-5. Improve CTR for photo/prices intent by adding clearer photo/pricing language to visible snippets and page sections.
-6. Improve page-two pages, especially rentals, stay guide, investing, and Rocky Top Sports World, using query-specific title/meta and internal-link refinements.
+1. Monitor `Alternate page with proper canonical tag` validation until Google marks the issue passed or reports failed examples.
+2. Recheck URL Inspection for `/blog/org-lot-map-buyers-guide.html` after Google processes the sitemap and indexing request.
+3. Improve CTR for photo/prices intent by adding clearer photo/pricing language to visible snippets and page sections.
+4. Improve page-two pages, especially rentals, stay guide, investing, and Rocky Top Sports World, using query-specific title/meta and internal-link refinements.
