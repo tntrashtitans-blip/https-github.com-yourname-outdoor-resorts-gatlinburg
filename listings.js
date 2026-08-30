@@ -44,7 +44,8 @@ const listings = [
     description: "Camp Shanty RV rental at Outdoor Resorts Gatlinburg with a 1-bedroom layout, 6 beds, and 1 bath.",
     image: "https://a0.muscache.com/im/pictures/hosting/Hosting-1660295335684782036/original/972f647f-0ded-4082-b6fa-d54bc673c655.jpeg",
     url: "http://airbnb.com/h/campshanty",
-    calendarUrl: "",
+    calendarUrl: "calendars/camp-shanty-lot-298.ics",
+    calendarCacheUrl: "calendars/camp-shanty-lot-298.ics",
     map: { lot: "298" },
     cta: "Book on Airbnb"
   },
