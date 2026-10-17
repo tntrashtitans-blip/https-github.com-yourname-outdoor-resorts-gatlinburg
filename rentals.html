@@ -199,7 +199,7 @@
     <div class="container availability__inner">
       <div class="availability__copy">
         <strong>Search dates</strong>
-        <span>Calendar feeds can be connected as owners provide iCal links. Until then, use each listing's booking button or owner page link for live availability.</span>
+        <span>Connected iCal feeds can flag reservation conflicts. A calendar-open result is not a booking guarantee; confirm dates and booking rules on the owner's platform.</span>
       </div>
       <div class="field">
         <label for="checkin">Check in</label>
@@ -209,7 +209,7 @@
         <label for="checkout">Check out</label>
         <input id="checkout" type="date" />
       </div>
-      <button class="button button--primary" id="availabilityBtn" type="button">Check Availability</button>
+      <button class="button button--primary" id="availabilityBtn" type="button">Check Calendars</button>
       <p class="availability__note" id="availabilityNote" aria-live="polite"></p>
     </div>
   </section>
@@ -260,8 +260,8 @@
           <p>Each card links to the listing source used by that owner, such as Airbnb, VRBO, Hipcamp, or an owner-direct page. Use that platform for final rules, payment, cancellation terms, and host communication.</p>
         </article>
         <article>
-          <h3>Calendar feeds are still being connected</h3>
-          <p>Date search works for listings with connected iCal feeds. Calendar feeds can lag or fail in the browser, so always open the booking link before making travel plans.</p>
+          <h3>Calendar search narrows the list</h3>
+          <p>Date search checks connected iCal feeds for reservation conflicts. Airbnb, VRBO, and Hipcamp may apply minimum stays, advance notice, or other booking rules that iCal does not show, so always confirm on the booking platform.</p>
         </article>
         <article>
           <h3>Match the stay type to your trip</h3>
@@ -286,7 +286,7 @@
         </article>
         <article>
           <h3>Does the date search show every available listing?</h3>
-          <p>No. Date search checks connected iCal feeds only. Some listings may still be available even if their calendar is not connected, so always confirm on the booking platform.</p>
+          <p>No. Date search checks connected iCal feeds for conflicts; it cannot confirm every platform booking rule. Some unconnected listings may also be available. Always confirm the selected dates on the booking platform.</p>
         </article>
         <article>
           <h3>Can I tent camp at Outdoor Resorts Gatlinburg?</h3>
@@ -327,7 +327,7 @@
     </div>
   </footer>
 
-  <script src="listings.js?v=20260830-lot-298-2"></script>
+  <script src="listings.js?v=20261017-live-calendar-check-1"></script>
   <script src="nav-mobile.js?v=20260510-mobile-fix-2"></script>
 </body>
 </html>

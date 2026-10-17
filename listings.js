@@ -44,10 +44,10 @@ const listings = [
     description: "Camp Shanty RV rental at Outdoor Resorts Gatlinburg with a 1-bedroom layout, 6 beds, and 1 bath.",
     image: "https://a0.muscache.com/im/pictures/hosting/Hosting-1660295335684782036/original/972f647f-0ded-4082-b6fa-d54bc673c655.jpeg",
     url: "http://airbnb.com/h/campshanty",
-    calendarUrl: "calendars/camp-shanty-lot-298.ics",
-    calendarCacheUrl: "calendars/camp-shanty-lot-298.ics",
+    calendarUrl: "",
     map: { lot: "298" },
-    cta: "Book on Airbnb"
+    cta: "Book on Airbnb",
+    availabilityLabel: "Verify on Airbnb"
   },
   {
     title: "Eagle's Nest Getaway",
@@ -442,6 +442,7 @@ const listings = [
 ];
 
 let currentFilter = "all";
+let currentSearchDates = null;
 const calendarState = new Map();
 const lotColorByNumber = {
   "5": "green",
@@ -526,15 +527,14 @@ async function checkListingAvailability(listing, checkIn, checkOut) {
   if (!listing.calendarUrl) return null;
 
   try {
-    const calendarText = await fetchCalendarText(listing);
+    const { text: calendarText, authoritative } = await fetchCalendarText(listing);
     const busyRanges = parseBusyRanges(calendarText);
     const searchStart = new Date(`${checkIn}T00:00:00`);
     const searchEnd = new Date(`${checkOut}T00:00:00`);
     const hasConflict = busyRanges.some((range) => rangesOverlap(searchStart, searchEnd, range.start, range.end));
 
     if (hasConflict) return { status: "unavailable" };
-
-    return { status: "available" };
+    return authoritative ? { status: "open" } : { status: "unknown" };
   } catch {
     return { status: "unknown" };
   }
@@ -545,21 +545,37 @@ function isValidCalendarText(text) {
 }
 
 async function fetchCalendarText(listing) {
-  const calendarUrls = [listing.calendarUrl, listing.calendarCacheUrl].filter(Boolean);
+  const calendarUrls = [
+    { url: listing.calendarUrl, authoritative: listing.calendarUrl?.startsWith("http") },
+    { url: listing.calendarCacheUrl, authoritative: false }
+  ].filter((source) => source.url);
 
-  for (const url of calendarUrls) {
+  for (const source of calendarUrls) {
     try {
-      const response = await fetch(url);
+      const response = await fetch(source.url);
       if (!response.ok) continue;
 
       const text = await response.text();
-      if (isValidCalendarText(text)) return text;
+      if (isValidCalendarText(text)) return { text, authoritative: source.authoritative };
     } catch {
       // Try the next calendar source.
     }
   }
 
   throw new Error("Calendar unavailable");
+}
+
+async function fetchLiveAvailability(checkIn, checkOut) {
+  const query = new URLSearchParams({ checkIn, checkOut });
+  const response = await fetch(`/.netlify/functions/availability?${query}`);
+  if (!response.ok) throw new Error("Live availability unavailable");
+
+  const payload = await response.json();
+  if (!payload || typeof payload.results !== "object") {
+    throw new Error("Invalid live availability response");
+  }
+
+  return payload.results;
 }
 
 function sortListingsForDisplay(listingsToSort) {
@@ -572,8 +588,8 @@ function sortListingsForDisplay(listingsToSort) {
     if (hasAvailabilitySearch) {
       const stateA = getCalendarState(a)?.status;
       const stateB = getCalendarState(b)?.status;
-      const availabilityRankA = stateA === "available" ? 0 : stateA === "unavailable" ? 2 : 1;
-      const availabilityRankB = stateB === "available" ? 0 : stateB === "unavailable" ? 2 : 1;
+      const availabilityRankA = stateA === "open" ? 0 : stateA === "unavailable" ? 2 : 1;
+      const availabilityRankB = stateB === "open" ? 0 : stateB === "unavailable" ? 2 : 1;
       if (availabilityRankA !== availabilityRankB) return availabilityRankA - availabilityRankB;
     }
 
@@ -592,9 +608,21 @@ function sortListingsForDisplay(listingsToSort) {
 function buildListingCard(listing) {
   const details = listing.details.map((detail) => `<span>${detail}</span>`).join("");
   const state = getCalendarState(listing);
-  const isAvailable = state?.status === "available";
-  const availabilityBadge = isAvailable ? `<span class="availability-pill">Available</span>` : "";
-  const cardClass = isAvailable ? " listing-card--available" : "";
+  const isCalendarOpen = state?.status === "open";
+  const availabilityBadge = isCalendarOpen ? `<span class="availability-pill">Calendar open</span>` : "";
+  const cardClass = isCalendarOpen ? " listing-card--available" : "";
+  let bookingUrl = listing.url;
+
+  if (currentSearchDates && listing.platform === "Airbnb") {
+    try {
+      const datedUrl = new URL(listing.url);
+      datedUrl.searchParams.set("check_in", currentSearchDates.checkIn);
+      datedUrl.searchParams.set("check_out", currentSearchDates.checkOut);
+      bookingUrl = datedUrl.toString();
+    } catch {
+      // Keep the owner's original link if it cannot accept URL parameters.
+    }
+  }
   const lotBadge = listing.map?.lot
     ? `<span class="listing-lot-badge listing-lot-badge--${lotColorByNumber[listing.map.lot] || "neutral"}">Lot ${listing.map.lot}</span>`
     : "";
@@ -612,8 +640,8 @@ function buildListingCard(listing) {
         <h3>${listing.title}</h3>
         <p class="listing-card__description">${listing.description}</p>
         <div class="listing-card__details">${details}</div>
-        ${isAvailable ? `<p class="listing-card__calendar">Available for selected dates</p>` : ""}
-        <a class="button button--primary listing-card__button" href="${listing.url}" target="_blank" rel="noopener">${listing.cta || `Book on ${listing.platform}`} ↗</a>
+        ${isCalendarOpen ? `<p class="listing-card__calendar">No iCal conflict found. Verify exact availability on ${listing.platform}.</p>` : ""}
+        <a class="button button--primary listing-card__button" href="${bookingUrl}" target="_blank" rel="noopener">${listing.cta || `Book on ${listing.platform}`} ↗</a>
       </div>
     </article>
   `;
@@ -695,26 +723,40 @@ document.getElementById("availabilityBtn")?.addEventListener("click", async () =
 
   note.textContent = `Checking ${connectedCount} connected calendar feed${connectedCount === 1 ? "" : "s"}...`;
 
-  const results = await Promise.all(
-    listings
-      .filter((listing) => listing.calendarUrl)
-      .map(async (listing) => [getListingKey(listing), await checkListingAvailability(listing, checkIn, checkOut)])
-  );
+  const connectedListings = listings.filter((listing) => listing.calendarUrl);
+  let results;
+
+  try {
+    const liveResults = await fetchLiveAvailability(checkIn, checkOut);
+    results = connectedListings.map((listing) => {
+      const key = getListingKey(listing);
+      const status = liveResults[key]?.status;
+      return [key, ["open", "unavailable"].includes(status) ? { status } : { status: "unknown" }];
+    });
+  } catch {
+    results = await Promise.all(
+      connectedListings.map(async (listing) => [
+        getListingKey(listing),
+        await checkListingAvailability(listing, checkIn, checkOut)
+      ])
+    );
+  }
 
   results.forEach(([key, state]) => {
     if (state) calendarState.set(key, state);
   });
 
-  const availableCount = results.filter(([, state]) => state?.status === "available").length;
+  const openCount = results.filter(([, state]) => state?.status === "open").length;
   const unknownCount = results.filter(([, state]) => state?.status === "unknown").length;
+  currentSearchDates = { checkIn, checkOut };
   renderListings();
 
   if (unknownCount > 0) {
-    note.textContent = `${availableCount} connected listing${availableCount === 1 ? "" : "s"} marked available. ${unknownCount} calendar feed${unknownCount === 1 ? "" : "s"} could not be checked in this browser.`;
+    note.textContent = `${openCount} connected listing calendar${openCount === 1 ? "" : "s"} show no conflict. ${unknownCount} calendar feed${unknownCount === 1 ? "" : "s"} could not be verified. Confirm exact availability on the booking platform.`;
     return;
   }
 
-  note.textContent = `${availableCount} connected listing${availableCount === 1 ? "" : "s"} available for ${checkIn} through ${checkOut}. Available calendar-connected listings are shown first.`;
+  note.textContent = `${openCount} connected listing calendar${openCount === 1 ? "" : "s"} show no iCal conflict for ${checkIn} through ${checkOut}. Verify exact availability on the booking platform; calendar-open listings are shown first.`;
 });
 
 renderListings();
