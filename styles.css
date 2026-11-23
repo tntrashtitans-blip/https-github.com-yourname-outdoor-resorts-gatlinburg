@@ -2165,3 +2165,64 @@ a {
     flex-direction: column;
   }
 }
+
+.page-hero--directory {
+  position: relative;
+  overflow: hidden;
+  padding: 104px 0 88px;
+  background:
+    linear-gradient(90deg, rgba(13, 26, 21, .88), rgba(13, 26, 21, .56)),
+    url("Assets/Entrance.png") center 42% / cover;
+  color: var(--white);
+}
+
+.page-hero--directory p {
+  color: rgba(255, 255, 255, .84);
+}
+
+.page-hero--directory h2 {
+  margin: 22px 0 0;
+  color: inherit;
+  font-family: "Playfair Display", serif;
+  font-size: clamp(1.45rem, 2.6vw, 1.9rem);
+  line-height: 1.2;
+}
+
+.page-hero--missing {
+  display: flex;
+  align-items: center;
+  min-height: 70vh;
+}
+
+.directory-copy {
+  max-width: 760px;
+}
+
+.directory-copy h2 {
+  margin: 28px 0 10px;
+  color: var(--forest-dark);
+  font-family: "Playfair Display", serif;
+  font-size: clamp(1.6rem, 3vw, 2.2rem);
+  line-height: 1.15;
+}
+
+.directory-copy p,
+.directory-copy li {
+  color: var(--muted);
+  font-size: 1.02rem;
+  line-height: 1.7;
+}
+
+.directory-copy p {
+  margin: 0 0 16px;
+}
+
+.directory-copy ul {
+  margin: 0 0 16px;
+  padding-left: 1.2rem;
+}
+
+.directory-copy a {
+  color: var(--forest);
+  font-weight: 800;
+}
