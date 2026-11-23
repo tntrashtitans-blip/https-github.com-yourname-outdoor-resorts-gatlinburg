@@ -316,8 +316,28 @@
       .stat__num { font-size: 1.55rem; }
     }
   </style>
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" href="/favicon-32.png" type="image/png" sizes="32x32">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<style>
+  .skip-link{position:absolute;left:12px;top:8px;z-index:10000;padding:10px 14px;background:#133528;color:#fff !important;font-weight:700;text-decoration:none;border-radius:6px;clip:rect(0 0 0 0);clip-path:inset(50%);height:1px;width:1px;overflow:hidden;white-space:nowrap}
+  .skip-link:focus{clip:auto;clip-path:none;height:auto;width:auto;overflow:visible;outline:3px solid #d8a448;outline-offset:2px}
+  .footer__about{color:rgba(255,255,255,.86);font-weight:800}
+  .footer__about:hover{color:#fff}
+</style>
+<!--
+GA4 placeholder. Tracking is not enabled. Replace G-XXXXXXX and remove this comment to turn it on.
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXX"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-XXXXXXX');
+</script>
+-->
 </head>
 <body class="rocky-page">
+  <a class="skip-link" href="#main">Skip to content</a>
 
 <nav class="nav">
   <div class="container nav__inner">
@@ -340,6 +360,7 @@
     </ul>
   </div>
 </nav>
+  <main id="main">
 
 <!-- HERO -->
 <section class="hero">
@@ -648,7 +669,9 @@
   </div>
 </section>
 
-<footer class="footer">
+  </main>
+
+  <footer class="footer">
   <div class="container">
     <div class="footer__grid">
       <div>
@@ -677,6 +700,7 @@
     </div>
     <div class="footer__bottom">
       <span>&copy; 2026 OutdoorResortsGatlinburg.com</span>
+        <a class="footer__about" href="/about.html">About</a>
       <span>Gatlinburg, TN &bull; 4229 East Parkway</span>
     </div>
   </div>

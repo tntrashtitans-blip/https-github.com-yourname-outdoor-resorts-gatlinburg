@@ -569,8 +569,28 @@ footer a:hover { color: rgba(255,255,255,0.72); }
   .photo-strip-img { height: 160px; }
 }
 </style>
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" href="/favicon-32.png" type="image/png" sizes="32x32">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<style>
+  .skip-link{position:absolute;left:12px;top:8px;z-index:10000;padding:10px 14px;background:#133528;color:#fff !important;font-weight:700;text-decoration:none;border-radius:6px;clip:rect(0 0 0 0);clip-path:inset(50%);height:1px;width:1px;overflow:hidden;white-space:nowrap}
+  .skip-link:focus{clip:auto;clip-path:none;height:auto;width:auto;overflow:visible;outline:3px solid #d8a448;outline-offset:2px}
+  .footer__about{color:rgba(255,255,255,.86);font-weight:800}
+  .footer__about:hover{color:#fff}
+</style>
+<!--
+GA4 placeholder. Tracking is not enabled. Replace G-XXXXXXX and remove this comment to turn it on.
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXX"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-XXXXXXX');
+</script>
+-->
 </head>
 <body>
+  <a class="skip-link" href="#main">Skip to content</a>
 
 <!-- NAV -->
 <nav class="nav">
@@ -594,6 +614,7 @@ footer a:hover { color: rgba(255,255,255,0.72); }
     </ul>
   </div>
 </nav>
+  <main id="main">
 
 <!-- HERO -->
 <section class="hero">
@@ -905,11 +926,11 @@ footer a:hover { color: rgba(255,255,255,0.72); }
         </div>
         <div class="form-group">
           <label for="email">Email address</label>
-          <input type="email" id="email" name="email" placeholder="you@example.com" required>
+          <input type="email" id="email" name="email" placeholder="Your email" required>
         </div>
         <div class="form-group">
           <label for="phone">Phone (optional)</label>
-          <input type="tel" id="phone" name="phone" placeholder="(615) 555-0100">
+          <input type="tel" id="phone" name="phone" placeholder="Your phone">
         </div>
         <div class="form-group">
           <label for="scenario">Which scenario fits you best?</label>
@@ -933,11 +954,14 @@ footer a:hover { color: rgba(255,255,255,0.72); }
 </section>
 
 <!-- FOOTER -->
-<footer>
+  </main>
+
+  <footer>
   <p>
     <a href="https://outdoorresortsgatlinburg.com/">OutdoorResortsGatlinburg.com</a> &nbsp;·&nbsp;
     4229 East Parkway, Gatlinburg, TN 37738 &nbsp;·&nbsp;
     Independent resort information and RV rental directory<br>
+    <a href="/about.html">About</a><br>
     This page is for informational purposes only and does not constitute legal, tax, or financial advice. Consult a licensed CPA, attorney, and real estate professional before making investment decisions.
   </p>
 </footer>
