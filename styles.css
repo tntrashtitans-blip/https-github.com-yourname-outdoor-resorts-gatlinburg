@@ -2226,3 +2226,21 @@ a {
   color: var(--forest);
   font-weight: 800;
 }
+
+.page-hero--guide {
+  position: relative;
+  overflow: hidden;
+  padding: 112px 0 96px;
+  background:
+    linear-gradient(90deg, rgba(13, 26, 21, .88), rgba(13, 26, 21, .58) 54%, rgba(13, 26, 21, .28)),
+    url("Assets/Community.jpg") center 46% / cover;
+  color: var(--white);
+}
+
+.page-hero--guide p {
+  color: rgba(255, 255, 255, .84);
+}
+
+.page-hero--guide .eyebrow {
+  color: #e2ad4f;
+}
