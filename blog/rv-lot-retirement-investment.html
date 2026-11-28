@@ -74,7 +74,7 @@ nav { background: #fff; border-bottom: 1px solid var(--border); padding: 0 2rem;
 footer { background: #111; padding: 2.5rem 2rem; text-align: center; }
 footer p { font-size: 0.8rem; color: rgba(255,255,255,0.32); line-height: 1.7; }
 footer a { color: rgba(255,255,255,0.48); text-decoration: none; }
-@media (max-width: 760px) { .nav-links { display: none; } .article-hero { height: 320px; } .phase { grid-template-columns: 1fr; } .phase-label { padding: 1rem 1.25rem; } }
+@media (max-width: 760px) { .nav-links li:not(.nav-blog) { display: none; } .article-hero { height: 320px; } .phase { grid-template-columns: 1fr; } .phase-label { padding: 1rem 1.25rem; } }
 </style>
 <script type="application/ld+json">
 {
@@ -151,6 +151,7 @@ GA4 placeholder. Tracking is not enabled. Replace G-XXXXXXX and remove this comm
       <li><a href="https://outdoorresortsgatlinburg.com/rentals.html">Browse Rentals →</a></li>
       <li><a href="https://outdoorresortsgatlinburg.com/stay-guide.html">Stay Guide</a></li>
       <li><a href="https://outdoorresortsgatlinburg.com/things-to-do.html">Explore</a></li>
+      <li class="nav-blog"><a href="https://outdoorresortsgatlinburg.com/blog/">Blog</a></li>
       <li><a href="https://outdoorresortsgatlinburg.com/investing-units-for-sale.html">Investing</a></li>
       <li><a href="https://outdoorresortsgatlinburg.com/list-your-rv.html">List Your RV</a></li>
     </ul>
@@ -167,6 +168,7 @@ GA4 placeholder. Tracking is not enabled. Replace G-XXXXXXX and remove this comm
 </section>
 
 <div class="article-wrap">
+  <p class="breadcrumb"><a href="/blog/">Back to all posts</a></p>
   <div class="breadcrumb">
     <a href="https://outdoorresortsgatlinburg.com/">Home</a>
     <span>›</span>

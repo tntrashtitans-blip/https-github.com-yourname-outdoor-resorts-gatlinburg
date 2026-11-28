@@ -96,6 +96,7 @@ a {
 
 .nav__links a {
   color: #44524d;
+  white-space: nowrap;
 }
 
 .nav__links a:hover,
@@ -1864,7 +1865,7 @@ a {
   width: 100%;
 }
 
-@media (max-width: 900px) {
+@media (max-width: 1179px) {
   .nav__inner {
     height: auto;
     padding-top: 12px;
@@ -1971,7 +1972,9 @@ a {
     border: 0;
     border-top: 1px solid var(--line);
   }
+}
 
+@media (max-width: 900px) {
   .hero {
     min-height: 76vh;
   }
@@ -2243,4 +2246,69 @@ a {
 
 .page-hero--guide .eyebrow {
   color: #e2ad4f;
+}
+
+.page-hero--blog {
+  position: relative;
+  overflow: hidden;
+  padding: 112px 0 96px;
+  background:
+    linear-gradient(90deg, rgba(13, 26, 21, .88), rgba(13, 26, 21, .58) 54%, rgba(13, 26, 21, .28)),
+    url("/Assets/Community.jpg") center 46% / cover;
+  color: var(--white);
+}
+
+.page-hero--blog p {
+  color: rgba(255, 255, 255, .84);
+}
+
+.page-hero--blog .eyebrow {
+  color: #e2ad4f;
+}
+
+.post-list {
+  display: grid;
+  gap: 16px;
+}
+
+.post-card {
+  padding: 22px 24px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--white);
+  box-shadow: 0 6px 24px rgba(23, 35, 31, .06);
+}
+
+.post-card h3 {
+  margin: 0 0 8px;
+  font-family: "Playfair Display", serif;
+  font-size: clamp(1.2rem, 2vw, 1.45rem);
+  line-height: 1.25;
+}
+
+.post-card h3 a {
+  color: var(--forest-dark);
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+}
+
+.post-card h3 a:hover {
+  color: var(--river-dark);
+}
+
+.post-card__date {
+  margin: 0 0 6px;
+  color: var(--river);
+  font-size: .78rem;
+  font-weight: 800;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+}
+
+.post-card__summary {
+  margin: 0;
+  color: var(--muted);
+  font-size: .98rem;
+  line-height: 1.55;
 }
