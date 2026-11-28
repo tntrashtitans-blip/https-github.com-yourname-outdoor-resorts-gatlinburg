@@ -1,4 +1,5 @@
 const CALENDAR_FEEDS = {
+  "Camp Shanty": "https://www.airbnb.com/calendar/ical/1660295335684782036.ics?t=84c14308832745f4bb99e2ae45eb46f1",
   "Campfire Cove": "https://www.airbnb.com/calendar/ical/810381394382742436.ics?t=e5e8e90d08874eb6a15eed8162fa20e1",
   "Creekside Cove": "https://www.airbnb.com/calendar/ical/1184548442935899278.ics?t=3e5d08bc88484f5ba12b1181510b64bd",
   "Creekside Vibes": "https://www.hipcamp.com/en-US/bookings/4a7def50-dbd2-4def-9900-3ff14240e190/agenda.ics?cal=95259&s=1124856",
